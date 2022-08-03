@@ -1,0 +1,532 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Aug  1 22:42:37 2022
+# Process ID: 21984
+# Current directory: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1
+# Command line: vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
+# Log file: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.vds
+# Journal file: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_level.tcl -notrace
+Command: synth_design -top top_level -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3840 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 363.391 ; gain = 94.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:36]
+INFO: [Synth 8-3491] module 'clocking' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:75' bound to instance 'your_instance_name' of component 'clocking' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:85]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'clkin1_buf' to cell 'IBUFG' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:119]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:130]
+INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:193]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:199]
+INFO: [Synth 8-113] binding component instance 'clkout2_buf' to cell 'BUFG' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:206]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (1#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd:85]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:10' bound to instance 'Inst_VGA' of component 'VGA' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:21]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/debounce.vhd:11' bound to instance 'Inst_debounce' of component 'debounce' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/debounce.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (3#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/debounce.vhd:17]
+INFO: [Synth 8-3491] module 'ov7670_controller' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.vhd:11' bound to instance 'Inst_ov7670_controller' of component 'ov7670_controller' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.vhd:23]
+INFO: [Synth 8-3491] module 'i2c_sender' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.vhd:11' bound to instance 'Inst_i2c_sender' of component 'i2c_sender' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (4#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.vhd:22]
+INFO: [Synth 8-3491] module 'ov7670_registers' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:12' bound to instance 'Inst_ov7670_registers' of component 'ov7670_registers' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (5#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (6#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.vhd:23]
+INFO: [Synth 8-3491] module 'frame_buffer' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-21984-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6' bound to instance 'Inst_frame_buffer' of component 'frame_buffer' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:215]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-21984-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (7#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-21984-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-3491] module 'ov7670_capture' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.vhd:17' bound to instance 'Inst_ov7670_capture' of component 'ov7670_capture' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (8#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.vhd:29]
+INFO: [Synth 8-3491] module 'RGB' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/RGB.vhd:8' bound to instance 'Inst_RGB' of component 'RGB' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/RGB.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (9#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/RGB.vhd:15]
+INFO: [Synth 8-3491] module 'Address_Generator' declared at 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/address_Generator.vhd:8' bound to instance 'Inst_Address_Generator' of component 'Address_Generator' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/address_Generator.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (10#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/address_Generator.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (11#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd:36]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 405.855 ; gain = 137.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 405.855 ; gain = 137.008
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-21984-DESKTOP-E1S6T55/dcp3/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Finished Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-21984-DESKTOP-E1S6T55/dcp3/frame_buffer_in_context.xdc] for cell 'Inst_frame_buffer'
+Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc:99]
+Finished Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFG => IBUF: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 706.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for Inst_frame_buffer. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element Hcnt_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element Vcnt_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:46]
+INFO: [Synth 8-5546] ROM "o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element c_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/debounce.vhd:24]
+INFO: [Synth 8-5546] ROM "taken" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data_sr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "divider" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element divider_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.vhd:45]
+INFO: [Synth 8-5546] ROM "finished" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6040] Register 0®üpú driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element sreg_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:31]
+INFO: [Synth 8-802] inferred FSM for state register 'line_reg' in module 'ov7670_capture'
+INFO: [Synth 8-5544] ROM "we_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "line" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element val_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/address_Generator.vhd:19]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE0 |                               01 |                               01
+                 iSTATE1 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'line_reg' using encoding 'sequential' in module 'ov7670_capture'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     17 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 5     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top_level 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 2     
+Module VGA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module i2c_sender 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module ov7670_registers 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ov7670_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ov7670_capture 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module RGB 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+Module Address_Generator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "Inst_debounce/o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Inst_ov7670_controller/Inst_i2c_sender/divider" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Inst_ov7670_controller/Inst_i2c_sender/taken" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Inst_ov7670_controller/Inst_ov7670_registers/finished" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6040] Register 0®üpú driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_controller/Inst_ov7670_registers/sreg_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element Inst_VGA/Hcnt_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element Inst_VGA/Vcnt_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element Inst_debounce/c_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/debounce.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_controller/Inst_i2c_sender/divider_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_controller/Inst_ov7670_registers/address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_capture/address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element Inst_Address_Generator/val_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/address_Generator.vhd:19]
+WARNING: [Synth 8-3917] design top_level has port ov7670_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design top_level has port ov7670_reset driven by constant 1
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Inst_ov7670_controller/Inst_i2c_sender/data_sr_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (Inst_ov7670_controller/Inst_i2c_sender/data_sr_reg[0]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_ov7670_capture/d_latch_reg[11]) is unused and will be removed from module top_level.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+-------------------------------------------------------+---------------+----------------+
+|Module Name      | RTL Object                                            | Depth x Width | Implemented As | 
++-----------------+-------------------------------------------------------+---------------+----------------+
+|ov7670_registers | sreg_reg                                              | 256x16        | Block RAM      | 
+|top_level        | Inst_ov7670_controller/Inst_ov7670_registers/sreg_reg | 256x16        | Block RAM      | 
++-----------------+-------------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance Inst_ov7670_controller/Inst_ov7670_registers/sreg_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_level   | Inst_ov7670_capture/href_last_reg[6] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |frame_buffer  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |frame_buffer |     1|
+|2     |BUFG         |     4|
+|3     |CARRY4       |    21|
+|4     |LUT1         |    18|
+|5     |LUT2         |    74|
+|6     |LUT3         |    29|
+|7     |LUT4         |    50|
+|8     |LUT5         |    13|
+|9     |LUT6         |    37|
+|10    |MMCME2_ADV   |     1|
+|11    |RAMB18E1     |     1|
+|12    |SRL16E       |     1|
+|13    |FDRE         |   181|
+|14    |FDSE         |    32|
+|15    |IBUF         |    14|
+|16    |IBUFG        |     1|
+|17    |OBUF         |    19|
+|18    |OBUFT        |     1|
++------+-------------+------+
+
+Report Instance Areas: 
++------+--------------------------+------------------+------+
+|      |Instance                  |Module            |Cells |
++------+--------------------------+------------------+------+
+|1     |top                       |                  |   509|
+|2     |  Inst_Address_Generator  |Address_Generator |    71|
+|3     |  Inst_VGA                |VGA               |    82|
+|4     |  Inst_debounce           |debounce          |    38|
+|5     |  Inst_ov7670_capture     |ov7670_capture    |    86|
+|6     |  Inst_ov7670_controller  |ov7670_controller |   180|
+|7     |    Inst_i2c_sender       |i2c_sender        |   144|
+|8     |    Inst_ov7670_registers |ov7670_registers  |    34|
+|9     |  your_instance_name      |clocking          |     5|
++------+--------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 706.078 ; gain = 137.008
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 706.078 ; gain = 437.230
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFG => IBUF: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 706.078 ; gain = 445.441
+INFO: [Common 17-1381] The checkpoint 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 706.078 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  1 22:43:10 2022...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Aug  1 22:40:23 2022
+# Process ID: 3036
+# Current directory: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/frame_buffer_synth_1
+# Command line: vivado.exe -log frame_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source frame_buffer.tcl
+# Log file: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/frame_buffer_synth_1/frame_buffer.vds
+# Journal file: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/frame_buffer_synth_1\vivado.jou
+#-----------------------------------------------------------
+source frame_buffer.tcl -notrace
