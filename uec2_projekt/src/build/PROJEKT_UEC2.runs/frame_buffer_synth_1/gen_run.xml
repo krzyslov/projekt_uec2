@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="frame_buffer_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1659386421">
   <File Type="PA-TCL" Name="frame_buffer.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="frame_buffer_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="frame_buffer_reports.tcl"/>
   <File Type="RDS-RDS" Name="frame_buffer.vds"/>
   <File Type="RDS-UTIL" Name="frame_buffer_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="frame_buffer_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="frame_buffer.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="frame_buffer_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="frame_buffer_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/frame_buffer">
     <File Path="$PSRCDIR/sources_1/ip/frame_buffer/frame_buffer.xci">
       <FileInfo>
@@ -36,9 +33,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

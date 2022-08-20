@@ -15,7 +15,7 @@ entity i2c_sender is
 			  taken : out  STD_LOGIC;
 			  send  : in  STD_LOGIC;
            id    : in  STD_LOGIC_VECTOR (7 downto 0);
-           reg   : in  STD_LOGIC_VECTOR (7 downto 0);
+           reg1   : in  STD_LOGIC_VECTOR (7 downto 0);
            value : in  STD_LOGIC_VECTOR (7 downto 0));
 end i2c_sender;
 
@@ -43,7 +43,7 @@ begin
 				SIOC <= '1';
 				if send = '1' then
 					if divider = "00000000" then
-						data_sr <= "100" &   id & '0'  &   reg & '0' & value & '0' & "01";
+						data_sr <= "100" &   id & '0'  &   reg1 & '0' & value & '0' & "01";
 						busy_sr <= "111" & "111111111" & "111111111" & "111111111" & "11";
 						taken <= '1';
 					else

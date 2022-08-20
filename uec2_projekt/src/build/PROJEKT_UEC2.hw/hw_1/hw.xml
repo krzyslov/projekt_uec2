@@ -7,8 +7,10 @@
   <device name="xc7a35t_0" gui_info=""/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a35t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/top_level.bit"/>
-      <Properties Property="SLR.COUNT" value="c:/Users/bened/Desktop/Proj/uec2_projekt/src/1"/>
+      <Properties Property="SLR.COUNT" value="C:/Users/bened/Desktop/Proj/uec2_projekt/src/1"/>
     </Object>
   </ObjectList>
   <probeset name="hw project" active="false"/>

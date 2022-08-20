@@ -17,6 +17,10 @@ proc create_report { reportName command } {
   }
 }
 set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
+set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/Proj/uec2_projekt/src/.Xil/Vivado-22212-DESKTOP-E1S6T55/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,19 +34,20 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib {
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/RGB.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/address_Generator.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/clocking.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/debounce.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/vga.vhd
-  C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/ov7670_fr/top_level.vhd
+read_verilog -library xil_defaultlib {
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v
+  C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v
 }
-read_ip -quiet c:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
+read_ip -quiet C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
 set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

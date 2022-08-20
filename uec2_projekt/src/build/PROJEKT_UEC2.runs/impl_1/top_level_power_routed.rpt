@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Mon Aug  1 22:44:13 2022
+| Date             : Sat Aug 20 23:41:44 2022
 | Host             : DESKTOP-E1S6T55 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.190        |
+| Total On-Chip Power (W)  | 0.188        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.116        |
+| Dynamic (W)              | 0.114        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        6 |       --- |             --- |
-| Slice Logic             |    <0.001 |      852 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      351 |     20800 |            1.69 |
-|   Register              |    <0.001 |      228 |     41600 |            0.55 |
-|   CARRY4                |    <0.001 |       21 |      8150 |            0.26 |
+| Slice Logic             |    <0.001 |      845 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      338 |     20800 |            1.63 |
+|   CARRY4                |    <0.001 |       16 |      8150 |            0.20 |
+|   Register              |    <0.001 |      247 |     41600 |            0.59 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes           |    <0.001 |       36 |     32600 |            0.11 |
 |   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   Others                |     0.000 |      138 |       --- |             --- |
-| Signals                 |     0.001 |      864 |       --- |             --- |
+|   Others                |     0.000 |      139 |       --- |             --- |
+| Signals                 |    <0.001 |      903 |       --- |             --- |
 | Block RAM               |     0.003 |     44.5 |        50 |           89.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| I/O                     |     0.004 |       35 |       106 |           33.02 |
+| I/O                     |     0.003 |       35 |       106 |           33.02 |
 | Static Power            |     0.074 |          |           |                 |
-| Total                   |     0.190 |          |           |                 |
+| Total                   |     0.188 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -129,14 +129,14 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+-----------------------------+-----------------+
-| Clock       | Domain                      | Constraint (ns) |
-+-------------+-----------------------------+-----------------+
-| clkfbout    | your_instance_name/clkfbout |            10.0 |
-| clkout0     | your_instance_name/clkout0  |            20.0 |
-| clkout1     | your_instance_name/clkout1  |            40.0 |
-| sys_clk_pin | clk100                      |            10.0 |
-+-------------+-----------------------------+-----------------+
++-------------------+------------------------------------+-----------------+
+| Clock             | Domain                             | Constraint (ns) |
++-------------------+------------------------------------+-----------------+
+| CLK_25_clocking   | my_clocking/inst/CLK_25_clocking   |            40.0 |
+| CLK_50_clocking   | my_clocking/inst/CLK_50_clocking   |            20.0 |
+| clkfbout_clocking | my_clocking/inst/clkfbout_clocking |            10.0 |
+| sys_clk_pin       | clk100                             |            10.0 |
++-------------------+------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -148,15 +148,17 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| top_level                                    |     0.116 |
-|   Inst_Address_Generator                     |    <0.001 |
-|   Inst_VGA                                   |    <0.001 |
-|   Inst_debounce                              |    <0.001 |
-|   Inst_frame_buffer                          |     0.004 |
-|     U0                                       |     0.004 |
-|       inst_blk_mem_gen                       |     0.004 |
-|         gnbram.gnativebmg.native_blk_mem_gen |     0.004 |
-|           valid.cstr                         |     0.004 |
+| top_level                                    |     0.114 |
+|   my_Address_Generator                       |    <0.001 |
+|   my_VGA                                     |    <0.001 |
+|   my_clocking                                |     0.106 |
+|     inst                                     |     0.106 |
+|   my_debounce                                |    <0.001 |
+|   my_frame_buffer                            |     0.003 |
+|     U0                                       |     0.003 |
+|       inst_blk_mem_gen                       |     0.003 |
+|         gnbram.gnativebmg.native_blk_mem_gen |     0.003 |
+|           valid.cstr                         |     0.003 |
 |             bindec_a.bindec_inst_a           |    <0.001 |
 |             bindec_b.bindec_inst_b           |    <0.001 |
 |             has_mux_b.B                      |    <0.001 |
@@ -236,11 +238,10 @@ Table of Contents
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[9].ram.r                 |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|   Inst_ov7670_capture                        |    <0.001 |
-|   Inst_ov7670_controller                     |    <0.001 |
+|   my_ov7670_capture                          |    <0.001 |
+|   my_ov7670_controller                       |    <0.001 |
 |     Inst_i2c_sender                          |    <0.001 |
 |     Inst_ov7670_registers                    |    <0.001 |
-|   your_instance_name                         |     0.106 |
 +----------------------------------------------+-----------+
 
 

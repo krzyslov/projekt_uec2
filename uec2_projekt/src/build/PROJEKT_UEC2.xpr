@@ -37,13 +37,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
-    <Option Name="WTIesExportSim" Val="1"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -54,70 +54,102 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/RGB.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/RGB.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/RGB.v"/>
+          <Attr Name="ImportTime" Val="1660666431"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/address_Generator.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/address_Generator.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/address_Generator.v"/>
+          <Attr Name="ImportTime" Val="1661029281"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/basys3_ov7670/clocking.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking.v"/>
+          <Attr Name="ImportTime" Val="1661015072"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/debounce.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking_clk_wiz.v"/>
+          <Attr Name="ImportTime" Val="1661015091"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/basys3_ov7670/i2c_sender.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/debounce.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/debounce.v"/>
+          <Attr Name="ImportTime" Val="1660754884"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/ov7670_capture.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/i2c_sender.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/i2c_sender.v"/>
+          <Attr Name="ImportTime" Val="1660930981"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/ov7670_controller.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/ov7670_capture.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/ov7670_capture.v"/>
+          <Attr Name="ImportTime" Val="1660757001"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/basys3_ov7670/ov7670_registers.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/ov7670_controller.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/ov7670_controller.v"/>
+          <Attr Name="ImportTime" Val="1660844330"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/vga.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/ov7670_registers.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/ov7670_registers.v"/>
+          <Attr Name="ImportTime" Val="1660941704"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/top_level.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/vga.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/vga.v"/>
+          <Attr Name="ImportTime" Val="1660833484"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../rtl/ov7670_fr/i3c2.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/top_level.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/top_level.v"/>
+          <Attr Name="ImportTime" Val="1660994912"/>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -139,6 +171,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="top_level"/>
@@ -184,9 +217,7 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -203,9 +234,7 @@
     </Run>
     <Run Id="frame_buffer_synth_1" Type="Ft3:Synth" SrcSet="frame_buffer" Part="xc7a35tcpg236-1" ConstrsSet="frame_buffer" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/frame_buffer_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -222,9 +251,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -329,9 +356,7 @@
     </Run>
     <Run Id="frame_buffer_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="frame_buffer" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="frame_buffer_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

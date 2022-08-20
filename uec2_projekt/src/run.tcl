@@ -43,27 +43,25 @@ proc create_new_project {project target top_module} {
     }
 
     # Specify verilog design files location   -- EDIT
-    #read_verilog {
-	#	rtl/frame_buffer/blk_mem_gen_v8_4.v
-	#	rtl/frame_buffer/frame_buffer.v
-	#	rtl/frame_buffer/frame_buffer_sim_netlist.v 
-	#	rtl/frame_buffer/frame_buffer_stub.v 
-    #}
+    read_verilog {
+		rtl/ov7670_fr/RGB.v
+		rtl/ov7670_fr/address_Generator.v
+		#rtl/AR_58276_2013_3_MMCM/MMCME2_ADV.v
+		rtl/basys3_ov7670/clocking.v
+		rtl/basys3_ov7670/clocking_clk_wiz.v
+		#rtl/ov7670_fr/ov7670_capture.v
+		#rtl/ov7670_fr/debounce.v
+    }
     
     # Specify vhdl design files location      -- EDIT
     read_vhdl {
-		rtl/ov7670_fr/address_Generator.vhd
+		rtl/ov7670_fr/ov7670_capture.vhd
 		rtl/ov7670_fr/debounce.vhd
 		rtl/ov7670_fr/i3c2.vhd
-		rtl/ov7670_fr/ov7670_capture.vhd
 		rtl/ov7670_fr/ov7670_controller.vhd
-		rtl/ov7670_fr/RGB.vhd
 		rtl/ov7670_fr/top_level.vhd
 		rtl/ov7670_fr/vga.vhd
 		
-
-		
-		rtl/basys3_ov7670/clocking.vhd
 		rtl/basys3_ov7670/i2c_sender.vhd
 		rtl/basys3_ov7670/ov7670_registers.vhd
     }
