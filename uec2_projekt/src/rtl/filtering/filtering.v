@@ -20,15 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module filtering(
-clock,reset,sel_module,val,         //inputs - sel_module(select required function), reset(to switch on and off), val(give a value to adjust brightness and filters)
-hsync,vsync,                        // hsync and vsync for the working of monitor
-red, green, blue                    // red, green and blue output pixels
+input wire clock,
+input wire reset,
+input wire [3:0]sel_module,
+input wire [7:0]val,
+input wire [7:0]red_in,
+input wire [7:0]green_in,
+input wire [7:0]blue_in,         //inputs - sel_module(select required function), reset(to switch on and off), val(give a value to adjust brightness and filters)
+output reg hsync,
+output reg vsync,                        // hsync and vsync for the working of monitor
+output reg [3:0]red,
+output reg[3:0] green,
+output reg[3:0] blue                    // red, green and blue output pixels
 );
 
-    input clock;
-    input reset;
-    input [7:0] val = 0;            // intialize value to zero
-    input[3:0] sel_module;          // can select one of 16 functions
+    //input clock;
+    //input reset;
+    //input [7:0] val = 0;            // intialize value to zero
+    //input[3:0] sel_module;          // can select one of 16 functions
     reg [7:0] gray, left, right, up, down, leftup, leftdown, rightup, rightdown;       //different values in matrix
     reg[7:0] red_o, blue_o, green_o;            // variables used during calcultion
     reg [15:0] r, b, g;                         // variables used during calcultion
@@ -47,11 +56,11 @@ red, green, blue                    // red, green and blue output pixels
 //lst = ["gray", "left", "right", "up", "down", "leftup", "leftdown", "rightup", "rightdown"] 
 
  
-   	output reg hsync;
-   	output reg vsync;
+   	//output reg hsync;
+   	//output reg vsync;
    	reg [7:0] tred,tgreen,tblue;
-	output reg [3:0] red,green;
-	output reg [3:0] blue;
+	//output reg [3:0] red,green;
+	//output reg [3:0] blue;
 
  
 	reg read = 0;
@@ -126,9 +135,16 @@ always @(posedge pixel_clk)
                 leftdown =  {out2[47], out2[46], out2[45], out2[44], out2[43], out2[42], out2[41], out2[40]};
                 rightup = {out2[39], out2[38], out2[37], out2[36], out2[35], out2[34], out2[33], out2[32]};
                 rightdown = {out2[31], out2[30], out2[29], out2[28], out2[27], out2[26], out2[25], out2[24]};
-                tblue =  {out2[23], out2[22], out2[21], out2[20], out2[19], out2[18], out2[17], out2[16]};
-                tgreen = {out2[15], out2[14], out2[13], out2[12], out2[11], out2[10], out2[9], out2[8]};
-                tred = {out2[7], out2[6], out2[5], out2[4], out2[3], out2[2], out2[1], out2[0]};
+                tblue=blue_in;
+                tgreen = green_in;
+                tred = red_in;
+                
+                
+                
+                
+                //tblue =  {out2[23], out2[22], out2[21], out2[20], out2[19], out2[18], out2[17], out2[16]};
+                //tgreen = {out2[15], out2[14], out2[13], out2[12], out2[11], out2[10], out2[9], out2[8]};
+                //tred = {out2[7], out2[6], out2[5], out2[4], out2[3], out2[2], out2[1], out2[0]};
                 
                 
 

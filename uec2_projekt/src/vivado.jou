@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Aug 29 15:09:00 2022
+# Process ID: 13644
+# Current directory: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src
+# Command line: vivado.exe -mode tcl -source run.tcl -tclargs open
+# Log file: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/vivado.log
+# Journal file: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src\vivado.jou
+#-----------------------------------------------------------
+source run.tcl
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+add_files -norecurse C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v
+update_compile_order -fileset sources_1
