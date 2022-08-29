@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Aug 29 15:08:27 2022
+# Process ID: 4220
+# Current directory: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt
+# Command line: vivado.exe -mode tcl -source run.tcl -tclargs open
+# Log file: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/vivado.log
+# Journal file: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt\vivado.jou
+#-----------------------------------------------------------
+source run.tcl
+couldn't read file "run.tcl": no such file or directory
+Vivado% exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 29 15:08:52 2022...

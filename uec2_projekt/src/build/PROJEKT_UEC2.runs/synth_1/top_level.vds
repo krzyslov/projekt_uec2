@@ -2,12 +2,12 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sat Aug 20 23:40:12 2022
-# Process ID: 16608
-# Current directory: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1
+# Start of session at: Mon Aug 29 15:10:44 2022
+# Process ID: 1920
+# Current directory: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1
 # Command line: vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
-# Log file: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.vds
-# Journal file: C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1\vivado.jou
+# Log file: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.vds
+# Journal file: C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top_level.tcl -notrace
 Command: synth_design -top top_level -part xc7a35tcpg236-1
@@ -15,21 +15,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1080 
+INFO: Helper process launched with PID 11108 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 363.336 ; gain = 94.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 353.973 ; gain = 96.410
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
-INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71]
-INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69]
-INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
-INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -78,13 +78,13 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vi
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
-INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69]
-INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71]
-WARNING: [Synth 8-350] instance 'my_clocking' of module 'clocking' requires 5 connections, but only 3 given [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:40]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:4]
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71]
+WARNING: [Synth 8-350] instance 'my_clocking' of module 'clocking' requires 5 connections, but only 3 given [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:40]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:4]
 	Parameter HM bound to: 799 - type: integer 
 	Parameter HD bound to: 640 - type: integer 
 	Parameter HF bound to: 16 - type: integer 
@@ -95,29 +95,29 @@ INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/Proj/uec2_
 	Parameter VF bound to: 10 - type: integer 
 	Parameter VB bound to: 33 - type: integer 
 	Parameter VR bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'VGA' (6#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:4]
-INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
-INFO: [Synth 8-256] done synthesizing module 'debounce' (7#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
-INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (6#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:4]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (7#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
 	Parameter camera_address bound to: 8'b01000010 
-INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
-INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (8#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
-INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (9#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
-WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:11]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (10#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
-INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16608-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (11#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16608-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (12#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
-INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
-INFO: [Synth 8-256] done synthesizing module 'RGB' (13#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
-INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
-INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (14#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
-WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:31]
-INFO: [Synth 8-256] done synthesizing module 'top_level' (15#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (8#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (9#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (10#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-1920-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (11#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-1920-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (12#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (13#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (14#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:31]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (15#1) [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 405.793 ; gain = 137.359
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 396.055 ; gain = 138.492
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -126,9 +126,9 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin my_clocking:reset to constant 0 [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:40]
+WARNING: [Synth 8-3295] tying undriven pin my_clocking:reset to constant 0 [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:40]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 405.793 ; gain = 137.359
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 396.055 ; gain = 138.492
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -137,13 +137,13 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16608-DESKTOP-E1S6T55/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
-Finished Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16608-DESKTOP-E1S6T55/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
-Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]
-WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc:100]
-Finished Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Parsing XDC File [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-1920-Tiger/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-1920-Tiger/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
+Parsing XDC File [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc:100]
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
@@ -151,23 +151,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 713.387 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 704.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for my_frame_buffer. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Vcnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "activeArea" won't be mapped to RAM because it is too sparse
@@ -181,16 +181,16 @@ INFO: [Synth 8-5546] ROM "o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "taken" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "data_sr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "divider" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element divider_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
+WARNING: [Synth 8-6014] Unused sequential element divider_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
 INFO: [Synth 8-5546] ROM "finished" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6040] Register 0®UEý driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6014] Unused sequential element sreg_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
-WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
+WARNING: [Synth 8-6040] Register 0®D¤þ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element sreg_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
 INFO: [Synth 8-802] inferred FSM for state register 'line_reg' in module 'ov7670_capture'
 INFO: [Synth 8-5544] ROM "we_reg0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "line_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
-WARNING: [Synth 8-6014] Unused sequential element val_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:21]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
+WARNING: [Synth 8-6014] Unused sequential element val_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:21]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -202,7 +202,7 @@ WARNING: [Synth 8-6014] Unused sequential element val_reg was removed.  [C:/User
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'line_reg' using encoding 'sequential' in module 'ov7670_capture'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -340,20 +340,20 @@ INFO: [Synth 8-5546] ROM "my_debounce/o" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "my_ov7670_controller/Inst_i2c_sender/divider" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "my_ov7670_controller/Inst_i2c_sender/taken" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "my_ov7670_controller/Inst_ov7670_registers/finished" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6040] Register 0®UEý driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6014] Unused sequential element my_ov7670_controller/Inst_ov7670_registers/sreg_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
-WARNING: [Synth 8-6014] Unused sequential element my_VGA/Vcnt_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:43]
-WARNING: [Synth 8-6014] Unused sequential element my_ov7670_controller/Inst_i2c_sender/divider_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
-WARNING: [Synth 8-6014] Unused sequential element my_ov7670_controller/Inst_ov7670_registers/address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
-WARNING: [Synth 8-6014] Unused sequential element my_ov7670_capture/address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
-WARNING: [Synth 8-6014] Unused sequential element my_Address_Generator/val_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:21]
+WARNING: [Synth 8-6040] Register 0®D¤þ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element my_ov7670_controller/Inst_ov7670_registers/sreg_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
+WARNING: [Synth 8-6014] Unused sequential element my_VGA/Vcnt_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:43]
+WARNING: [Synth 8-6014] Unused sequential element my_ov7670_controller/Inst_i2c_sender/divider_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
+WARNING: [Synth 8-6014] Unused sequential element my_ov7670_controller/Inst_ov7670_registers/address_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
+WARNING: [Synth 8-6014] Unused sequential element my_ov7670_capture/address_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
+WARNING: [Synth 8-6014] Unused sequential element my_Address_Generator/val_reg was removed.  [C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:21]
 WARNING: [Synth 8-3917] design top_level has port ov7670_pwdn driven by constant 0
 WARNING: [Synth 8-3917] design top_level has port ov7670_reset driven by constant 1
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\my_ov7670_controller/Inst_i2c_sender/data_sr_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (my_ov7670_controller/Inst_i2c_sender/data_sr_reg[0]) is unused and will be removed from module top_level.
 WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/d_latch_reg[11]) is unused and will be removed from module top_level.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -380,13 +380,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:38 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,7 +399,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance my_ov7670_controller/Inst_ov7670_registers/sreg_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -423,7 +423,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -436,7 +436,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -448,25 +448,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -532,11 +532,11 @@ Report Instance Areas:
 |10    |    Inst_ov7670_registers |ov7670_registers  |    34|
 +------+--------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.387 ; gain = 444.953
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 713.387 ; gain = 137.359
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.387 ; gain = 444.953
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:22 . Memory (MB): peak = 704.109 ; gain = 138.492
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 704.109 ; gain = 446.547
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -548,8 +548,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 69 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 713.387 ; gain = 452.414
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:47 . Memory (MB): peak = 704.109 ; gain = 453.504
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 713.387 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 20 23:40:45 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 704.109 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 29 15:12:51 2022...

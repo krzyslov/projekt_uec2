@@ -1,5 +1,6 @@
 
 module top_level(
+    input wire [3:0]sw,
 	input wire clk100,
 	input wire btnl,
 	input wire btnr,

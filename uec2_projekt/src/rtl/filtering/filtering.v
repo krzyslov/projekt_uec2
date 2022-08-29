@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module vga_syncIndex(
+module filtering(
 clock,reset,sel_module,val,         //inputs - sel_module(select required function), reset(to switch on and off), val(give a value to adjust brightness and filters)
 hsync,vsync,                        // hsync and vsync for the working of monitor
 red, green, blue                    // red, green and blue output pixels
