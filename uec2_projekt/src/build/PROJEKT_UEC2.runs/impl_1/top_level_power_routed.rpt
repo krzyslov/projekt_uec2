@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Mon Aug 29 15:16:34 2022
+| Date             : Mon Aug 29 16:09:07 2022
 | Host             : Tiger running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.188        |
+| Total On-Chip Power (W)  | 0.189        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.114        |
+| Dynamic (W)              | 0.115        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        6 |       --- |             --- |
-| Slice Logic             |    <0.001 |      845 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      338 |     20800 |            1.63 |
-|   CARRY4                |    <0.001 |       16 |      8150 |            0.20 |
-|   Register              |    <0.001 |      247 |     41600 |            0.59 |
+| Slice Logic             |    <0.001 |     1030 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      431 |     20800 |            2.07 |
+|   CARRY4                |    <0.001 |       29 |      8150 |            0.36 |
+|   Register              |    <0.001 |      282 |     41600 |            0.68 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes           |    <0.001 |       36 |     32600 |            0.11 |
 |   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   Others                |     0.000 |      139 |       --- |             --- |
-| Signals                 |    <0.001 |      903 |       --- |             --- |
+|   Others                |     0.000 |      141 |       --- |             --- |
+| Signals                 |     0.001 |     1012 |       --- |             --- |
 | Block RAM               |     0.003 |     44.5 |        50 |           89.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| I/O                     |     0.003 |       35 |       106 |           33.02 |
+| I/O                     |     0.003 |       39 |       106 |           36.79 |
 | Static Power            |     0.074 |          |           |                 |
-| Total                   |     0.188 |          |           |                 |
+| Total                   |     0.189 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -148,12 +148,13 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| top_level                                    |     0.114 |
+| top_level                                    |     0.115 |
 |   my_Address_Generator                       |    <0.001 |
 |   my_VGA                                     |    <0.001 |
 |   my_clocking                                |     0.106 |
 |     inst                                     |     0.106 |
 |   my_debounce                                |    <0.001 |
+|   my_filtering                               |    <0.001 |
 |   my_frame_buffer                            |     0.003 |
 |     U0                                       |     0.003 |
 |       inst_blk_mem_gen                       |     0.003 |

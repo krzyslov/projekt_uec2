@@ -133,9 +133,9 @@ filtering my_filtering(
     .clock(clk_vga),
     .reset(1'b0),
     .sel_module(sw),
-    .red_in(),
-    .green_in(),
-    .blue_in(),
+    .red_in(R),
+    .green_in(G),
+    .blue_in(B),
     .red(red[7:4]),
     .green(green[7:4]),
     .blue(blue[7:4])   

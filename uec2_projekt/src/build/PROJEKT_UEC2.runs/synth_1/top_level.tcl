@@ -17,6 +17,9 @@ proc create_report { reportName command } {
   }
 }
 set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
+set_param synth.incrementalSynthesisCache C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/.Xil/Vivado-13644-Tiger/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,6 +39,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v
   C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v
   C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v
+  C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v
   C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v
   C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v
   C:/Users/Jerzy/Desktop/git_projekt/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v
