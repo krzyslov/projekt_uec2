@@ -253,3 +253,21 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_lev
 // TclEventType: DG_ANALYSIS_MSG_RESET
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
 // TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 459 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 2); // k (j, cl)
+selectCodeEditor("top_level.v", 102, 142); // cd (w, cl)
+selectCodeEditor("top_level.v", 62, 167); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectCodeEditor("top_level.v", 74, 123); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET

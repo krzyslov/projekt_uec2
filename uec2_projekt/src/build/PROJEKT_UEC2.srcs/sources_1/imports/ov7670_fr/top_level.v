@@ -110,13 +110,13 @@ ov7670_capture my_ov7670_capture(
 	.dout(wrdata),
 	.we(wren[0])
 );
-
+wire [7:0] R,G,B;
 RGB my_RGB(
 	.Din(rddata),
 	.Nblank(activeArea),
-	.R(red),
-	.G(green),
-	.B(blue)
+	.R(R),
+	.G(G),
+	.B(B)
 	
 );
 
@@ -127,5 +127,18 @@ Address_Generator my_Address_Generator(
 	.enable(activeArea),
 	.vsync(vSync),
 	.address(rdaddress)
+);
+
+filtering my_filtering(
+    .clock(clk_vga),
+    .reset(1'b0),
+    .sel_module(sw),
+    .red_in(),
+    .green_in(),
+    .blue_in(),
+    .red(red[7:4]),
+    .green(green[7:4]),
+    .blue(blue[7:4])   
+
 );
 endmodule
