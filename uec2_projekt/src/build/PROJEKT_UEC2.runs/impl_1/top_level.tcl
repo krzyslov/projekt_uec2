@@ -69,18 +69,18 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
   set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/filtering/uec2_projekt/src/.Xil/Vivado-16300-DESKTOP-E1S6T55/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/Proj/uec2_projekt/src/.Xil/Vivado-14428-DESKTOP-E1S6T55/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.cache/wt [current_project]
-  set_property parent.project_path C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.xpr [current_project]
-  set_property ip_output_repo C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.xpr [current_project]
+  set_property ip_output_repo C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp
-  read_ip -quiet C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
-  read_xdc C:/Users/bened/Desktop/filtering/uec2_projekt/src/constraints/project_constraints.xdc
+  add_files -quiet C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp
+  read_ip -quiet C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
+  read_xdc C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc
   link_design -top top_level -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

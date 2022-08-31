@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Aug 31 12:40:24 2022
+| Date             : Wed Aug 31 15:22:23 2022
 | Host             : DESKTOP-E1S6T55 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
@@ -52,9 +52,9 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      858 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      370 |     20800 |            1.78 |
+| Clocks         |     0.001 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |      857 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      369 |     20800 |            1.77 |
 |   Register     |    <0.001 |      231 |     41600 |            0.56 |
 |   CARRY4       |    <0.001 |       20 |      8150 |            0.25 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
@@ -238,7 +238,7 @@ Table of Contents
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[9].ram.r                 |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|   my_ov7670_capture                          |     0.002 |
+|   my_ov7670_capture                          |     0.001 |
 |   my_ov7670_controller                       |    <0.001 |
 |     Inst_i2c_sender                          |    <0.001 |
 |     Inst_ov7670_registers                    |    <0.001 |

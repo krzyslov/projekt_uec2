@@ -3,30 +3,37 @@
 
 module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activeArea, Nsync);
 	input CLK25;
-	output clkout;
-	wire clkout;
 	input rez_160x120;
 	input rez_320x240;
-	output Hsync;
-	reg Hsync;
-	output Vsync;
-	reg Vsync;
-	output Nblank;
-	wire Nblank;
-	output activeArea;
-	reg activeArea;
-	output Nsync;
-	wire Nsync;
 	
+	reg Hsync;
+	reg Vsync;
+	reg activeArea;
 	reg[9:0] Hcnt = 10'b0000000000;
-	reg[9:0] Vcnt = 10'b1000001000;
+    reg[9:0] Vcnt = 10'b1000001000;
+        
+	output clkout;
+	output Hsync;
+	output Vsync;
+	output Nblank;
+	output activeArea;
+	output Nsync;
+	
+	wire clkout;
+	wire Nblank;
+	wire Nsync;
 	wire video;
+	
 	parameter HM = 799;
 	parameter HD = 640;
 	parameter HF = 16;
 	parameter HB = 48;
 	parameter HR = 96;
 	parameter VM = 524;
+	parameter VD = 480;
+	parameter VF = 10;
+	parameter VB = 33;
+	parameter VR = 2;
 	
 	always @(posedge CLK25)
 	begin
@@ -54,24 +61,43 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 						activeArea <= 1'b1;
 					end
 				end
-			end
-			else if(rez_320x240 == 1'b1)
-			begin
-				if(Hcnt == 320 - 1)
+				else
 				begin
-					activeArea <= 1'b0;
-				end
-			end
-			else
-			begin
-				if(Hcnt == 640 - 1)
-				begin
-					activeArea <= 1'b0;
-				end
-			end
-			Hcnt<=Hcnt+1;
+				    if( Vcnt < 480 - 1)
+				    begin 
+				        activeArea <= 1'b1;
+				    end
+			    end
+			    Vcnt <= Vcnt + 1;
+			end 
 		end
-	end 
+		else
+		begin
+		  if(rez_160x120 == 1'b1)
+		  begin
+		      if(Hcnt == 160 - 1)
+		      begin
+		          activeArea <= 1'b0;
+		      end
+		  end
+            else if( rez_320x240 == 1'b1 ) 
+            begin
+                if(Hcnt == 320 - 1)
+                begin
+                    activeArea <= 1'b0;
+                end
+            end
+            else
+            begin
+                if(Hcnt == 640 - 1)
+                begin
+                    activeArea <= 1'b0;
+                end
+            end
+            Hcnt<=Hcnt+1;
+        end
+	end
+	
 	
 	always @(posedge CLK25)
 	begin
@@ -98,7 +124,7 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 	end
 	
 	assign Nsync = 1'b1;
-	assign video = (Hcnt<HD) % (Vcnt <VD)) ? 1'b1 : 1'b0;
+	assign video = ((Hcnt<HD) % (Vcnt <VD)) ? 1'b1 : 1'b0;
 	assign Nblank = video;
 	assign clkout = CLK25;
 endmodule

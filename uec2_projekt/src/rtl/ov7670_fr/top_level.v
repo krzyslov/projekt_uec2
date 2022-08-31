@@ -1,8 +1,9 @@
 
 module top_level(
+    input wire [3:0]sw,
 	input wire clk100,
-	input wire btnl,
-	input wire btnr,
+	//input wire btnl,
+	//input wire btnr,
 	input wire btnc,
 	output wire config_finished,
 	output wire vga_hsync,
@@ -34,8 +35,8 @@ assign ov7670_siod = ov7670_siod_xhdl0;
 assign vga_r = red[7:4];
 assign vga_g = green[7:4];
 assign vga_b = blue[7:4];
-assign rez_160x120 = btnl;
-assign rez_320x240 = btnr;
+//assign rez_160x120 = btnl;
+//assign rez_320x240 = btnr;
 
 clocking my_clocking(
 	.CLK_100(clk100),
@@ -75,14 +76,14 @@ ov7670_controller my_ov7670_controller(
 	.xclk(ov7670_xclk)
 );
 
-assign size_select = {btnl,btnr};
+//assign size_select = {btnl,btnr};
 assign rd_addr =    (size_select == 2'b00) ? rdaddress[18:2] : rdaddress[16:0];
                     //(size_select == 2'b01) ? rdaddress[16:0] : 
                     //(size_select == 2'b10) ? rdaddress[16:0] : rdaddress[16:0];
                     //(size_select == 2'b11) ? rdaddress[16:0] : rd_addr;
 
 
-assign wr_addr = (size_select == 2'b00) ? wraddress[18:2] : wraddress[16:0];
+assign wr_addr = wraddress[18:2];
 //(size_select == 2'b01) ? wraddress[16:0] : 
 //(size_select == 2'b10) ? wraddress[16:0] : 
 //(size_select == 2'b11) ? wraddress : wr_addr;
@@ -100,8 +101,8 @@ frame_buffer my_frame_buffer(
 
 ov7670_capture my_ov7670_capture(
 	.pclk(ov7670_pclk),
-	.rez_160x120(rez_160x120),
-	.rez_320x240(rez_320x240),
+//	.rez_160x120(rez_160x120),
+//	.rez_320x240(rez_320x240),
 	.vsync(ov7670_vsync),
 	.href(ov7670_href),
 	.d(ov7670_data),
@@ -109,22 +110,35 @@ ov7670_capture my_ov7670_capture(
 	.dout(wrdata),
 	.we(wren[0])
 );
-
+wire [7:0] R,G,B;
 RGB my_RGB(
 	.Din(rddata),
 	.Nblank(activeArea),
-	.R(red),
-	.G(green),
-	.B(blue)
+	.R(R),
+	.G(G),
+	.B(B)
 	
 );
 
 Address_Generator my_Address_Generator(
 	.CLK25(clk_vga),
-	.rez_160x120(rez_160x120),
-	.rez_320x240(rez_320x240),
+//	.rez_160x120(rez_160x120),
+//	.rez_320x240(rez_320x240),
 	.enable(activeArea),
 	.vsync(vSync),
 	.address(rdaddress)
+);
+
+filtering my_filtering(
+    .clock(clk_vga),
+    .reset(1'b0),
+    .sel_module(sw),
+    .red_in(R),
+    .green_in(G),
+    .blue_in(B),
+    .red(red[7:4]),
+    .green(green[7:4]),
+    .blue(blue[7:4]),   
+    .Nblank(activeArea)
 );
 endmodule

@@ -1,9 +1,9 @@
 
 
-module ov7670(
+module ov7670_capture(
 	input wire pclk,
-	input wire rez_160x120,
-	input wire rez_320x240,
+	//input wire rez_160x120,
+	//input wire rez_320x240,
 	input wire vsync,
 	input wire href,
 	input wire [7:0] d,
@@ -77,13 +77,15 @@ always @(posedge pclk)begin
 		line<= {2{1'b0}};
 	end
 	else begin
-		if (((rez_160x120 == 1'b1) && (href_last[6] == 1'b1)) ||((rez_320x240 == 1'b1) && (href_last[2] == 1'b1)) || ((rez_160x120 == 1'b0) && (rez_320x240 == 1'b0)&& (href_last[0] == 1'b1))) begin
-			if (rez_160x120 == 1'b1)
+		//if (((rez_160x120 == 1'b1) && (href_last[6] == 1'b1)) ||((rez_320x240 == 1'b1) && (href_last[2] == 1'b1)) || ((rez_160x120 == 1'b0) && (rez_320x240 == 1'b0)&& (href_last[0] == 1'b1))) begin
+		if (href_last[0] == 1'b1) begin
+			/*if (rez_160x120 == 1'b1)
 				we_reg<=(line==2'b10) ? 1'b1 : 1'b0;
 			else if(rez_320x240 == 1'b1)
 				we_reg<= (line[1] == 1'b1) ? 1'b1 : 1'b0;
-			else
-				we_reg <= 1'b1;
+			else*/
+				
+            we_reg <= 1'b1;
 			href_last<={7{1'b0}};
 		end
 		else

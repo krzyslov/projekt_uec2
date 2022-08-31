@@ -15,16 +15,22 @@
 //
 module RGB (Din, Nblank, R, G, B);
 
-   input[11:0] Din; 
+   input[11:0] Din;
    input Nblank; 
-   output[7:0] R; 
+   output [7:0] R ; 
    wire[7:0] R;
-   output[7:0] G; 
-   wire[7:0] G;
-   output[7:0] B; 
-   wire[7:0] B;
+   output [7:0] G ; 
+   wire [7:0] G;
+   output [7:0] B ; 
+   wire [7:0] B;
+    
 
    assign R = (Nblank == 1'b1) ? {Din[11:8], Din[11:8]} : 8'b00000000 ;
    assign G = (Nblank == 1'b1) ? {Din[7:4], Din[7:4]} : 8'b00000000 ;
    assign B = (Nblank == 1'b1) ? {Din[3:0], Din[3:0]} : 8'b00000000 ;
+    
+    
+
+    
+
 endmodule
