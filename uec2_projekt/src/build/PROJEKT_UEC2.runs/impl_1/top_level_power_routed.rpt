@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Aug 31 15:22:23 2022
-| Host             : DESKTOP-E1S6T55 running 64-bit major release  (build 9200)
+| Date             : Wed Aug 31 17:41:34 2022
+| Host             : Tiger running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
 | Device           : xc7a35tcpg236-1
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      857 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      369 |     20800 |            1.77 |
-|   Register     |    <0.001 |      231 |     41600 |            0.56 |
+| Clocks         |     0.002 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |      863 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      376 |     20800 |            1.81 |
+|   Register     |    <0.001 |      235 |     41600 |            0.56 |
 |   CARRY4       |    <0.001 |       20 |      8150 |            0.25 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |       36 |     32600 |            0.11 |
 |   Others       |     0.000 |      141 |       --- |             --- |
-| Signals        |     0.002 |      892 |       --- |             --- |
+| Signals        |     0.002 |      904 |       --- |             --- |
 | Block RAM      |     0.003 |     44.5 |        50 |           89.00 |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
 | I/O            |     0.005 |       37 |       106 |           34.91 |
@@ -242,6 +242,7 @@ Table of Contents
 |   my_ov7670_controller                       |    <0.001 |
 |     Inst_i2c_sender                          |    <0.001 |
 |     Inst_ov7670_registers                    |    <0.001 |
+|   my_resetlocked                             |    <0.001 |
 +----------------------------------------------+-----------+
 
 

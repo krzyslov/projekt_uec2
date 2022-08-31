@@ -22,7 +22,7 @@ module top_level(
 	output wire ov7670_reset
 );
 
-wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,rez_160x120,rez_320x240;
+wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,rez_160x120,rez_320x240,locked,reset_locked;
 wire [16:0] rd_addr,wr_addr;
 wire [18:0] wraddress,rdaddress;
 wire [11:0] wrdata,rddata;
@@ -39,16 +39,27 @@ assign vga_b = blue[7:4];
 //assign rez_320x240 = btnr;
 
 clocking my_clocking(
+	.reset(btnc),
 	.CLK_100(clk100),
 	.CLK_50(clk_camera),
-	.CLK_25(clk_vga)
+	.CLK_25(clk_vga),
+	.locked(locked)
 ); 
+
+resetlocked my_resetlocked(
+    .pclk(clk_vga),
+	.reset(reset_locked),
+	.locked(locked)
+
+);
+
 
 assign vga_vsync = vSync;
 
 
 VGA my_VGA(
 	.CLK25(clk_vga),
+	.reset(reset_locked),
 	.rez_160x120(rez_160x120),
 	.rez_320x240(rez_320x240),
 	.clkout(),
@@ -61,7 +72,7 @@ VGA my_VGA(
 
 debounce my_debounce(
 	.clk(clk_vga),
-	.i(btnc),
+	.i(reset_locked),
 	.o(resend)
 );
 
@@ -113,6 +124,7 @@ ov7670_capture my_ov7670_capture(
 wire [7:0] R,G,B;
 RGB my_RGB(
 	.Din(rddata),
+	.reset(reset_locked),
 	.Nblank(activeArea),
 	.R(R),
 	.G(G),
@@ -122,6 +134,7 @@ RGB my_RGB(
 
 Address_Generator my_Address_Generator(
 	.CLK25(clk_vga),
+	.reset(reset_locked),
 //	.rez_160x120(rez_160x120),
 //	.rez_320x240(rez_320x240),
 	.enable(activeArea),
@@ -131,7 +144,7 @@ Address_Generator my_Address_Generator(
 
 filtering my_filtering(
     .clock(clk_vga),
-    .reset(1'b0),
+    .reset(reset_locked),
     .sel_module(sw),
     .red_in(R),
     .green_in(G),

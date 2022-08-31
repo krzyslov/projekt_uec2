@@ -13,10 +13,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 //
-module RGB (Din, Nblank, R, G, B);
+module RGB (Din, Nblank, reset, R, G, B);
 
    input[11:0] Din;
    input Nblank; 
+   input reset;
    output [7:0] R ; 
    wire[7:0] R;
    output [7:0] G ; 
@@ -25,9 +26,9 @@ module RGB (Din, Nblank, R, G, B);
    wire [7:0] B;
     
 
-   assign R = (Nblank == 1'b1) ? {Din[11:8], Din[11:8]} : 8'b00000000 ;
-   assign G = (Nblank == 1'b1) ? {Din[7:4], Din[7:4]} : 8'b00000000 ;
-   assign B = (Nblank == 1'b1) ? {Din[3:0], Din[3:0]} : 8'b00000000 ;
+   assign R = (Nblank == 1'b1 && reset == 1'b0) ? {Din[11:8], Din[11:8]} : 8'b00000000 ;
+   assign G = (Nblank == 1'b1 && reset == 1'b0) ? {Din[7:4], Din[7:4]} : 8'b00000000 ;
+   assign B = (Nblank == 1'b1 && reset == 1'b0 ) ? {Din[3:0], Din[3:0]} : 8'b00000000 ;
     
     
 

@@ -1,10 +1,11 @@
 
 
 
-module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activeArea, Nsync);
+module VGA (CLK25, clkout, rez_160x120, rez_320x240,reset, Hsync, Vsync, Nblank, activeArea, Nsync);
 	input CLK25;
 	input rez_160x120;
 	input rez_320x240;
+	input reset;
 	
 	reg Hsync;
 	reg Vsync;
@@ -37,8 +38,15 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 	
 	always @(posedge CLK25)
 	begin
+		if (reset ==1'b1) begin
+			Hcnt<=10'b0000000000;
+			Vcnt <= 10'b0000000000;
+			activeArea<=1'b1;
+		end 
+		else begin
 		if(Hcnt == HM)
 		begin
+		
 			Hcnt <= 10'b0000000000;
 			if(Vcnt == VM)
 			begin
@@ -97,10 +105,15 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
             Hcnt<=Hcnt+1;
         end
 	end
-	
+	end
 	
 	always @(posedge CLK25)
 	begin
+	
+		if(reset == 1'b1) begin
+			Hsync<=1'b1;
+		end
+		else begin
 		if(Hcnt>=(HD+HF) & Hcnt <= (HD + HF + HR - 1))
 		begin
 			Hsync <= 1'b0;
@@ -110,9 +123,13 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 			Hsync <= 1'b1;
 		end
 	end
-	
+	end
 	always @(posedge CLK25)
 	begin
+		if(reset == 1'b1)begin
+			Vsync <=1'b1;
+		end
+		else begin
 		if(Vcnt >= (VD+VF) & Vcnt <= (VD +VF +VR - 1))
 		begin
 			Vsync <= 1'b0;
@@ -121,6 +138,7 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 		begin
 			Vsync <= 1'b1;
 		end
+	end
 	end
 	
 	assign Nsync = 1'b1;

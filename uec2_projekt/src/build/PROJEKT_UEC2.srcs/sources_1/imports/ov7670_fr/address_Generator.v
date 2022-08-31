@@ -1,10 +1,11 @@
 
-// TEN MODU�? JEST ŹLE NAPISANY: PRZEZ NIEGO JEST TEN FIOLETOWY PASEK PO BOKU MONITORA
-// ZAPEWNE JEST TO JAKIEŚ PRZESUNI�?CIE ZWIĄZANE Z NIEZASTOSOWANIEM TRYBU BEZPIECZNEGO
+// TEN MODUĹ? JEST ĹąLE NAPISANY: PRZEZ NIEGO JEST TEN FIOLETOWY PASEK PO BOKU MONITORA
+// ZAPEWNE JEST TO JAKIEĹš PRZESUNIÄ?CIE ZWIÄ„ZANE Z NIEZASTOSOWANIEM TRYBU BEZPIECZNEGO
 module Address_Generator (
 
    input wire CLK25, 
-   input wire enable, 
+   input wire enable,
+   input wire reset,
    //input wire rez_160x120, 
    //input wire rez_320x240, 
    input wire vsync, 
@@ -32,8 +33,15 @@ module Address_Generator (
 
 	
 	always @(posedge CLK25) begin
-		val <= val_nxt;
-		address <= val_nxt;
+		
+		if (reset == 1'b1) begin
+			val <={19{1'b0}};
+			address <= {19{1'b0}};
+		end else begin
+		
+			val <= val_nxt;
+			address <= val_nxt;
+		end
 	end		
 		
     
