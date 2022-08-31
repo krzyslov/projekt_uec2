@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="32" Path="C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.xpr">
+<Project Version="7" Minor="32" Path="C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fbc058a6251b4b8a9eb3650ffb9f5111"/>
@@ -94,6 +94,13 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/debounce.v"/>
           <Attr Name="ImportTime" Val="1660754884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../rtl/filtering/filtering.v">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

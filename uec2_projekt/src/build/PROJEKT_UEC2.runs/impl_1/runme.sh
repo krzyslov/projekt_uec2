@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1'
+HD_PWD='C:/Users/bened/Desktop/filtering/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
