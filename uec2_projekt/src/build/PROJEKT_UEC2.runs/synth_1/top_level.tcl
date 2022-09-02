@@ -17,7 +17,6 @@ proc create_report { reportName command } {
   }
 }
 set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
-set_param synth.incrementalSynthesisCache C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-23688-Tiger/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -36,10 +35,14 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v
+  C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v
+  C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v
+  C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v
+  C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v
   C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v

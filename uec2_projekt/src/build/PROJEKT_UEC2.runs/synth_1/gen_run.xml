@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1661960150">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1662052579">
   <File Type="PA-TCL" Name="top_level.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_reports.tcl"/>
@@ -23,7 +23,14 @@
     <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/address_Generator.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/address_Generator.v"/>
-        <Attr Name="ImportTime" Val="1661029281"/>
+        <Attr Name="ImportTime" Val="1661961732"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/filtering/char_rom.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -56,7 +63,28 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../rtl/filtering/delay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/filtering/draw_rect_char.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../rtl/filtering/filtering.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/filtering/font_rom.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -109,7 +137,7 @@
     <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/vga.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/vga.v"/>
-        <Attr Name="ImportTime" Val="1660833484"/>
+        <Attr Name="ImportTime" Val="1661966929"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -118,7 +146,7 @@
     <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/top_level.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/top_level.v"/>
-        <Attr Name="ImportTime" Val="1661959879"/>
+        <Attr Name="ImportTime" Val="1661962064"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

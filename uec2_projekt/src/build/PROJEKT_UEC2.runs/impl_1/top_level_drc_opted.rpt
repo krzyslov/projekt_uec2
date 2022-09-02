@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Aug 31 17:39:56 2022
+| Date         : Thu Sep  1 19:20:44 2022
 | Host         : Tiger running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_level_drc_opted.rpt -pb top_level_drc_opted.pb -rpx top_level_drc_opted.rpx
 | Design       : top_level
@@ -24,14 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
-+----------+----------+-----------------------------------------------------+------------+
-| Rule     | Severity | Description                                         | Violations |
-+----------+----------+-----------------------------------------------------+------------+
-| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PLCK-12  | Warning  | Clock Placer Checks                                 | 1          |
-| RPBF-3   | Warning  | IO port buffering is incomplete                     | 1          |
-+----------+----------+-----------------------------------------------------+------------+
+             Violations found: 4
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PLCK-12   | Warning  | Clock Placer Checks                                 | 1          |
+| REQP-1840 | Warning  | RAMB18 async control check                          | 1          |
+| RPBF-3    | Warning  | IO port buffering is incomplete                     | 1          |
++-----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -57,6 +58,11 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
 	ov7670_pclk_IBUF_inst (IBUF.O) is locked to M19
 	ov7670_pclk_IBUF_BUFG_inst (BUFG.I) cannot be placed
 
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 my_font_rom/char_line_pixels_reg has an input control pin my_font_rom/char_line_pixels_reg/ENARDEN (net: my_font_rom/char_line_pixels_reg_ENARDEN_cooolgate_en_sig_65) which is driven by a register (my_resetlocked/safestart_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 RPBF-3#1 Warning

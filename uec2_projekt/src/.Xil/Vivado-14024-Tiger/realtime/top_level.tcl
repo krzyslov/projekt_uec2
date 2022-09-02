@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-23688-Tiger/realtime/tmp"
+    set ::env(RT_TMP) "C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14024-Tiger/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -34,13 +34,17 @@ set rt::rc [catch {
     if {$rt::useElabCache == false} {
       rt::read_verilog -sv C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
       rt::read_verilog {
-      C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-23688-Tiger/realtime/frame_buffer_stub.v
+      C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14024-Tiger/realtime/frame_buffer_stub.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v
+      C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v
+      C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v
+      C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v
+      C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v
       C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v
@@ -64,7 +68,7 @@ set rt::rc [catch {
     rt::set_parameter rstSrlDepthThreshold 4
 # MODE: 
     rt::set_parameter webTalkPath {}
-    rt::set_parameter enableSplitFlowPath "C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-23688-Tiger/"
+    rt::set_parameter enableSplitFlowPath "C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14024-Tiger/"
     # start of synth.elaboration.rodinMoreOptions ...
     rt::set_parameter var_size_limit 1572865
     # end of synth.elaboration.rodinMoreOptions ...

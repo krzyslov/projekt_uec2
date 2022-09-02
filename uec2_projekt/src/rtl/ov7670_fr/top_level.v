@@ -142,6 +142,12 @@ Address_Generator my_Address_Generator(
 	.address(rdaddress)
 );
 
+wire [3:0] red_char, green_char,blue_char;
+wire [10:0] hcount_f, vcount_f;
+wire hblank_f,vblank_f,hsync_f,vsync_f;
+
+
+
 filtering my_filtering(
     .clock(clk_vga),
     .reset(reset_locked),
@@ -149,9 +155,61 @@ filtering my_filtering(
     .red_in(R),
     .green_in(G),
     .blue_in(B),
-    .red(red[7:4]),
-    .green(green[7:4]),
-    .blue(blue[7:4]),   
-    .Nblank(activeArea)
+    .red(red_char),
+    .green(green_char),
+    .blue(blue_char),   
+    .Nblank(activeArea),
+    .hc(hcount_f),
+    .vc(vcount_f),
+    .hblank(hblank_f),
+    .vblank(vblank_f),
+    .hsync(hsync_f),
+    .vsync(vsync_f)
+    
 );
+
+wire [6:0] char_code;
+wire [3:0] char_line;
+wire [7:0] char_pixel, char_xy;
+
+draw_rect_char my_draw_rect_char(
+      .vcount_in(vcount_f),
+      .vsync_in(vsync_f),
+      .vblnk_in(vblank_f),
+      .hcount_in(hcount_f),
+      .hsync_in(hsync_f),
+      .hblnk_in(hblank_f),
+      .char_pixels(char_pixel),
+      .rgb_in({red_char,green_char,blue_char}),
+      .vcount_out(),
+      .vsync_out(),
+      .vblnk_out(),
+      .hcount_out(),
+      .hsync_out(),
+      .hblnk_out(),
+      .rgb_out({red[7:4],green[7:4],blue[7:4]}),
+      .char_xy(char_xy),
+      .char_line(char_line), //{r,g,b}
+      .pclk(clk_vga),
+      .rst(reset_locked)
+
+);
+
+
+font_rom my_font_rom(        
+      .char_line_pixels(char_pixel),  
+      .addr({char_code[6:0],char_line[3:0]}),
+      .clk(clk_vga)
+
+);
+
+char_rom my_char_rom(
+   
+    .char_code(char_code),
+    .char_xy(char_xy),
+    .sw(sw)
+
+);
+
+
 endmodule

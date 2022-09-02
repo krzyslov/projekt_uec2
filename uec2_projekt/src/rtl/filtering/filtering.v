@@ -30,7 +30,13 @@ input wire [7:0]green_in,
 input wire [7:0]blue_in,         //inputs - sel_module(select required function), reset(to switch on and off), val(give a value to adjust brightness and filters)
 output reg [3:0]red,
 output reg[3:0] green,
-output reg[3:0] blue,                    // red, green and blue output pixels
+output reg[3:0] blue, 
+output reg[10:0] hc,
+output reg[10:0] vc,
+output reg hblank,
+output reg vblank,
+output reg hsync,
+output reg vsync,                   // red, green and blue output pixels
 input wire Nblank
 );
 
@@ -84,15 +90,17 @@ image  inst1(
    assign 	pixel_clk = ec;
    //clock;
    
-   reg 		hblank=0,vblank=0;
+  	
    initial begin
-   //hsync =0;
-   //vsync=0;
+    hsync =0;
+   vsync=0;
+    hblank=0;
+    vblank=0;
    end
-   reg [9:0] 	hc=0;      
-   reg [9:0] 	vc=0;	 
+//   reg [9:0] 	hc=0;      
+  // reg [9:0] 	vc=0;	 
 	
-   wire 	hsyncon,hsyncoff,hreset,hblankon;
+   wire 	hsyncon,hsyncoff,hreset,hblankon; //
    assign 	hblankon = ec & (hc == 639);    
    assign 	hsyncon = ec & (hc == 655);
    assign 	hsyncoff = ec & (hc == 751);
@@ -100,7 +108,7 @@ image  inst1(
    
    wire 	blank =  (vblank | (hblank & ~hreset));    
    
-   wire 	vsyncon,vsyncoff,vreset,vblankon;
+   wire 	vsyncon,vsyncoff,vreset,vblankon; //
    assign 	vblankon = hreset & (vc == 479);    
    assign 	vsyncon = hreset & (vc == 490);
    assign 	vsyncoff = hreset & (vc == 492);
@@ -109,11 +117,11 @@ image  inst1(
    always @(posedge clock) begin
    hc <= ec ? (hreset ? 0 : hc + 1) : hc;
    hblank <= hreset ? 0 : hblankon ? 1 : hblank;
-  // hsync <= hsyncon ? 0 : hsyncoff ? 1 : hsync; 
+   hsync <= hsyncon ? 0 : hsyncoff ? 1 : hsync; 
    
    vc <= hreset ? (vreset ? 0 : vc + 1) : vc;
    vblank <= vreset ? 0 : vblankon ? 1 : vblank;
-   //vsync <= vsyncon ? 0 : vsyncoff ? 1 : vsync;
+   vsync <= vsyncon ? 0 : vsyncoff ? 1 : vsync;
 end
 
 

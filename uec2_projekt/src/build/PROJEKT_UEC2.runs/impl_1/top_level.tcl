@@ -68,7 +68,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
-  set_param synth.incrementalSynthesisCache C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-23688-Tiger/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0

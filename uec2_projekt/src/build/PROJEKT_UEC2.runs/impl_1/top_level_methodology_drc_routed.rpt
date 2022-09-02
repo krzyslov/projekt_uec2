@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Aug 31 17:41:30 2022
+| Date         : Thu Sep  1 19:22:23 2022
 | Host         : Tiger running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_methodology_drc_routed.rpt -pb top_level_methodology_drc_routed.pb -rpx top_level_methodology_drc_routed.rpx
 | Design       : top_level
@@ -23,17 +23,22 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 103
+             Violations found: 104
 +-----------+----------+--------------------------------------------+------------+
 | Rule      | Severity | Description                                | Violations |
 +-----------+----------+--------------------------------------------+------------+
-| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal | 1          |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal | 2          |
 | TIMING-17 | Warning  | Non-clocked sequential cell                | 102        |
 +-----------+----------+--------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance my_font_rom/char_line_pixels_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
 Timing of a block RAM might be sub-optimal  
 The timing for the instance my_ov7670_controller/Inst_ov7670_registers/sreg_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>

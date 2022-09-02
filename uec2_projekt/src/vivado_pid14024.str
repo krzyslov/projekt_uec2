@@ -1,0 +1,1481 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:22 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 14024
+License: Customer
+
+Current time: 	Thu Sep 01 16:21:11 CEST 2022
+Time zone: 	Central European Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 28 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre/bin/java.exe
+
+User name: 	Jerzy
+User home directory: C:/Users/Jerzy
+User working directory: C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src
+User country: 	PL
+User language: 	pl
+User locale: 	pl_PL
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.3
+RDI_DATADIR: C:/Xilinx/Vivado/2017.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.3/bin
+
+User preferences location: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/vivado.log
+Vivado journal file location: 	C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/vivado.jou
+Engine tmp dir: 	C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14024-Tiger
+
+GUI allocated memory:	187 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 612 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 40 MB (+39371kb) [00:00:14]
+// [Engine Memory]: 592 MB (+469588kb) [00:00:14]
+// [GUI Memory]: 53 MB (+11176kb) [00:00:19]
+// [GUI Memory]: 57 MB (+1918kb) [00:00:19]
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: source run.tcl 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'. 
+// Tcl Message: update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 252.648 ; gain = 0.000 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: STOP_PROGRESS_DIALOG
+// [GUI Memory]: 62 MB (+2531kb) [00:00:25]
+// bs (cl):  Sourcing Tcl script 'run.tcl' : addNotify
+// TclEventType: STOP_PROGRESS_DIALOG
+dismissDialog("Sourcing Tcl script 'run.tcl'"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 612 MB. GUI used memory: 38 MB. Current time: 9/1/22 4:21:13 PM CEST
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 347 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1); // B (D, cl)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// Elapsed time: 10 seconds
+setFileChooser("C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+String[] filenames31467 = {"C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_room_16x16.v", "C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v", "C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 25 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bs (cl):  Add Sources  : addNotify
+// Tcl Message: add_files -norecurse {C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_room_16x16.v C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v} 
+dismissDialog("Add Sources"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 67 MB (+1347kb) [00:06:50]
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 627 MB (+5633kb) [00:06:56]
+// HMemoryUtils.trashcanNow. Engine heap size: 633 MB. GUI used memory: 40 MB. Current time: 9/1/22 4:27:44 PM CEST
+// [GUI Memory]: 71 MB (+447kb) [00:08:29]
+// [GUI Memory]: 75 MB (+976kb) [00:08:44]
+// WARNING: HTimer (StateMonitor Timer) is taking too long to process. Increasing delay to 4000 ms.
+// [GUI Memory]: 79 MB (+251kb) [00:10:49]
+// Elapsed time: 651 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, draw_rect_char (draw_rect_char.v)]", 12); // B (D, cl)
+// PAPropertyPanels.initPanels (draw_rect_char.v) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, draw_rect_char (draw_rect_char.v)]", 12, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, draw_rect_char (draw_rect_char.v)]", 12, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+// [GUI Memory]: 84 MB (+684kb) [00:18:16]
+// Elapsed time: 44 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_room_16x16 (char_room_16x16.v)]", 13, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_room_16x16 (char_room_16x16.v)]", 13, false, false, false, false, false, true); // B (D, cl) - Double Click
+selectCodeEditor("char_room_16x16.v", 136, 210); // cd (w, cl)
+// [GUI Memory]: 88 MB (+14kb) [00:19:23]
+// Elapsed time: 52 seconds
+selectCodeEditor("char_room_16x16.v", 258, 103); // cd (w, cl)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_filtering : filtering (filtering.v)]", 11, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_filtering : filtering (filtering.v)]", 11, false, false, false, false, false, true); // B (D, cl) - Double Click
+// Elapsed time: 35 seconds
+selectCodeEditor("filtering.v", 132, 128); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+selectCodeEditor("char_room_16x16.v", 168, 106); // cd (w, cl)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+selectCodeEditor("char_room_16x16.v", 474, 115); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+selectCodeEditor("char_room_16x16.v", 583, 113); // cd (w, cl)
+// Elapsed time: 41 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 93 MB (+1145kb) [00:23:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 649 MB. GUI used memory: 44 MB. Current time: 9/1/22 4:57:44 PM CEST
+// Elapsed time: 1939 seconds
+selectCodeEditor("char_room_16x16.v", 221, 97); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+selectCodeEditor("draw_rect_char.v", 366, 126); // cd (w, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("draw_rect_char.v", 150, 124); // cd (w, cl)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("draw_rect_char.v", 313, 126); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 4000 ms.
+// Elapsed time: 168 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("char_room_16x16.v", 227, 142); // cd (w, cl)
+// Elapsed time: 71 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, font_rom (font_rom.v)]", 14, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, font_rom (font_rom.v)]", 14, false, false, false, false, false, true); // B (D, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+// Elapsed time: 71 seconds
+selectCodeEditor("char_room_16x16.v", 35, 145); // cd (w, cl)
+// [GUI Memory]: 98 MB (+150kb) [01:01:04]
+// Elapsed time: 104 seconds
+selectCodeEditor("char_room_16x16.v", 18, 132); // cd (w, cl)
+// Elapsed time: 38 seconds
+selectCodeEditor("char_room_16x16.v", 18, 215); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 114, 164); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 26 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cl)
+selectCodeEditor("char_room_16x16.v", 22, 248); // cd (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("char_room_16x16.v", 145, 61); // cd (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("char_room_16x16.v", 116, 181); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 33, 230); // cd (w, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("char_room_16x16.v", 20, 230); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 128, 34); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 48, 177); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 45, 165); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 378, 38); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 217, 133); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 221, 130); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 46, 30); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 42, 176); // cd (w, cl)
+// Elapsed time: 29 seconds
+selectCodeEditor("char_room_16x16.v", 37, 93); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 286, 176); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 23 seconds
+selectCodeEditor("char_room_16x16.v", 544, 180); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 113, 176); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 126, 211); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 120, 202); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 392, 195); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 338, 196); // cd (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 649 MB. GUI used memory: 43 MB. Current time: 9/1/22 5:27:45 PM CEST
+// Elapsed time: 14 seconds
+selectCodeEditor("char_room_16x16.v", 507, 199); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 514, 199); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("char_room_16x16.v", 516, 212); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 517, 214); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 521, 214); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 519, 216); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("char_room_16x16.v", 519, 229); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 520, 237); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("char_room_16x16.v", 522, 245); // cd (w, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 27 seconds
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 28 seconds
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// Elapsed time: 20 seconds
+typeControlKey((HResource) null, "char_room_16x16.v", 'v'); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 71 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+typeControlKey((HResource) null, "char_room_16x16.v", 'c'); // cd (w, cl)
+// Elapsed time: 346 seconds
+selectCodeEditor("char_room_16x16.v", 634, 367); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 718, 317); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 578, 394); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ax
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+selectCodeEditor("char_room_16x16.v", 509, 49); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 147, 212); // cd (w, cl)
+selectCodeEditor("char_room_16x16.v", 155, 215); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_room_16x16 (char_room_16x16.v)]", 3, false, false, false, false, true, false); // B (D, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_rom (char_room_16x16.v)]", 3, false); // B (D, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_room_16x16.v", 2); // k (j, cl)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_rom (char_room_16x16.v)]", 3, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_rom (char_room_16x16.v)]", 3, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_rom (char_room_16x16.v)]", 3, false, false, false, false, true, false); // B (D, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (as)
+// TclEventType: STOP_PROGRESS_DIALOG
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+dismissDialog("Remove Sources"); // as (cl)
+// as (cl): Remove Sources: addNotify
+// bs (as):  Remove Sources : addNotify
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_room_16x16.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_room_16x16.v 
+dismissDialog("Remove Sources"); // bs (as)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v");
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 8 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// bs (cl):  Add Sources  : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v 
+dismissDialog("Add Sources"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 109 MB (+5940kb) [01:18:36]
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 649 MB. GUI used memory: 47 MB. Current time: 9/1/22 5:57:45 PM CEST
+// Elapsed time: 2199 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, draw_rect_char (draw_rect_char.v)]", 2, true); // B (D, cl) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+// Elapsed time: 25 seconds
+selectCodeEditor("draw_rect_char.v", 69, 130); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// PAResourceOtoP.PAViews_SOURCES: Sources: close view
+// Elapsed time: 146 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 2); // k (j, cl)
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_rom (char_rom.v)]", 3, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, char_rom (char_rom.v)]", 3, false, false, false, false, false, true); // B (D, cl) - Double Click
+// Elapsed time: 44 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 3); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+// Elapsed time: 85 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectCodeEditor("top_level.v", 10, 197); // cd (w, cl)
+selectCodeEditor("top_level.v", 25, 202); // cd (w, cl)
+typeControlKey((HResource) null, "top_level.v", 'v'); // cd (w, cl)
+// Elapsed time: 57 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectCodeEditor("top_level.v", 149, 77); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 649 MB. GUI used memory: 48 MB. Current time: 9/1/22 6:27:46 PM CEST
+// Elapsed time: 750 seconds
+selectCodeEditor("top_level.v", 99, 146); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 70 seconds
+selectCodeEditor("top_level.v", 39, 124); // cd (w, cl)
+typeControlKey((HResource) null, "top_level.v", 'v'); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 497 seconds
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cl)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+// bs (cl):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: top_level 
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: ELABORATE_FINISH
+// [Engine Memory]: 697 MB (+39825kb) [02:25:20]
+// HMemoryUtils.trashcanNow. Engine heap size: 723 MB. GUI used memory: 49 MB. Current time: 9/1/22 6:46:06 PM CEST
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 947.398 ; gain = 49.605 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 600 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: ERROR: [Synth 8-448] named port connection 'char_pixel' does not exist for instance 'my_draw_rect_char' of module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:171] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] 
+// Tcl Message: ERROR: [Synth 8-285] failed synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] ERROR: [Synth 8-285] failed synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 983.469 ; gain = 85.676 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35tcpg236-1 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist 
+// Tcl Message: 40 Infos, 32 Warnings, 0 Critical Warnings and 6 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist  
+// [Engine Memory]: 750 MB (+19268kb) [02:25:22]
+// M (cl): Critical Messages: addNotify
+// Elapsed time: 29 seconds
+dismissDialog("Open Elaborated Design"); // bs (cl)
+// Elapsed time: 27 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (M)
+dismissDialog("Critical Messages"); // M (cl)
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aQ, cl): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, cl): FALSE
+// HMemoryUtils.trashcanNow. Engine heap size: 775 MB. GUI used memory: 48 MB. Current time: 9/1/22 6:46:41 PM CEST
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, synth_design -rtl -name rtl_1. , [Synth 8-448] named port connection 'char_pixel' does not exist for instance 'my_draw_rect_char' of module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:171]. ]", 2, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\projekt_verilog\projekt_uec2\uec2_projekt\src\build\PROJEKT_UEC2.srcs\sources_1\imports\ov7670_fr\top_level.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 1); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectCodeEditor("top_level.v", 117, 163); // cd (w, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands]", 0, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\projekt_verilog\projekt_uec2\uec2_projekt\src\rtl\filtering\font_rom.v;-;;-;16;-;line;-;9;-;;-;16;-;"); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 3); // k (j, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cl)
+// bs (cl):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: top_level 
+// [Engine Memory]: 795 MB (+7470kb) [02:27:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 814 MB. GUI used memory: 47 MB. Current time: 9/1/22 6:48:01 PM CEST
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1131.457 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 600 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: ERROR: [Synth 8-448] named port connection 'clk' does not exist for instance 'my_char_rom' of module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:196] ERROR: [Synth 8-448] named port connection 'rst' does not exist for instance 'my_char_rom' of module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:197] ERROR: [Synth 8-285] failed synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 1156.352 ; gain = 24.895 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist 
+// Tcl Message: 42 Infos, 32 Warnings, 0 Critical Warnings and 6 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist  
+// M (cl): Critical Messages: addNotify
+// Elapsed time: 25 seconds
+dismissDialog("Open Elaborated Design"); // bs (cl)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (M)
+dismissDialog("Critical Messages"); // M (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, synth_design -rtl -name rtl_1. , [Synth 8-285] failed synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]. ]", 3, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\projekt_verilog\projekt_uec2\uec2_projekt\src\build\PROJEKT_UEC2.srcs\sources_1\imports\ov7670_fr\top_level.v;-;;-;16;-;line;-;2;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("top_level.v", 27, 80); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cl)
+// bs (cl):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: top_level 
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1156.352 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 600 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: ERROR: [Synth 8-448] named port connection 'rst' does not exist for instance 'my_char_rom' of module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:196] ERROR: [Synth 8-285] failed synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1156.352 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist 
+// Tcl Message: 42 Infos, 32 Warnings, 0 Critical Warnings and 5 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist  
+// M (cl): Critical Messages: addNotify
+// Elapsed time: 26 seconds
+dismissDialog("Open Elaborated Design"); // bs (cl)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (M)
+dismissDialog("Critical Messages"); // M (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom.v", 5); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 5); // k (j, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("font_rom.v", 70, 162); // cd (w, cl)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 5); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom.v", 4); // k (j, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("char_rom.v", 138, 114); // cd (w, cl)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 5); // k (j, cl)
+selectCodeEditor("font_rom.v", 56, 181); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 3); // k (j, cl)
+selectCodeEditor("top_level.v", 28, 179); // cd (w, cl)
+selectCodeEditor("top_level.v", 158, 177); // cd (w, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_level.v", 160, 174); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 5); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 3); // k (j, cl)
+selectCodeEditor("top_level.v", 152, 217); // cd (w, cl)
+selectCodeEditor("top_level.v", 148, 217); // cd (w, cl)
+selectCodeEditor("top_level.v", 146, 216); // cd (w, cl)
+selectCodeEditor("top_level.v", 160, 164); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cl)
+// bs (cl):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: top_level 
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 829 MB. GUI used memory: 48 MB. Current time: 9/1/22 6:51:51 PM CEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 883 MB. GUI used memory: 48 MB. Current time: 9/1/22 6:51:57 PM CEST
+// [Engine Memory]: 883 MB (+50681kb) [02:31:12]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: C:/Xilinx/Vivado/2017.3/data/parts/xilinx/artix7/devint/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_detail.xgd elapsed time: 1.4s
+// [Engine Memory]: 1,012 MB (+89410kb) [02:31:15]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.8s
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (top_level.v) elapsed time: 0.2s
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1156.352 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 600 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'top_level' (21#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1158.867 ; gain = 2.516 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1158.867 ; gain = 2.516 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer' INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.3 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: Finished Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:01:07 ; elapsed = 00:00:47 . Memory (MB): peak = 1342.488 ; gain = 186.137 
+// Tcl Message: 53 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:00:48 . Memory (MB): peak = 1342.488 ; gain = 186.137 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 50 seconds
+dismissDialog("Open Elaborated Design"); // bs (cl)
+// [GUI Memory]: 117 MB (+2304kb) [02:32:30]
+// PAPropertyPanels.initPanels (activeArea) elapsed time: 0.5s
+// Elapsed time: 83 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+selectCodeEditor("filtering.v", 151, 133); // cd (w, cl)
+// Elapsed time: 40 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, cl)
+// [GUI Memory]: 126 MB (+3845kb) [02:33:54]
+// Elapsed time: 77 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 2); // k (j, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("draw_rect_char.v", 170, 176); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 187, 196); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 174, 194); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 134 MB (+1681kb) [02:35:48]
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("filtering.v", 135, 249); // cd (w, cl)
+// [GUI Memory]: 141 MB (+123kb) [02:36:53]
+// Elapsed time: 58 seconds
+selectCodeEditor("filtering.v", 17, 159); // cd (w, cl)
+selectCodeEditor("filtering.v", 79, 216); // cd (w, cl)
+// Elapsed time: 45 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("filtering.v", 37, 178); // cd (w, cl)
+selectCodeEditor("filtering.v", 27, 145); // cd (w, cl)
+selectCodeEditor("filtering.v", 102, 195); // cd (w, cl)
+typeControlKey((HResource) null, "filtering.v", 'v'); // cd (w, cl)
+selectCodeEditor("filtering.v", 27, 146); // cd (w, cl)
+selectCodeEditor("filtering.v", 99, 213); // cd (w, cl)
+typeControlKey((HResource) null, "filtering.v", 'v'); // cd (w, cl)
+// Elapsed time: 74 seconds
+selectCodeEditor("filtering.v", 83, 57); // cd (w, cl)
+selectCodeEditor("filtering.v", 337, 61); // cd (w, cl)
+typeControlKey((HResource) null, "filtering.v", 'v'); // cd (w, cl)
+selectCodeEditor("filtering.v", 81, 192); // cd (w, cl)
+selectCodeEditor("filtering.v", 364, 179); // cd (w, cl)
+selectCodeEditor("filtering.v", 344, 185); // cd (w, cl)
+selectCodeEditor("filtering.v", 289, 184); // cd (w, cl)
+selectCodeEditor("filtering.v", 268, 189); // cd (w, cl)
+typeControlKey((HResource) null, "filtering.v", 'v'); // cd (w, cl)
+// Elapsed time: 40 seconds
+selectCodeEditor("filtering.v", 88, 437); // cd (w, cl)
+selectCodeEditor("filtering.v", 85, 435, false, false, false, false, true); // cd (w, cl) - Double Click
+selectCodeEditor("filtering.v", 277, 435); // cd (w, cl)
+selectCodeEditor("filtering.v", 83, 429); // cd (w, cl)
+typeControlKey((HResource) null, "filtering.v", 'v'); // cd (w, cl)
+selectCodeEditor("filtering.v", 283, 196); // cd (w, cl)
+selectCodeEditor("filtering.v", 82, 197); // cd (w, cl)
+typeControlKey((HResource) null, "filtering.v", 'v'); // cd (w, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 5); // k (j, cl)
+selectCodeEditor("top_level.v", 247, 178); // cd (w, cl)
+// Elapsed time: 57 seconds
+selectCodeEditor("top_level.v", 284, 207); // cd (w, cl)
+selectCodeEditor("top_level.v", 275, 199); // cd (w, cl)
+selectCodeEditor("top_level.v", 252, 196); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 5); // k (j, cl)
+selectCodeEditor("top_level.v", 167, 431); // cd (w, cl)
+selectCodeEditor("top_level.v", 158, 436); // cd (w, cl)
+selectCodeEditor("top_level.v", 165, 327); // cd (w, cl)
+selectCodeEditor("top_level.v", 160, 331); // cd (w, cl)
+selectCodeEditor("top_level.v", 158, 334); // cd (w, cl)
+selectCodeEditor("top_level.v", 164, 333); // cd (w, cl)
+selectCodeEditor("top_level.v", 160, 333); // cd (w, cl)
+// Elapsed time: 146 seconds
+selectCodeEditor("top_level.v", 203, 353); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 7); // k (j, cl)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 5); // k (j, cl)
+selectCodeEditor("top_level.v", 195, 370); // cd (w, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 13 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cZ, cl)
+// bs (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1342.488 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,063 MB. GUI used memory: 79 MB. Current time: 9/1/22 7:07:47 PM CEST
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 400 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] 
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'top_level' (21#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 1351.879 ; gain = 9.391 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1351.879 ; gain = 9.391 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// [Engine Memory]: 1,070 MB (+7770kb) [02:47:05]
+// TclEventType: DESIGN_REFRESH
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,070 MB. GUI used memory: 78 MB. Current time: 9/1/22 7:07:56 PM CEST
+// Engine heap size: 1,070 MB. GUI used memory: 79 MB. Current time: 9/1/22 7:07:56 PM CEST
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer' 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,070 MB. GUI used memory: 54 MB. Current time: 9/1/22 7:08:01 PM CEST
+// Xgd.load filename: C:/Xilinx/Vivado/2017.3/data/parts/xilinx/artix7/devint/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_detail.xgd elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (top_level.v) elapsed time: 0.3s
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.3 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: Finished Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:01:05 ; elapsed = 00:00:48 . Memory (MB): peak = 1375.602 ; gain = 33.113 
+// Elapsed time: 49 seconds
+dismissDialog("Reloading"); // bs (cl)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (<const0>) elapsed time: 0.3s
+// Elapsed time: 31 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectCodeEditor("top_level.v", 52, 319); // cd (w, cl)
+selectCodeEditor("top_level.v", 46, 319); // cd (w, cl)
+selectCodeEditor("top_level.v", 45, 314); // cd (w, cl)
+selectCodeEditor("top_level.v", 49, 315); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "filtering.v", 5); // k (j, cl)
+selectCodeEditor("filtering.v", 83, 141); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cZ, cl)
+// bs (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1375.602 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 400 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'top_level' (21#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1375.602 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 1375.602 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,077 MB. GUI used memory: 82 MB. Current time: 9/1/22 7:09:52 PM CEST
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 1,077 MB. GUI used memory: 128 MB. Current time: 9/1/22 7:09:56 PM CEST
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer' 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,077 MB. GUI used memory: 57 MB. Current time: 9/1/22 7:10:02 PM CEST
+// Xgd.load filename: C:/Xilinx/Vivado/2017.3/data/parts/xilinx/artix7/devint/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_detail.xgd elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.1s
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (top_level.v) elapsed time: 0.2s
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.3 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: Finished Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:46 . Memory (MB): peak = 1382.652 ; gain = 7.051 
+// Elapsed time: 46 seconds
+dismissDialog("Reloading"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// PAPropertyPanels.initPanels (<const0>) elapsed time: 0.3s
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 4); // k (j, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cZ, cl)
+// bs (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1382.652 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 400 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] 
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9] INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'top_level' (21#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1382.652 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 1382.652 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 1,083 MB. GUI used memory: 67 MB. Current time: 9/1/22 7:11:26 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 66 MB. Current time: 9/1/22 7:11:26 PM CEST
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer' 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 59 MB. Current time: 9/1/22 7:11:31 PM CEST
+// Xgd.load filename: C:/Xilinx/Vivado/2017.3/data/parts/xilinx/artix7/devint/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_detail.xgd elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.1s
+// Schematic: addNotify
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (top_level.v) elapsed time: 0.2s
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.3 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: Finished Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:46 . Memory (MB): peak = 1393.180 ; gain = 10.527 
+// Elapsed time: 47 seconds
+dismissDialog("Reloading"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 81 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 3); // k (j, cl)
+selectCodeEditor("top_level.v", 304, 86); // cd (w, cl)
+selectCodeEditor("top_level.v", 315, 103); // cd (w, cl)
+typeControlKey((HResource) null, "top_level.v", 'c'); // cd (w, cl)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("top_level.v", 512, 255); // cd (w, cl)
+// Elapsed time: 10 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cl)
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+// TclEventType: DESIGN_CLOSE
+// Engine heap size: 1,083 MB. GUI used memory: 64 MB. Current time: 9/1/22 7:13:51 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 63 MB. Current time: 9/1/22 7:13:51 PM CEST
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: close_design 
+// Tcl Message: close_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+// Elapsed time: 57 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cl)
+// bs (cl):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: top_level 
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 61 MB. Current time: 9/1/22 7:15:13 PM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (top_level.v) elapsed time: 0.2s
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71] INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69] INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] 
+// Tcl Message: 	Parameter CAPACITANCE bound to: DONT_CARE - type: string  	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string  	Parameter IBUF_LOW_PWR bound to: TRUE - type: string  	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string  	Parameter IOSTANDARD bound to: DEFAULT - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468] INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757] 
+// Tcl Message: 	Parameter HM bound to: 799 - type: integer  	Parameter HD bound to: 640 - type: integer  	Parameter HF bound to: 16 - type: integer  	Parameter HB bound to: 48 - type: integer  	Parameter HR bound to: 96 - type: integer  	Parameter VM bound to: 524 - type: integer  	Parameter VD bound to: 480 - type: integer  	Parameter VF bound to: 10 - type: integer  	Parameter VB bound to: 33 - type: integer  	Parameter VR bound to: 2 - type: integer  
+// Tcl Message: 	Parameter camera_address bound to: 8'b01000010  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4] INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22] INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13] 
+// Tcl Message: 	Parameter rect_x bound to: 200 - type: integer  	Parameter rect_width bound to: 240 - type: integer  	Parameter rect_y bound to: 400 - type: integer  	Parameter rect_height bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3] 
+// Tcl Message: 	Parameter WIDTH bound to: 38 - type: integer  	Parameter CLK_DEL bound to: 2 - type: integer  
+// Tcl Message: 	Parameter string_length bound to: 30 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'top_level' (21#1) [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer' INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.3 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: Finished Parsing XDC File [C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] 
+// Tcl Message: INFO: [Timing 38-2] Deriving generated clocks 
+// Tcl Message: Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:42 ; elapsed = 00:00:39 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+// Tcl Message: 53 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:40 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 40 seconds
+dismissDialog("Open Elaborated Design"); // bs (cl)
+// Elapsed time: 41 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cl)
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+// TclEventType: DESIGN_CLOSE
+// Engine heap size: 1,083 MB. GUI used memory: 66 MB. Current time: 9/1/22 7:16:11 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 65 MB. Current time: 9/1/22 7:16:11 PM CEST
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: close_design 
+// Tcl Message: close_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1393.180 ; gain = 0.000 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'ct' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Sep  1 19:16:20 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Thu Sep  1 19:16:20 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/projekt_verilog/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 4000 ms.
+// ah (cl): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 63 MB. Current time: 9/1/22 7:46:13 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 61 MB. Current time: 9/1/22 8:16:14 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 61 MB. Current time: 9/1/22 8:46:14 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 61 MB. Current time: 9/1/22 9:16:16 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 61 MB. Current time: 9/1/22 9:46:16 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 62 MB. Current time: 9/1/22 10:16:17 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 62 MB. Current time: 9/2/22 1:43:49 AM CEST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 62 MB. Current time: 9/2/22 12:56:12 PM CEST

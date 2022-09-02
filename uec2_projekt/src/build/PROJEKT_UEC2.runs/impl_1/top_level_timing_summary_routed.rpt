@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Aug 31 17:41:34 2022
+| Date         : Thu Sep  1 19:22:27 2022
 | Host         : Tiger running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file top_level_timing_summary_routed.rpt -warn_on_violation -rpx top_level_timing_summary_routed.rpx
 | Design       : top_level
@@ -128,7 +128,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     13.291        0.000                      0                 1077        0.074        0.000                      0                 1077        3.000        0.000                       0                   230  
+     13.448        0.000                      0                 1282        0.038        0.000                      0                 1282        3.000        0.000                       0                   330  
 
 
 All user specified timing constraints are met.
@@ -155,8 +155,8 @@ sys_clk_pin          {0.000 5.000}      10.000          100.000
 Clock                    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 sys_clk_pin                                                                                                                                                            3.000        0.000                       0                     1  
-  CLK_25_clocking         31.621        0.000                      0                  830        0.074        0.000                      0                  830       19.500        0.000                       0                   131  
-  CLK_50_clocking         13.291        0.000                      0                  230        0.143        0.000                      0                  230        9.500        0.000                       0                    95  
+  CLK_25_clocking         30.380        0.000                      0                  975        0.038        0.000                      0                  975       19.500        0.000                       0                   231  
+  CLK_50_clocking         13.448        0.000                      0                  230        0.050        0.000                      0                  230        9.500        0.000                       0                    95  
   clkfbout_clocking                                                                                                                                                    7.845        0.000                       0                     3  
 
 
@@ -167,7 +167,7 @@ sys_clk_pin                                                                     
 
 From Clock       To Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
 ----------       --------             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
-CLK_25_clocking  CLK_50_clocking       16.284        0.000                      0                   17        0.447        0.000                      0                   17  
+CLK_25_clocking  CLK_50_clocking       16.806        0.000                      0                   17        0.092        0.000                      0                   17  
 
 
 ------------------------------------------------------------------------------------------------
@@ -175,8 +175,9 @@ CLK_25_clocking  CLK_50_clocking       16.284        0.000                      
 | -----------------------
 ------------------------------------------------------------------------------------------------
 
-Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
-----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  CLK_25_clocking    CLK_25_clocking         35.753        0.000                      0                   60        0.252        0.000                      0                   60  
 
 
 ------------------------------------------------------------------------------------------------
@@ -214,27 +215,27 @@ High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000 
 From Clock:  CLK_25_clocking
   To Clock:  CLK_25_clocking
 
-Setup :            0  Failing Endpoints,  Worst Slack       31.621ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.074ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       30.380ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.038ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       19.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             31.621ns  (required time - arrival time)
-  Source:                 my_Address_Generator/val_reg[16]/C
+Slack (MET) :             30.380ns  (required time - arrival time)
+  Source:                 my_Address_Generator/val_reg[18]/C
                             (rising edge-triggered cell FDRE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[14]
+  Destination:            my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T/ENBWREN
                             (rising edge-triggered cell RAMB36E1 clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             CLK_25_clocking
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (CLK_25_clocking rise@40.000ns - CLK_25_clocking rise@0.000ns)
-  Data Path Delay:        7.664ns  (logic 0.456ns (5.950%)  route 7.208ns (94.050%))
+  Data Path Delay:        8.986ns  (logic 0.456ns (5.074%)  route 8.530ns (94.926%))
   Logic Levels:           0  
-  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.514ns = ( 38.486 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.972ns
+  Clock Path Skew:        -0.099ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.529ns = ( 38.471 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.947ns
     Clock Pessimism Removal (CPR):    0.484ns
   Clock Uncertainty:      0.091ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -253,12 +254,12 @@ Slack (MET) :             31.621ns  (required time - arrival time)
                                                      -6.961    -4.269 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.661    -2.608    my_clocking/inst/CLK_25_clocking
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  my_clocking/inst/clkout2_buf/O
-                         net (fo=129, routed)         1.540    -0.972    my_Address_Generator/CLK_25
-    SLICE_X35Y69         FDRE                                         r  my_Address_Generator/val_reg[16]/C
+                         net (fo=229, routed)         1.565    -0.947    my_Address_Generator/CLK_25
+    SLICE_X31Y44         FDRE                                         r  my_Address_Generator/val_reg[18]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X35Y69         FDRE (Prop_fdre_C_Q)         0.456    -0.516 r  my_Address_Generator/val_reg[16]/Q
-                         net (fo=47, routed)          7.208     6.692    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/addrb[14]
-    RAMB36_X1Y3          RAMB36E1                                     r  my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B/ADDRBWRADDR[14]
+    SLICE_X31Y44         FDRE (Prop_fdre_C_Q)         0.456    -0.491 f  my_Address_Generator/val_reg[18]/Q
+                         net (fo=50, routed)          8.530     8.040    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/ENB
+    RAMB36_X1Y16         RAMB36E1                                     r  my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T/ENBWREN  (IS_INVERTED)
   -------------------------------------------------------------------    -------------------
 
                          (clock CLK_25_clocking rise edge)
@@ -271,17 +272,17 @@ Slack (MET) :             31.621ns  (required time - arrival time)
                                                      -7.217    35.332 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.581    36.914    my_clocking/inst/CLK_25_clocking
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  my_clocking/inst/clkout2_buf/O
-                         net (fo=129, routed)         1.482    38.486    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/clkb
-    RAMB36_X1Y3          RAMB36E1                                     r  my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B/CLKBWRCLK
-                         clock pessimism              0.484    38.970    
-                         clock uncertainty           -0.091    38.879    
-    RAMB36_X1Y3          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[14])
-                                                     -0.566    38.313    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B
+                         net (fo=229, routed)         1.466    38.471    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/clkb
+    RAMB36_X1Y16         RAMB36E1                                     r  my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T/CLKBWRCLK
+                         clock pessimism              0.484    38.954    
+                         clock uncertainty           -0.091    38.863    
+    RAMB36_X1Y16         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    38.420    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T
   -------------------------------------------------------------------
-                         required time                         38.313    
-                         arrival time                          -6.692    
+                         required time                         38.420    
+                         arrival time                          -8.040    
   -------------------------------------------------------------------
-                         slack                                 31.621    
+                         slack                                 30.380    
 
 
 
@@ -289,20 +290,20 @@ Slack (MET) :             31.621ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.074ns  (arrival time - required time)
-  Source:                 my_Address_Generator/val_reg[17]/C
-                            (rising edge-triggered cell FDRE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/D
-                            (rising edge-triggered cell FDRE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             0.038ns  (arrival time - required time)
+  Source:                 my_draw_rect_char/my_delay/del_mem_reg[0][28]/C
+                            (rising edge-triggered cell FDCE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            my_draw_rect_char/my_delay/delay_stage[1].del_mem_reg[1][28]/D
+                            (rising edge-triggered cell FDCE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             CLK_25_clocking
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (CLK_25_clocking rise@0.000ns - CLK_25_clocking rise@0.000ns)
-  Data Path Delay:        0.412ns  (logic 0.141ns (34.235%)  route 0.271ns (65.765%))
+  Data Path Delay:        0.368ns  (logic 0.141ns (38.303%)  route 0.227ns (61.697%))
   Logic Levels:           0  
-  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.867ns
-    Source Clock Delay      (SCD):    -0.629ns
-    Clock Pessimism Removal (CPR):    -0.503ns
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.859ns
+    Source Clock Delay      (SCD):    -0.617ns
+    Clock Pessimism Removal (CPR):    -0.508ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -316,12 +317,12 @@ Slack (MET) :             0.074ns  (arrival time - required time)
                                                      -2.360    -1.693 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.486    -1.207    my_clocking/inst/CLK_25_clocking
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  my_clocking/inst/clkout2_buf/O
-                         net (fo=129, routed)         0.552    -0.629    my_Address_Generator/CLK_25
-    SLICE_X35Y69         FDRE                                         r  my_Address_Generator/val_reg[17]/C
+                         net (fo=229, routed)         0.564    -0.617    my_draw_rect_char/my_delay/CLK_25
+    SLICE_X31Y49         FDCE                                         r  my_draw_rect_char/my_delay/del_mem_reg[0][28]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X35Y69         FDRE (Prop_fdre_C_Q)         0.141    -0.488 r  my_Address_Generator/val_reg[17]/Q
-                         net (fo=53, routed)          0.271    -0.217    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/addrb[3]
-    SLICE_X44Y68         FDRE                                         r  my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/D
+    SLICE_X31Y49         FDCE (Prop_fdce_C_Q)         0.141    -0.476 r  my_draw_rect_char/my_delay/del_mem_reg[0][28]/Q
+                         net (fo=1, routed)           0.227    -0.249    my_draw_rect_char/my_delay/del_mem_reg[0]_0[28]
+    SLICE_X30Y50         FDCE                                         r  my_draw_rect_char/my_delay/delay_stage[1].del_mem_reg[1][28]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock CLK_25_clocking rise edge)
@@ -334,15 +335,15 @@ Slack (MET) :             0.074ns  (arrival time - required time)
                                                      -3.142    -2.248 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.530    -1.718    my_clocking/inst/CLK_25_clocking
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  my_clocking/inst/clkout2_buf/O
-                         net (fo=129, routed)         0.822    -0.867    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/clkb
-    SLICE_X44Y68         FDRE                                         r  my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/C
-                         clock pessimism              0.503    -0.363    
-    SLICE_X44Y68         FDRE (Hold_fdre_C_D)         0.072    -0.291    my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]
+                         net (fo=229, routed)         0.830    -0.859    my_draw_rect_char/my_delay/CLK_25
+    SLICE_X30Y50         FDCE                                         r  my_draw_rect_char/my_delay/delay_stage[1].del_mem_reg[1][28]/C
+                         clock pessimism              0.508    -0.350    
+    SLICE_X30Y50         FDCE (Hold_fdce_C_D)         0.063    -0.287    my_draw_rect_char/my_delay/delay_stage[1].del_mem_reg[1][28]
   -------------------------------------------------------------------
-                         required time                          0.291    
-                         arrival time                          -0.217    
+                         required time                          0.287    
+                         arrival time                          -0.249    
   -------------------------------------------------------------------
-                         slack                                  0.074    
+                         slack                                  0.038    
 
 
 
@@ -356,10 +357,10 @@ Period(ns):         40.000
 Sources:            { my_clocking/inst/mmcm_adv_inst/CLKOUT1 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.892         40.000      37.108     RAMB36_X2Y8      my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.892         40.000      37.108     RAMB36_X2Y16     my_frame_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T/CLKBWRCLK
 Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       40.000      173.360    MMCME2_ADV_X1Y0  my_clocking/inst/mmcm_adv_inst/CLKOUT1
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X35Y65     my_Address_Generator/val_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X35Y65     my_Address_Generator/val_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X31Y40     my_Address_Generator/val_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X31Y40     my_Address_Generator/val_reg[0]/C
 
 
 
@@ -367,28 +368,28 @@ High Pulse Width  Slow    FDRE/C              n/a            0.500         20.00
 From Clock:  CLK_50_clocking
   To Clock:  CLK_50_clocking
 
-Setup :            0  Failing Endpoints,  Worst Slack       13.291ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.143ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       13.448ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.050ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             13.291ns  (required time - arrival time)
+Slack (MET) :             13.448ns  (required time - arrival time)
   Source:                 my_ov7670_controller/Inst_ov7670_registers/sreg_reg/CLKARDCLK
                             (rising edge-triggered cell RAMB18E1 clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
-  Destination:            my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[12]/S
-                            (rising edge-triggered cell FDSE clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            my_ov7670_controller/Inst_i2c_sender/data_sr_reg[11]/R
+                            (rising edge-triggered cell FDRE clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
   Path Group:             CLK_50_clocking
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            20.000ns  (CLK_50_clocking rise@20.000ns - CLK_50_clocking rise@0.000ns)
-  Data Path Delay:        6.022ns  (logic 2.826ns (46.932%)  route 3.196ns (53.068%))
-  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.081ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.551ns = ( 18.449 - 20.000 ) 
-    Source Clock Delay      (SCD):    -0.906ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        5.971ns  (logic 2.826ns (47.329%)  route 3.145ns (52.671%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        -0.070ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.562ns = ( 18.438 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.914ns
+    Clock Pessimism Removal (CPR):    0.578ns
   Clock Uncertainty:      0.082ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.147ns
@@ -406,19 +407,19 @@ Slack (MET) :             13.291ns  (required time - arrival time)
                                                      -6.961    -4.269 r  my_clocking/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    my_clocking/inst/CLK_50_clocking
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  my_clocking/inst/clkout1_buf/O
-                         net (fo=93, routed)          1.606    -0.906    my_ov7670_controller/Inst_ov7670_registers/CLK_50
-    RAMB18_X2Y12         RAMB18E1                                     r  my_ov7670_controller/Inst_ov7670_registers/sreg_reg/CLKARDCLK
+                         net (fo=93, routed)          1.598    -0.914    my_ov7670_controller/Inst_ov7670_registers/CLK_50
+    RAMB18_X0Y10         RAMB18E1                                     r  my_ov7670_controller/Inst_ov7670_registers/sreg_reg/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB18_X2Y12         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[2])
-                                                      2.454     1.548 f  my_ov7670_controller/Inst_ov7670_registers/sreg_reg/DOADO[2]
-                         net (fo=2, routed)           1.012     2.560    my_ov7670_controller/Inst_ov7670_registers/DOADO[2]
-    SLICE_X57Y30         LUT4 (Prop_lut4_I3_O)        0.124     2.684 r  my_ov7670_controller/Inst_ov7670_registers/config_finished_OBUF_inst_i_3/O
-                         net (fo=3, routed)           0.820     3.505    my_ov7670_controller/Inst_ov7670_registers/config_finished_OBUF_inst_i_3_n_0
-    SLICE_X56Y31         LUT5 (Prop_lut5_I2_O)        0.124     3.629 r  my_ov7670_controller/Inst_ov7670_registers/busy_sr[0]_i_2/O
-                         net (fo=5, routed)           0.669     4.298    my_ov7670_controller/Inst_i2c_sender/p_1_in[0]
-    SLICE_X53Y33         LUT6 (Prop_lut6_I0_O)        0.124     4.422 r  my_ov7670_controller/Inst_i2c_sender/busy_sr[31]_i_1/O
-                         net (fo=31, routed)          0.694     5.115    my_ov7670_controller/Inst_i2c_sender/busy_sr[31]_i_1_n_0
-    SLICE_X50Y32         FDSE                                         r  my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[12]/S
+    RAMB18_X0Y10         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[3])
+                                                      2.454     1.540 f  my_ov7670_controller/Inst_ov7670_registers/sreg_reg/DOADO[3]
+                         net (fo=2, routed)           1.218     2.758    my_ov7670_controller/Inst_ov7670_registers/DOADO[3]
+    SLICE_X9Y25          LUT4 (Prop_lut4_I2_O)        0.124     2.882 r  my_ov7670_controller/Inst_ov7670_registers/config_finished_OBUF_inst_i_3/O
+                         net (fo=3, routed)           0.481     3.362    my_ov7670_controller/Inst_ov7670_registers/config_finished_OBUF_inst_i_3_n_0
+    SLICE_X9Y25          LUT5 (Prop_lut5_I2_O)        0.124     3.486 r  my_ov7670_controller/Inst_ov7670_registers/busy_sr[0]_i_2/O
+                         net (fo=5, routed)           0.718     4.204    my_ov7670_controller/Inst_i2c_sender/p_1_in[0]
+    SLICE_X6Y26          LUT3 (Prop_lut3_I0_O)        0.124     4.328 r  my_ov7670_controller/Inst_i2c_sender/data_sr[30]_i_1/O
+                         net (fo=11, routed)          0.729     5.057    my_ov7670_controller/Inst_i2c_sender/data_sr[30]_i_1_n_0
+    SLICE_X9Y25          FDRE                                         r  my_ov7670_controller/Inst_i2c_sender/data_sr_reg[11]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock CLK_50_clocking rise edge)
@@ -431,16 +432,16 @@ Slack (MET) :             13.291ns  (required time - arrival time)
                                                      -7.217    15.332 r  my_clocking/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    16.914    my_clocking/inst/CLK_50_clocking
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    17.005 r  my_clocking/inst/clkout1_buf/O
-                         net (fo=93, routed)          1.444    18.449    my_ov7670_controller/Inst_i2c_sender/CLK_50
-    SLICE_X50Y32         FDSE                                         r  my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[12]/C
-                         clock pessimism              0.564    19.012    
-                         clock uncertainty           -0.082    18.931    
-    SLICE_X50Y32         FDSE (Setup_fdse_C_S)       -0.524    18.407    my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[12]
+                         net (fo=93, routed)          1.433    18.438    my_ov7670_controller/Inst_i2c_sender/CLK_50
+    SLICE_X9Y25          FDRE                                         r  my_ov7670_controller/Inst_i2c_sender/data_sr_reg[11]/C
+                         clock pessimism              0.578    19.015    
+                         clock uncertainty           -0.082    18.934    
+    SLICE_X9Y25          FDRE (Setup_fdre_C_R)       -0.429    18.505    my_ov7670_controller/Inst_i2c_sender/data_sr_reg[11]
   -------------------------------------------------------------------
-                         required time                         18.407    
-                         arrival time                          -5.115    
+                         required time                         18.505    
+                         arrival time                          -5.057    
   -------------------------------------------------------------------
-                         slack                                 13.291    
+                         slack                                 13.448    
 
 
 
@@ -448,20 +449,20 @@ Slack (MET) :             13.291ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.143ns  (arrival time - required time)
-  Source:                 my_ov7670_controller/Inst_i2c_sender/data_sr_reg[22]/C
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[2]/C
                             (rising edge-triggered cell FDRE clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
-  Destination:            my_ov7670_controller/Inst_i2c_sender/data_sr_reg[23]/D
-                            (rising edge-triggered cell FDRE clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            my_ov7670_controller/Inst_ov7670_registers/sreg_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
   Path Group:             CLK_50_clocking
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (CLK_50_clocking rise@0.000ns - CLK_50_clocking rise@0.000ns)
-  Data Path Delay:        0.254ns  (logic 0.141ns (55.507%)  route 0.113ns (44.493%))
+  Data Path Delay:        0.290ns  (logic 0.141ns (48.675%)  route 0.149ns (51.325%))
   Logic Levels:           0  
-  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.861ns
-    Source Clock Delay      (SCD):    -0.621ns
-    Clock Pessimism Removal (CPR):    -0.274ns
+  Clock Path Skew:        0.056ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.823ns
+    Source Clock Delay      (SCD):    -0.625ns
+    Clock Pessimism Removal (CPR):    -0.254ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -475,12 +476,12 @@ Slack (MET) :             0.143ns  (arrival time - required time)
                                                      -2.360    -1.693 r  my_clocking/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    my_clocking/inst/CLK_50_clocking
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  my_clocking/inst/clkout1_buf/O
-                         net (fo=93, routed)          0.560    -0.621    my_ov7670_controller/Inst_i2c_sender/CLK_50
-    SLICE_X55Y32         FDRE                                         r  my_ov7670_controller/Inst_i2c_sender/data_sr_reg[22]/C
+                         net (fo=93, routed)          0.556    -0.625    my_ov7670_controller/Inst_ov7670_registers/CLK_50
+    SLICE_X9Y27          FDRE                                         r  my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X55Y32         FDRE (Prop_fdre_C_Q)         0.141    -0.480 r  my_ov7670_controller/Inst_i2c_sender/data_sr_reg[22]/Q
-                         net (fo=1, routed)           0.113    -0.367    my_ov7670_controller/Inst_i2c_sender/data_sr_reg_n_0_[22]
-    SLICE_X56Y32         FDRE                                         r  my_ov7670_controller/Inst_i2c_sender/data_sr_reg[23]/D
+    SLICE_X9Y27          FDRE (Prop_fdre_C_Q)         0.141    -0.484 r  my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[2]/Q
+                         net (fo=1, routed)           0.149    -0.336    my_ov7670_controller/Inst_ov7670_registers/address[2]
+    RAMB18_X0Y10         RAMB18E1                                     r  my_ov7670_controller/Inst_ov7670_registers/sreg_reg/ADDRARDADDR[6]
   -------------------------------------------------------------------    -------------------
 
                          (clock CLK_50_clocking rise edge)
@@ -493,15 +494,16 @@ Slack (MET) :             0.143ns  (arrival time - required time)
                                                      -3.142    -2.248 r  my_clocking/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    my_clocking/inst/CLK_50_clocking
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  my_clocking/inst/clkout1_buf/O
-                         net (fo=93, routed)          0.829    -0.861    my_ov7670_controller/Inst_i2c_sender/CLK_50
-    SLICE_X56Y32         FDRE                                         r  my_ov7670_controller/Inst_i2c_sender/data_sr_reg[23]/C
-                         clock pessimism              0.274    -0.586    
-    SLICE_X56Y32         FDRE (Hold_fdre_C_D)         0.076    -0.510    my_ov7670_controller/Inst_i2c_sender/data_sr_reg[23]
+                         net (fo=93, routed)          0.866    -0.823    my_ov7670_controller/Inst_ov7670_registers/CLK_50
+    RAMB18_X0Y10         RAMB18E1                                     r  my_ov7670_controller/Inst_ov7670_registers/sreg_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.569    
+    RAMB18_X0Y10         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183    -0.386    my_ov7670_controller/Inst_ov7670_registers/sreg_reg
   -------------------------------------------------------------------
-                         required time                          0.510    
-                         arrival time                          -0.367    
+                         required time                          0.386    
+                         arrival time                          -0.336    
   -------------------------------------------------------------------
-                         slack                                  0.143    
+                         slack                                  0.050    
 
 
 
@@ -515,10 +517,10 @@ Period(ns):         20.000
 Sources:            { my_clocking/inst/mmcm_adv_inst/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         20.000      17.424     RAMB18_X2Y12     my_ov7670_controller/Inst_ov7670_registers/sreg_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         20.000      17.424     RAMB18_X0Y10     my_ov7670_controller/Inst_ov7670_registers/sreg_reg/CLKARDCLK
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       20.000      193.360    MMCME2_ADV_X1Y0  my_clocking/inst/mmcm_adv_inst/CLKOUT0
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X52Y31     my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X52Y31     my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X6Y25      my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[0]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         10.000      9.500      SLICE_X4Y26      my_ov7670_controller/Inst_i2c_sender/busy_sr_reg[10]/C
 
 
 
@@ -549,26 +551,26 @@ Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       10.000     
 From Clock:  CLK_25_clocking
   To Clock:  CLK_50_clocking
 
-Setup :            0  Failing Endpoints,  Worst Slack       16.284ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.447ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       16.806ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.092ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             16.284ns  (required time - arrival time)
+Slack (MET) :             16.806ns  (required time - arrival time)
   Source:                 my_debounce/o_reg/C
                             (rising edge-triggered cell FDRE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            my_ov7670_controller/Inst_ov7670_registers/address_reg[5]/R
+  Destination:            my_ov7670_controller/Inst_ov7670_registers/address_reg[6]/R
                             (rising edge-triggered cell FDRE clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
   Path Group:             CLK_50_clocking
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            20.000ns  (CLK_50_clocking rise@20.000ns - CLK_25_clocking rise@0.000ns)
-  Data Path Delay:        2.945ns  (logic 0.456ns (15.484%)  route 2.489ns (84.516%))
+  Data Path Delay:        2.257ns  (logic 0.456ns (20.207%)  route 1.801ns (79.793%))
   Logic Levels:           0  
-  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.488ns = ( 18.512 - 20.000 ) 
-    Source Clock Delay      (SCD):    -0.959ns
+  Clock Path Skew:        -0.202ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.558ns = ( 18.442 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.958ns
     Clock Pessimism Removal (CPR):    0.398ns
   Clock Uncertainty:      0.211ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -587,12 +589,12 @@ Slack (MET) :             16.284ns  (required time - arrival time)
                                                      -6.961    -4.269 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.661    -2.608    my_clocking/inst/CLK_25_clocking
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  my_clocking/inst/clkout2_buf/O
-                         net (fo=129, routed)         1.553    -0.959    my_debounce/CLK_25
-    SLICE_X33Y56         FDRE                                         r  my_debounce/o_reg/C
+                         net (fo=229, routed)         1.554    -0.958    my_debounce/CLK_25
+    SLICE_X31Y31         FDRE                                         r  my_debounce/o_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X33Y56         FDRE (Prop_fdre_C_Q)         0.456    -0.503 r  my_debounce/o_reg/Q
-                         net (fo=17, routed)          2.489     1.986    my_ov7670_controller/Inst_ov7670_registers/SR[0]
-    SLICE_X58Y29         FDRE                                         r  my_ov7670_controller/Inst_ov7670_registers/address_reg[5]/R
+    SLICE_X31Y31         FDRE (Prop_fdre_C_Q)         0.456    -0.502 r  my_debounce/o_reg/Q
+                         net (fo=17, routed)          1.801     1.299    my_ov7670_controller/Inst_ov7670_registers/SR[0]
+    SLICE_X10Y27         FDRE                                         r  my_ov7670_controller/Inst_ov7670_registers/address_reg[6]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock CLK_50_clocking rise edge)
@@ -605,16 +607,16 @@ Slack (MET) :             16.284ns  (required time - arrival time)
                                                      -7.217    15.332 r  my_clocking/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    16.914    my_clocking/inst/CLK_50_clocking
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    17.005 r  my_clocking/inst/clkout1_buf/O
-                         net (fo=93, routed)          1.507    18.512    my_ov7670_controller/Inst_ov7670_registers/CLK_50
-    SLICE_X58Y29         FDRE                                         r  my_ov7670_controller/Inst_ov7670_registers/address_reg[5]/C
-                         clock pessimism              0.398    18.910    
-                         clock uncertainty           -0.211    18.699    
-    SLICE_X58Y29         FDRE (Setup_fdre_C_R)       -0.429    18.270    my_ov7670_controller/Inst_ov7670_registers/address_reg[5]
+                         net (fo=93, routed)          1.437    18.442    my_ov7670_controller/Inst_ov7670_registers/CLK_50
+    SLICE_X10Y27         FDRE                                         r  my_ov7670_controller/Inst_ov7670_registers/address_reg[6]/C
+                         clock pessimism              0.398    18.840    
+                         clock uncertainty           -0.211    18.629    
+    SLICE_X10Y27         FDRE (Setup_fdre_C_R)       -0.524    18.105    my_ov7670_controller/Inst_ov7670_registers/address_reg[6]
   -------------------------------------------------------------------
-                         required time                         18.270    
-                         arrival time                          -1.986    
+                         required time                         18.105    
+                         arrival time                          -1.299    
   -------------------------------------------------------------------
-                         slack                                 16.284    
+                         slack                                 16.806    
 
 
 
@@ -622,19 +624,19 @@ Slack (MET) :             16.284ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.447ns  (arrival time - required time)
+Slack (MET) :             0.092ns  (arrival time - required time)
   Source:                 my_debounce/o_reg/C
                             (rising edge-triggered cell FDRE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_101_cooolDelFlop/D
+  Destination:            my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_85_cooolDelFlop/D
                             (rising edge-triggered cell FDCE clocked by CLK_50_clocking  {rise@0.000ns fall@10.000ns period=20.000ns})
   Path Group:             CLK_50_clocking
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (CLK_50_clocking rise@0.000ns - CLK_25_clocking rise@0.000ns)
-  Data Path Delay:        1.070ns  (logic 0.141ns (13.178%)  route 0.929ns (86.822%))
+  Data Path Delay:        0.678ns  (logic 0.141ns (20.799%)  route 0.537ns (79.201%))
   Logic Levels:           0  
-  Clock Path Skew:        0.342ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.834ns
-    Source Clock Delay      (SCD):    -0.620ns
+  Clock Path Skew:        0.316ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.865ns
+    Source Clock Delay      (SCD):    -0.625ns
     Clock Pessimism Removal (CPR):    -0.555ns
   Clock Uncertainty:      0.211ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -653,12 +655,12 @@ Slack (MET) :             0.447ns  (arrival time - required time)
                                                      -2.360    -1.693 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.486    -1.207    my_clocking/inst/CLK_25_clocking
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  my_clocking/inst/clkout2_buf/O
-                         net (fo=129, routed)         0.561    -0.620    my_debounce/CLK_25
-    SLICE_X33Y56         FDRE                                         r  my_debounce/o_reg/C
+                         net (fo=229, routed)         0.556    -0.625    my_debounce/CLK_25
+    SLICE_X31Y31         FDRE                                         r  my_debounce/o_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X33Y56         FDRE (Prop_fdre_C_Q)         0.141    -0.479 r  my_debounce/o_reg/Q
-                         net (fo=17, routed)          0.929     0.450    my_ov7670_controller/Inst_ov7670_registers/SR[0]
-    SLICE_X58Y32         FDCE                                         r  my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_101_cooolDelFlop/D
+    SLICE_X31Y31         FDRE (Prop_fdre_C_Q)         0.141    -0.484 r  my_debounce/o_reg/Q
+                         net (fo=17, routed)          0.537     0.053    my_ov7670_controller/Inst_ov7670_registers/SR[0]
+    SLICE_X8Y29          FDCE                                         r  my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_85_cooolDelFlop/D
   -------------------------------------------------------------------    -------------------
 
                          (clock CLK_50_clocking rise edge)
@@ -671,16 +673,153 @@ Slack (MET) :             0.447ns  (arrival time - required time)
                                                      -3.142    -2.248 r  my_clocking/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    my_clocking/inst/CLK_50_clocking
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  my_clocking/inst/clkout1_buf/O
-                         net (fo=93, routed)          0.856    -0.834    my_ov7670_controller/Inst_ov7670_registers/CLK_50
-    SLICE_X58Y32         FDCE                                         r  my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_101_cooolDelFlop/C
-                         clock pessimism              0.555    -0.279    
-                         clock uncertainty            0.211    -0.068    
-    SLICE_X58Y32         FDCE (Hold_fdce_C_D)         0.070     0.002    my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_101_cooolDelFlop
+                         net (fo=93, routed)          0.825    -0.865    my_ov7670_controller/Inst_ov7670_registers/CLK_50
+    SLICE_X8Y29          FDCE                                         r  my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_85_cooolDelFlop/C
+                         clock pessimism              0.555    -0.310    
+                         clock uncertainty            0.211    -0.099    
+    SLICE_X8Y29          FDCE (Hold_fdce_C_D)         0.059    -0.040    my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_85_cooolDelFlop
   -------------------------------------------------------------------
-                         required time                         -0.002    
-                         arrival time                           0.450    
+                         required time                          0.040    
+                         arrival time                           0.053    
   -------------------------------------------------------------------
-                         slack                                  0.447    
+                         slack                                  0.092    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  CLK_25_clocking
+  To Clock:  CLK_25_clocking
+
+Setup :            0  Failing Endpoints,  Worst Slack       35.753ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.252ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             35.753ns  (required time - arrival time)
+  Source:                 my_resetlocked/safestart_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            my_draw_rect_char/my_delay/del_mem_reg[0][3]/CLR
+                            (recovery check against rising-edge clock CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            40.000ns  (CLK_25_clocking rise@40.000ns - CLK_25_clocking rise@0.000ns)
+  Data Path Delay:        3.722ns  (logic 0.456ns (12.252%)  route 3.266ns (87.748%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.115ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.552ns = ( 38.448 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.946ns
+    Clock Pessimism Removal (CPR):    0.492ns
+  Clock Uncertainty:      0.091ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.168ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK_25_clocking rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    my_clocking/inst/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  my_clocking/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    my_clocking/inst/CLK_100_clocking
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    my_clocking/inst/CLK_25_clocking
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  my_clocking/inst/clkout2_buf/O
+                         net (fo=229, routed)         1.566    -0.946    my_resetlocked/CLK_25
+    SLICE_X36Y48         FDPE                                         r  my_resetlocked/safestart_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y48         FDPE (Prop_fdpe_C_Q)         0.456    -0.490 f  my_resetlocked/safestart_reg[3]/Q
+                         net (fo=152, routed)         3.266     2.776    my_draw_rect_char/my_delay/Q[0]
+    SLICE_X30Y39         FDCE                                         f  my_draw_rect_char/my_delay/del_mem_reg[0][3]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK_25_clocking rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    my_clocking/inst/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  my_clocking/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    my_clocking/inst/CLK_100_clocking
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -7.217    35.332 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.581    36.914    my_clocking/inst/CLK_25_clocking
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  my_clocking/inst/clkout2_buf/O
+                         net (fo=229, routed)         1.443    38.448    my_draw_rect_char/my_delay/CLK_25
+    SLICE_X30Y39         FDCE                                         r  my_draw_rect_char/my_delay/del_mem_reg[0][3]/C
+                         clock pessimism              0.492    38.939    
+                         clock uncertainty           -0.091    38.848    
+    SLICE_X30Y39         FDCE (Recov_fdce_C_CLR)     -0.319    38.529    my_draw_rect_char/my_delay/del_mem_reg[0][3]
+  -------------------------------------------------------------------
+                         required time                         38.529    
+                         arrival time                          -2.776    
+  -------------------------------------------------------------------
+                         slack                                 35.753    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 my_resetlocked/safestart_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            my_draw_rect_char/my_delay/del_mem_reg[0][30]/CLR
+                            (removal check against rising-edge clock CLK_25_clocking  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK_25_clocking rise@0.000ns - CLK_25_clocking rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.141ns (33.267%)  route 0.283ns (66.733%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.857ns
+    Source Clock Delay      (SCD):    -0.617ns
+    Clock Pessimism Removal (CPR):    -0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK_25_clocking rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    my_clocking/inst/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  my_clocking/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    my_clocking/inst/CLK_100_clocking
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.360    -1.693 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           0.486    -1.207    my_clocking/inst/CLK_25_clocking
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  my_clocking/inst/clkout2_buf/O
+                         net (fo=229, routed)         0.564    -0.617    my_resetlocked/CLK_25
+    SLICE_X36Y48         FDPE                                         r  my_resetlocked/safestart_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y48         FDPE (Prop_fdpe_C_Q)         0.141    -0.476 f  my_resetlocked/safestart_reg[3]/Q
+                         net (fo=152, routed)         0.283    -0.194    my_draw_rect_char/my_delay/Q[0]
+    SLICE_X33Y48         FDCE                                         f  my_draw_rect_char/my_delay/del_mem_reg[0][30]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK_25_clocking rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    my_clocking/inst/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  my_clocking/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    my_clocking/inst/CLK_100_clocking
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.142    -2.248 r  my_clocking/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           0.530    -1.718    my_clocking/inst/CLK_25_clocking
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  my_clocking/inst/clkout2_buf/O
+                         net (fo=229, routed)         0.833    -0.857    my_draw_rect_char/my_delay/CLK_25
+    SLICE_X33Y48         FDCE                                         r  my_draw_rect_char/my_delay/del_mem_reg[0][30]/C
+                         clock pessimism              0.503    -0.353    
+    SLICE_X33Y48         FDCE (Remov_fdce_C_CLR)     -0.092    -0.445    my_draw_rect_char/my_delay/del_mem_reg[0][30]
+  -------------------------------------------------------------------
+                         required time                          0.445    
+                         arrival time                          -0.194    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
 
 
 
