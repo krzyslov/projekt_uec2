@@ -1,27 +1,22 @@
+module VGA (
+input wire CLK25,
+output wire clkout, 
+input wire rez_160x120,
+input wire rez_320x240,
+input wire reset, 
+output reg Hsync,
+output reg Vsync, 
+output wire Nblank, 
+output reg activeArea, 
+output wire Nsync,
+output reg [10:0] Hcnt_out,
+output reg [10:0] Vcnt_out
+);
 
-
-
-module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activeArea, Nsync);
-	input CLK25;
-	input rez_160x120;
-	input rez_320x240;
 	
-	reg Hsync;
-	reg Vsync;
-	reg activeArea;
-	reg[9:0] Hcnt = 10'b0000000000;
-    reg[9:0] Vcnt = 10'b1000001000;
+	reg[10:0] Hcnt = 11'b0000000000;
+    reg[10:0] Vcnt = 11'b1000001000;
         
-	output clkout;
-	output Hsync;
-	output Vsync;
-	output Nblank;
-	output activeArea;
-	output Nsync;
-	
-	wire clkout;
-	wire Nblank;
-	wire Nsync;
 	wire video;
 	
 	parameter HM = 799;
@@ -37,12 +32,19 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 	
 	always @(posedge CLK25)
 	begin
+		if (reset ==1'b1) begin
+			Hcnt<=11'b00000000000;
+			Vcnt <= 11'b00000000000;
+			activeArea<=1'b1;
+		end 
+		else begin
 		if(Hcnt == HM)
 		begin
-			Hcnt <= 10'b0000000000;
+		
+			Hcnt <= 11'b00000000000;
 			if(Vcnt == VM)
 			begin
-				Vcnt <= 10'b0000000000;
+				Vcnt <= 11'b00000000000;
 				activeArea <= 1'b1;
 			end
 			else
@@ -97,10 +99,15 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
             Hcnt<=Hcnt+1;
         end
 	end
-	
+	end
 	
 	always @(posedge CLK25)
 	begin
+	
+		if(reset == 1'b1) begin
+			Hsync<=1'b1;
+		end
+		else begin
 		if(Hcnt>=(HD+HF) & Hcnt <= (HD + HF + HR - 1))
 		begin
 			Hsync <= 1'b0;
@@ -110,9 +117,15 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 			Hsync <= 1'b1;
 		end
 	end
+	end
+	
 	
 	always @(posedge CLK25)
 	begin
+		if(reset == 1'b1)begin
+			Vsync <=1'b1;
+		end
+		else begin
 		if(Vcnt >= (VD+VF) & Vcnt <= (VD +VF +VR - 1))
 		begin
 			Vsync <= 1'b0;
@@ -122,12 +135,21 @@ module VGA (CLK25, clkout, rez_160x120, rez_320x240, Hsync, Vsync, Nblank, activ
 			Vsync <= 1'b1;
 		end
 	end
+	end
+	
+	always @(posedge CLK25)
+	begin
+	   if(reset == 1'b1)begin
+            Hcnt_out <=11'd0;
+            Vcnt_out <= 11'd0;
+       end else begin
+            Hcnt_out <= Hcnt;
+            Vcnt_out <= Vcnt;
+       end
+	end
 	
 	assign Nsync = 1'b1;
 	assign video = ((Hcnt<HD) % (Vcnt <VD)) ? 1'b1 : 1'b0;
 	assign Nblank = video;
 	assign clkout = CLK25;
 endmodule
-	
-	
-		

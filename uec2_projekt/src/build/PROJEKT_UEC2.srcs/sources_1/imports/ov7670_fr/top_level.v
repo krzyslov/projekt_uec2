@@ -22,7 +22,7 @@ module top_level(
 	output wire ov7670_reset
 );
 
-wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,rez_160x120,rez_320x240;
+wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,rez_160x120,rez_320x240,locked,reset_locked;
 wire [16:0] rd_addr,wr_addr;
 wire [18:0] wraddress,rdaddress;
 wire [11:0] wrdata,rddata;
@@ -38,30 +38,52 @@ assign vga_b = blue[7:4];
 //assign rez_160x120 = btnl;
 //assign rez_320x240 = btnr;
 
-clocking my_clocking(
+/*clocking my_clocking(
+	.reset(btnc),
 	.CLK_100(clk100),
 	.CLK_50(clk_camera),
-	.CLK_25(clk_vga)
-); 
+	.CLK_25(clk_vga),
+	.locked(locked)
+); */
+
+clock my_clock(
+    .reset(btnc),
+    .locked(locked),
+    .CLK_IN_100(clk100),
+    .CLK_50(clk_camera),
+    .CLK_25(clk_vga)
+);
+
+resetlocked my_resetlocked(
+    .pclk(clk_vga),
+	.reset(reset_locked),
+	.locked(locked)
+
+);
+
 
 assign vga_vsync = vSync;
 
+wire [10:0] hcount_f, vcount_f;
+wire hblank_f,vblank_f,hsync_f,vsync_f;
+wire [10:0] hcount_vga_filtering, vcount_vga_filtering;
 
 VGA my_VGA(
 	.CLK25(clk_vga),
-	.rez_160x120(rez_160x120),
-	.rez_320x240(rez_320x240),
+	.reset(reset_locked),
 	.clkout(),
 	.Hsync(vga_hsync),
 	.Vsync(vSync),
 	.Nblank(nBlank),
 	.Nsync(nSync),
-	.activeArea(activeArea)
+	.activeArea(activeArea),
+	.Hcnt_out(hcount_vga_filtering),
+	.Vcnt_out(vcount_vga_filtering)
 );
 
 debounce my_debounce(
 	.clk(clk_vga),
-	.i(btnc),
+	.i(reset_locked),
 	.o(resend)
 );
 
@@ -88,11 +110,13 @@ assign wr_addr = wraddress[18:2];
 //(size_select == 2'b10) ? wraddress[16:0] : 
 //(size_select == 2'b11) ? wraddress : wr_addr;
 
+wire [18:0] address_C, address_N, address_NE, address_E,address_SE,address_S, address_SW, address_W, address_NW;
+wire [11:0] rddata_C, rddata_N, rddata_NE, rddata_E, rddata_SE, rddata_S, rddata_SW, rddata_W, rddata_NW;
 
 frame_buffer my_frame_buffer(
-	.addrb(rd_addr),
+	.addrb(address_C[18:2]),
 	.clkb(clk_vga),
-	.doutb(rddata),
+	.doutb(rddata_C),
 	.clka(ov7670_pclk),
 	.addra(wr_addr),
 	.dina(wrdata),
@@ -111,34 +135,111 @@ ov7670_capture my_ov7670_capture(
 	.we(wren[0])
 );
 wire [7:0] R,G,B;
+
+wire [23:0] RGB_C, RGB_N, RGB_NE, RGB_E, RGB_SE, RGB_S, RGB_SW, RGB_W, RGB_NW;
+
 RGB my_RGB(
-	.Din(rddata),
+	.Din(rddata_C),
+	.reset(reset_locked),
 	.Nblank(activeArea),
-	.R(R),
-	.G(G),
-	.B(B)
+	.R(RGB_C[7:0]),
+	.G(RGB_C[15:8]),
+	.B(RGB_C[23:16])
 	
 );
 
 Address_Generator my_Address_Generator(
 	.CLK25(clk_vga),
+	.reset(reset_locked),
 //	.rez_160x120(rez_160x120),
 //	.rez_320x240(rez_320x240),
 	.enable(activeArea),
 	.vsync(vSync),
-	.address(rdaddress)
+	.address_C(address_C),
+	.address_N(address_N),
+	.address_NE(address_NE),
+	.address_E(address_E),
+	.address_SE(address_SE),
+	.address_S(address_S),
+	.address_SW(address_SW),
+	.address_W(address_W),
+	.address_NW(address_NW)
+	//.address(rdaddress)
 );
 
+wire [3:0] red_char, green_char,blue_char;
+
+
+
+
+
 filtering my_filtering(
+    .vsync_in(vSync),
+    .hsync_in(vga_hsync),
     .clock(clk_vga),
-    .reset(1'b0),
+    .reset(reset_locked),
     .sel_module(sw),
-    .red_in(R),
-    .green_in(G),
-    .blue_in(B),
-    .red(red[7:4]),
-    .green(green[7:4]),
-    .blue(blue[7:4]),   
-    .Nblank(activeArea)
+    .rgb_in(RGB_C),
+    //.red_in(R),
+    //.green_in(G),
+    //.blue_in(B),
+    .red(red_char),
+    .green(green_char),
+    .blue(blue_char),   
+    .Nblank(activeArea),
+    .hc(hcount_f),
+    .vc(vcount_f),
+    .hblank(hblank_f),
+    .vblank(vblank_f),
+    .hsync(hsync_f),
+    .vsync(vsync_f),
+    .Hcount_in(hcount_vga_filtering),
+    .Vcount_in(vcount_vga_filtering)
+    
 );
+
+wire [6:0] char_code;
+wire [3:0] char_line;
+wire [7:0] char_pixel, char_xy;
+
+draw_rect_char my_draw_rect_char(
+      .vcount_in(vcount_f),
+      .vsync_in(vsync_f),
+      .vblnk_in(vblank_f),
+      .hcount_in(hcount_f),
+      .hsync_in(hsync_f),
+      .hblnk_in(hblank_f),
+      .char_pixels(char_pixel),
+      .rgb_in({red_char,green_char,blue_char}),
+      .vcount_out(),
+      .vsync_out(),
+      .vblnk_out(),
+      .hcount_out(),
+      .hsync_out(),
+      .hblnk_out(),
+      .rgb_out({red[7:4],green[7:4],blue[7:4]}),
+      .char_xy(char_xy),
+      .char_line(char_line), //{r,g,b}
+      .pclk(clk_vga),
+      .rst(reset_locked)
+
+);
+
+
+font_rom my_font_rom(        
+      .char_line_pixels(char_pixel),  
+      .addr({char_code[6:0],char_line[3:0]}),
+      .clk(clk_vga)
+
+);
+
+char_rom my_char_rom(
+   
+    .char_code(char_code),
+    .char_xy(char_xy),
+    .sw(sw)
+
+);
+
+
 endmodule

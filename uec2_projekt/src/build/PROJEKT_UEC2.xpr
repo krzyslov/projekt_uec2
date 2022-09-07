@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="32" Path="C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.xpr">
+<Project Version="7" Minor="32" Path="C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fbc058a6251b4b8a9eb3650ffb9f5111"/>
@@ -37,13 +37,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="2"/>
-    <Option Name="WTIesExportSim" Val="2"/>
-    <Option Name="WTVcsExportSim" Val="2"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
-    <Option Name="WTActivehdlExportSim" Val="2"/>
+    <Option Name="WTXSimExportSim" Val="7"/>
+    <Option Name="WTModelSimExportSim" Val="7"/>
+    <Option Name="WTQuestaExportSim" Val="7"/>
+    <Option Name="WTIesExportSim" Val="7"/>
+    <Option Name="WTVcsExportSim" Val="7"/>
+    <Option Name="WTRivieraExportSim" Val="7"/>
+    <Option Name="WTActivehdlExportSim" Val="7"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -66,25 +66,14 @@
       <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/address_Generator.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/address_Generator.v"/>
-          <Attr Name="ImportTime" Val="1661029281"/>
+          <Attr Name="ImportTime" Val="1661961732"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking.v">
+      <File Path="$PPRDIR/../rtl/filtering/char_rom.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking.v"/>
-          <Attr Name="ImportTime" Val="1661015072"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking_clk_wiz.v"/>
-          <Attr Name="ImportTime" Val="1661015091"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -99,7 +88,28 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../rtl/filtering/delay.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../rtl/filtering/draw_rect_char.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../rtl/filtering/filtering.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../rtl/filtering/font_rom.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -142,10 +152,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../rtl/ov7670_fr/resetlocked.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/vga.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/vga.v"/>
-          <Attr Name="ImportTime" Val="1660833484"/>
+          <Attr Name="ImportTime" Val="1661966929"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -154,7 +171,27 @@
       <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/top_level.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/top_level.v"/>
-          <Attr Name="ImportTime" Val="1660994912"/>
+          <Attr Name="ImportTime" Val="1661962064"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking.v"/>
+          <Attr Name="ImportTime" Val="1661015072"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking_clk_wiz.v"/>
+          <Attr Name="ImportTime" Val="1661015091"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -199,6 +236,19 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="frame_buffer"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="clock" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clock">
+      <File Path="$PSRCDIR/sources_1/ip/clock/clock.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="clock"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -251,6 +301,25 @@
           <ReportConfigOutputOption Name="pb" Type="string" Value="frame_buffer_utilization_synth.pb"/>
         </ReportConfig>
         <ReportConfig Name="frame_buffer_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="frame_buffer.vds">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="clock_synth_1" Type="Ft3:Synth" SrcSet="clock" Part="xc7a35tcpg236-1" ConstrsSet="clock" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/clock_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
+        <ReportConfig Name="clock_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="clock_utilization_synth.rpt" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="clock_utilization_synth.pb"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="clock.vds">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
       </ReportStrategy>
@@ -460,6 +529,112 @@
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
         <ReportConfig Name="frame_buffer_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="clock_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="clock" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="clock_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
+        <ReportConfig Name="clock_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="clock_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
       </ReportStrategy>

@@ -4,11 +4,20 @@
 module Address_Generator (
 
    input wire CLK25, 
-   input wire enable, 
+   input wire enable,
+   input wire reset,
    //input wire rez_160x120, 
    //input wire rez_320x240, 
    input wire vsync, 
-   output reg [18:0] address
+   output reg [18:0] address_C,
+   output reg [18:0] address_N,
+   output reg [18:0] address_NE,
+   output reg [18:0] address_E,
+   output reg [18:0] address_SE,
+   output reg [18:0] address_S,
+   output reg [18:0] address_SW,
+   output reg [18:0] address_W,
+   output reg [18:0] address_NW
 );   
 
 	reg [18:0] val;
@@ -32,8 +41,31 @@ module Address_Generator (
 
 	
 	always @(posedge CLK25) begin
-		val <= val_nxt;
-		address <= val_nxt;
+		
+		if (reset == 1'b1) begin
+			val <={19{1'b0}};
+			address_C <= {19{1'b0}};
+			address_N <= {19{1'b0}};
+			address_NE <= {19{1'b0}};
+			address_E <= {19{1'b0}};
+			address_SE <= {19{1'b0}};
+			address_S <= {19{1'b0}};
+			address_SW <= {19{1'b0}};
+			address_W <= {19{1'b0}};
+			address_NW <= {19{1'b0}};
+		end else begin
+		
+			val <= val_nxt;
+			address_C <= val_nxt;
+			address_N <= val_nxt - 640;
+			address_NE <=val_nxt - 640 + 1;
+			address_E <= val_nxt + 1;
+			address_SE <= val_nxt + 640 + 1;
+			address_S <= val_nxt + 640;
+			address_SW <= val_nxt + 640 - 1;
+			address_W <= val_nxt - 1;
+			address_NW <= val_nxt - 640 - 1;
+		end
 	end		
 		
     

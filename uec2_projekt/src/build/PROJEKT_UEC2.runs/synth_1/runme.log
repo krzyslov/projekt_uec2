@@ -14,76 +14,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22252 
+INFO: Helper process launched with PID 17008 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 363.301 ; gain = 94.445
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 366.723 ; gain = 97.863
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
-INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71]
-INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69]
-INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
-	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
-	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
-	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
-	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
-	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
-INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
-	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
-	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
-	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
-	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter COMPENSATION bound to: ZHOLD - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
-	Parameter IS_PSEN_INVERTED bound to: 1'b0 
-	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
-	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
-	Parameter IS_RST_INVERTED bound to: 1'b0 
-	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
-	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
-	Parameter SS_EN bound to: FALSE - type: string 
-	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
-	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
-	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
-INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v:69]
-INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/clocking.v:71]
-WARNING: [Synth 8-350] instance 'my_clocking' of module 'clocking' requires 5 connections, but only 3 given [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:41]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:4]
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/realtime/clock_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clock' (1#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/realtime/clock_stub.v:5]
+WARNING: [Synth 8-350] instance 'my_clock' of module 'clock' requires 8 connections, but only 5 given [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:49]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/freqd/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (2#1) [C:/Users/bened/Desktop/freqd/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:1]
 	Parameter HM bound to: 799 - type: integer 
 	Parameter HD bound to: 640 - type: integer 
 	Parameter HF bound to: 16 - type: integer 
@@ -94,62 +35,110 @@ INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/Proj/uec2_
 	Parameter VF bound to: 10 - type: integer 
 	Parameter VB bound to: 33 - type: integer 
 	Parameter VR bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'VGA' (6#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:4]
-INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
-INFO: [Synth 8-256] done synthesizing module 'debounce' (7#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
-INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (3#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:71]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (4#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
 	Parameter camera_address bound to: 8'b01000010 
-INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
-INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (8#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
-INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (9#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
-WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:11]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (10#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
-INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-19712-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (11#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-19712-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
-WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:63]
-WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:64]
-INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (12#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
-INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
-INFO: [Synth 8-256] done synthesizing module 'RGB' (13#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
-INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
-INFO: [Synth 8-4471] merging register 'address_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:36]
-WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:36]
-INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (14#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
-INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:22]
-WARNING: [Synth 8-6014] Unused sequential element hc_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:96]
-WARNING: [Synth 8-6014] Unused sequential element hblank_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:101]
-WARNING: [Synth 8-6014] Unused sequential element vc_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:104]
-WARNING: [Synth 8-6014] Unused sequential element vblank_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:101]
-WARNING: [Synth 8-6014] Unused sequential element gray_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:130]
-WARNING: [Synth 8-6014] Unused sequential element left_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:131]
-WARNING: [Synth 8-6014] Unused sequential element right_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:132]
-WARNING: [Synth 8-6014] Unused sequential element up_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:134]
-WARNING: [Synth 8-6014] Unused sequential element down_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:135]
-WARNING: [Synth 8-6014] Unused sequential element leftup_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:136]
-WARNING: [Synth 8-6014] Unused sequential element leftdown_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:137]
-WARNING: [Synth 8-6014] Unused sequential element rightup_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:138]
-WARNING: [Synth 8-6014] Unused sequential element rightdown_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:139]
-WARNING: [Synth 8-6014] Unused sequential element tblue_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:140]
-WARNING: [Synth 8-6014] Unused sequential element tgreen_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:141]
-WARNING: [Synth 8-6014] Unused sequential element tred_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:142]
-WARNING: [Synth 8-6014] Unused sequential element red_o_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:158]
-WARNING: [Synth 8-6014] Unused sequential element green_o_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:159]
-WARNING: [Synth 8-6014] Unused sequential element blue_o_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:160]
-WARNING: [Synth 8-6014] Unused sequential element r_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:179]
-WARNING: [Synth 8-6014] Unused sequential element g_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:180]
-WARNING: [Synth 8-6014] Unused sequential element b_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:181]
-WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:557]
-WARNING: [Synth 8-3848] Net out2 in module/entity filtering does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:69]
-INFO: [Synth 8-256] done synthesizing module 'filtering' (15#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:22]
-WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:32]
-WARNING: [Synth 8-3848] Net rez_160x120 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:25]
-WARNING: [Synth 8-3848] Net rez_320x240 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:25]
-WARNING: [Synth 8-3848] Net size_select in module/entity top_level does not have driver. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:31]
-INFO: [Synth 8-256] done synthesizing module 'top_level' (16#1) [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (5#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (6#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (7#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (8#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (9#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (10#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (11#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:22]
+	Parameter position_center bound to: 4'b0000 
+	Parameter position_up bound to: 4'b0001 
+	Parameter position_down bound to: 4'b0010 
+	Parameter position_left bound to: 4'b0011 
+	Parameter position_right bound to: 4'b0100 
+	Parameter position_left_up bound to: 4'b0101 
+	Parameter position_left_down bound to: 4'b0110 
+	Parameter position_right_up bound to: 4'b0111 
+	Parameter position_right_down bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element pcount_reg was removed.  [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:112]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:157]
+WARNING: [Synth 8-3848] Net gray_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net left_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net right_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net up_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net down_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net leftup_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net leftdown_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net rightup_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net rightdown_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:44]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:45]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (12#1) [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-350] instance 'my_filtering' of module 'filtering' requires 21 connections, but only 18 given [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:176]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/freqd/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/freqd/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (13#1) [C:/Users/bened/Desktop/freqd/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (14#1) [C:/Users/bened/Desktop/freqd/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/freqd/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (15#1) [C:/Users/bened/Desktop/freqd/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/freqd/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (16#1) [C:/Users/bened/Desktop/freqd/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:32]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (17#1) [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+WARNING: [Synth 8-3331] design filtering has unconnected port clk10
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 406.383 ; gain = 137.527
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 413.812 ; gain = 144.953
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -158,50 +147,51 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin my_clocking:reset to constant 0 [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:41]
-WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:50]
-WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:50]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:71]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v:71]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 406.383 ; gain = 137.527
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 413.812 ; gain = 144.953
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-19712-DESKTOP-E1S6T55/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
-Finished Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-19712-DESKTOP-E1S6T55/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
-Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]
-WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc:108]
-Finished Parsing XDC File [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/bened/Desktop/Proj/uec2_projekt/src/constraints/project_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Parsing XDC File [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/dcp5/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
+Finished Parsing XDC File [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/dcp5/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
+Parsing XDC File [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/dcp7/clock_in_context.xdc] for cell 'my_clock'
+Finished Parsing XDC File [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/dcp7/clock_in_context.xdc] for cell 'my_clock'
+Parsing XDC File [C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 717.465 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 728.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 728.898 ; gain = 460.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 728.898 ; gain = 460.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk100. (constraint file  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/dcp7/clock_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100. (constraint file  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-11848-DESKTOP-E1S6T55/dcp7/clock_in_context.xdc, line 8).
+Applied set_property DONT_TOUCH = true for my_clock. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for my_frame_buffer. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 728.898 ; gain = 460.039
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Vcnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "activeArea" won't be mapped to RAM because it is too sparse
@@ -215,17 +205,32 @@ INFO: [Synth 8-5546] ROM "o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "taken" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "data_sr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "divider" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element divider_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
+WARNING: [Synth 8-6014] Unused sequential element divider_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
 INFO: [Synth 8-5546] ROM "finished" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6040] Register 0®Æý driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6014] Unused sequential element sreg_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
-WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
-WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
-WARNING: [Synth 8-6014] Unused sequential element val_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:35]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/bened/Desktop/Proj/uec2_projekt/src/rtl/filtering/filtering.v:158]
-DSP Debug: swapped A/B pins for adder 000001FFBC4F71A0
+WARNING: [Synth 8-6040] Register 0®Uý driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element sreg_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
+WARNING: [Synth 8-6014] Unused sequential element address_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:300]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:590]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:448]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:590]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:448]
+WARNING: [Synth 8-6014] Unused sequential element char_line_pixels_reg was removed.  [C:/Users/bened/Desktop/freqd/rtl/filtering/font_rom.v:22]
+WARNING: [Synth 8-327] inferring latch for variable 'red_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:309]
+WARNING: [Synth 8-327] inferring latch for variable 'green_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:310]
+WARNING: [Synth 8-327] inferring latch for variable 'blue_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:311]
+WARNING: [Synth 8-327] inferring latch for variable 'red_o_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:300]
+WARNING: [Synth 8-327] inferring latch for variable 'green_o_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:301]
+WARNING: [Synth 8-327] inferring latch for variable 'blue_o_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:302]
+WARNING: [Synth 8-327] inferring latch for variable 'tred_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:289]
+WARNING: [Synth 8-327] inferring latch for variable 'tgreen_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:288]
+WARNING: [Synth 8-327] inferring latch for variable 'tblue_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:287]
+WARNING: [Synth 8-327] inferring latch for variable 'r_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:317]
+WARNING: [Synth 8-327] inferring latch for variable 'b_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:319]
+WARNING: [Synth 8-327] inferring latch for variable 'g_nxt_reg' [C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v:318]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 728.898 ; gain = 460.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -238,42 +243,49 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     24 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 9     
 	   2 Input     17 Bit       Adders := 1     
-	   3 Input     16 Bit       Adders := 2     
-	   2 Input     16 Bit       Adders := 3     
-	   2 Input     12 Bit       Adders := 1     
-	   5 Input     11 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 4     
-	   3 Input     10 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 6     
+	   9 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 4     
 	   6 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 6     
 +---Registers : 
+	               38 Bit    Registers := 2     
 	               32 Bit    Registers := 2     
 	               24 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
-	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
+	               19 Bit    Registers := 9     
+	               16 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 8     
+	                8 Bit    Registers := 47    
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 9     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
 +---ROMs : 
-	                              ROMs := 1     
+	                              ROMs := 2     
 +---Muxes : 
+	   2 Input    238 Bit        Muxes := 1     
+	   8 Input    238 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 3     
-	   2 Input     10 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 17    
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 14    
 	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 27    
+	   2 Input      4 Bit        Muxes := 11    
+	   8 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 16    
 	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -281,20 +293,20 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module top_level 
+Module resetlocked 
 Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     17 Bit        Muxes := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
 Module VGA 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
 +---Registers : 
-	               10 Bit    Registers := 2     
+	               11 Bit    Registers := 4     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 Module debounce 
@@ -348,27 +360,62 @@ Module RGB
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 3     
+Module Address_Generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 9     
++---Registers : 
+	               19 Bit    Registers := 9     
 Module filtering 
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 2     
 	   2 Input     17 Bit       Adders := 1     
-	   3 Input     16 Bit       Adders := 2     
-	   2 Input     16 Bit       Adders := 3     
-	   2 Input     12 Bit       Adders := 1     
-	   5 Input     11 Bit       Adders := 1     
-	   3 Input     10 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 2     
-	   2 Input      9 Bit       Adders := 6     
+	   9 Input     12 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 2     
 	   6 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 6     
 +---Registers : 
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 43    
 	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 12    
-	   2 Input      4 Bit        Muxes := 27    
+	   2 Input      8 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 11    
+	   8 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
+Module delay 
+Detailed RTL Component Info : 
++---Registers : 
+	               38 Bit    Registers := 2     
+Module draw_rect_char 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+Module font_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module char_rom 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    238 Bit        Muxes := 1     
+	   8 Input    238 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -385,40 +432,227 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "activeArea" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element Vcnt_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:43]
+WARNING: [Synth 8-6014] Unused sequential element Hcnt_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:36]
+WARNING: [Synth 8-6014] Unused sequential element Vcnt_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v:37]
 INFO: [Synth 8-5546] ROM "o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Inst_i2c_sender/divider" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Inst_i2c_sender/taken" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Inst_ov7670_registers/finished" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6040] Register 0®Æý driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_registers/sreg_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
-WARNING: [Synth 8-6014] Unused sequential element Inst_i2c_sender/divider_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
-WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_registers/address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
-WARNING: [Synth 8-6014] Unused sequential element my_ov7670_capture/address_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
-WARNING: [Synth 8-6014] Unused sequential element my_Address_Generator/val_reg was removed.  [C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v:35]
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\my_ov7670_controller/Inst_i2c_sender/data_sr_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_controller/Inst_i2c_sender/data_sr_reg[0]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/href_last_reg[6]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/href_last_reg[5]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/href_last_reg[4]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/href_last_reg[3]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/href_last_reg[2]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/href_last_reg[1]) is unused and will be removed from module top_level.
-WARNING: [Synth 8-3332] Sequential element (my_ov7670_capture/d_latch_reg[11]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-6040] Register 0®Uý driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_registers/sreg_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:19]
+WARNING: [Synth 8-6014] Unused sequential element Inst_i2c_sender/divider_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v:46]
+WARNING: [Synth 8-6014] Unused sequential element Inst_ov7670_registers/address_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v:26]
+WARNING: [Synth 8-6014] Unused sequential element my_font_rom/char_line_pixels_reg was removed.  [C:/Users/bened/Desktop/freqd/rtl/filtering/font_rom.v:22]
+WARNING: [Synth 8-6014] Unused sequential element my_ov7670_capture/address_reg was removed.  [C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v:36]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+WARNING: [Synth 8-3331] design filtering has unconnected port clk10
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (my_ov7670_controller/\Inst_i2c_sender/data_sr_reg[0] )
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_nxt_reg[0]' (LD) to 'my_filtering/tblue_nxt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_nxt_reg[1]' (LD) to 'my_filtering/tblue_nxt_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_nxt_reg[2]' (LD) to 'my_filtering/tblue_nxt_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_nxt_reg[3]' (LD) to 'my_filtering/tblue_nxt_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_nxt_reg[0]' (LD) to 'my_filtering/tgreen_nxt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_nxt_reg[0]' (LD) to 'my_filtering/tred_nxt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_nxt_reg[1]' (LD) to 'my_filtering/tred_nxt_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_reg[0]' (FDR) to 'my_filtering/tblue_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_reg[1]' (FDR) to 'my_filtering/tblue_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_reg[2]' (FDR) to 'my_filtering/tblue_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tblue_reg[3]' (FDR) to 'my_filtering/tblue_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_reg[0]' (FDR) to 'my_filtering/tgreen_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_reg[0]' (FDR) to 'my_filtering/tred_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_reg[1]' (FDR) to 'my_filtering/tred_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_nxt_reg[1]' (LD) to 'my_filtering/tgreen_nxt_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_nxt_reg[2]' (LD) to 'my_filtering/tgreen_nxt_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_nxt_reg[3]' (LD) to 'my_filtering/tgreen_nxt_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_nxt_reg[2]' (LD) to 'my_filtering/tred_nxt_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_nxt_reg[3]' (LD) to 'my_filtering/tred_nxt_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[13]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[15]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[14]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[9]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[10]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[11]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[12]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[8]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[6]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[7]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[4]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[5]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[13]' (FDR) to 'my_filtering/g_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[15]' (FDR) to 'my_filtering/g_reg[14]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[14]' (FDR) to 'my_filtering/g_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[9]' (FDR) to 'my_filtering/g_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[10]' (FDR) to 'my_filtering/g_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[11]' (FDR) to 'my_filtering/g_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[12]' (FDR) to 'my_filtering/g_reg[8]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/g_reg[8]' (FDR) to 'my_filtering/r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[4]' (FDR) to 'my_filtering/r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[5]' (FDR) to 'my_filtering/r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[6]' (FDR) to 'my_filtering/r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_reg[1]' (FDR) to 'my_filtering/tgreen_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_reg[2]' (FDR) to 'my_filtering/tgreen_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tgreen_reg[3]' (FDR) to 'my_filtering/tgreen_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_reg[2]' (FDR) to 'my_filtering/tred_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/tred_reg[3]' (FDR) to 'my_filtering/tred_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[6]' (FDR) to 'my_filtering/r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[4]' (FDR) to 'my_filtering/r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[5]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[13]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[15]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[14]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[9]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[10]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[11]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[12]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/r_reg[8]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_filtering/b_reg[7]' (FDR) to 'my_filtering/r_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_filtering/\r_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (Inst_i2c_sender/data_sr_reg[0]) is unused and will be removed from module ov7670_controller.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[18]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[17]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[16]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[15]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[14]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[13]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[12]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[11]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[10]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[9]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[8]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[7]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[6]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[5]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[4]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[3]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[2]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[1]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_N_reg[0]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[18]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[17]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[16]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[15]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[14]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[13]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[12]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[11]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[10]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[9]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[8]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[7]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[6]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[5]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[4]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[3]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[2]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[1]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_NE_reg[0]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[18]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[17]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[16]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[15]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[14]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[13]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[12]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[11]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[10]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[9]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[8]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[7]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[6]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[5]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[4]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[3]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[2]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[1]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_E_reg[0]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[18]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[17]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[16]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[15]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[14]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[13]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[12]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[11]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[10]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[9]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[8]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[7]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[6]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[5]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[4]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[3]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[2]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[1]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SE_reg[0]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[18]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[17]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[16]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[15]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[14]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[13]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[12]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[11]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[10]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[9]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[8]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[7]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[6]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[5]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[4]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[3]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[2]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[1]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_S_reg[0]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SW_reg[18]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SW_reg[17]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SW_reg[16]) is unused and will be removed from module Address_Generator.
+WARNING: [Synth 8-3332] Sequential element (address_SW_reg[15]) is unused and will be removed from module Address_Generator.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 728.898 ; gain = 460.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM:
-+------------------+--------------------------------+---------------+----------------+
-|Module Name       | RTL Object                     | Depth x Width | Implemented As | 
-+------------------+--------------------------------+---------------+----------------+
-|ov7670_registers  | sreg_reg                       | 256x16        | Block RAM      | 
-|ov7670_controller | Inst_ov7670_registers/sreg_reg | 256x16        | Block RAM      | 
-+------------------+--------------------------------+---------------+----------------+
++------------------+----------------------------------+---------------+----------------+
+|Module Name       | RTL Object                       | Depth x Width | Implemented As | 
++------------------+----------------------------------+---------------+----------------+
+|ov7670_registers  | sreg_reg                         | 256x16        | Block RAM      | 
+|font_rom          | char_line_pixels_reg             | 2048x8        | Block RAM      | 
+|ov7670_controller | Inst_ov7670_registers/sreg_reg   | 256x16        | Block RAM      | 
+|top_level         | my_font_rom/char_line_pixels_reg | 2048x8        | Block RAM      | 
++------------------+----------------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -432,14 +666,20 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'my_clock/CLK_10' to pin 'my_clock/bbstub_CLK_10/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'my_clock/CLK_100' to pin 'my_clock/bbstub_CLK_100/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'my_clock/CLK_25' to pin 'my_clock/bbstub_CLK_25/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'my_clock/CLK_50' to pin 'my_clock/bbstub_CLK_50/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'my_clock/CLK_90' to pin 'my_clock/bbstub_CLK_90/O'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 728.898 ; gain = 460.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 738.648 ; gain = 469.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -451,8 +691,9 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance my_ov7670_controller/Inst_ov7670_registers/sreg_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance my_font_rom/char_line_pixels_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -476,7 +717,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -489,7 +730,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -501,25 +742,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -529,66 +770,75 @@ Report BlackBoxes:
 +------+--------------+----------+
 |      |BlackBox name |Instances |
 +------+--------------+----------+
-|1     |frame_buffer  |         1|
+|1     |clock         |         1|
+|2     |frame_buffer  |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
 +------+-------------+------+
 |      |Cell         |Count |
 +------+-------------+------+
-|1     |frame_buffer |     1|
-|2     |BUFG         |     4|
-|3     |CARRY4       |    20|
-|4     |LUT1         |    12|
-|5     |LUT2         |    53|
-|6     |LUT3         |    34|
-|7     |LUT4         |    25|
-|8     |LUT5         |    28|
-|9     |LUT6         |    70|
-|10    |MMCME2_ADV   |     1|
-|11    |RAMB18E1     |     1|
-|12    |FDRE         |   184|
-|13    |FDSE         |    32|
-|14    |IBUF         |    17|
-|15    |OBUF         |    19|
-|16    |OBUFT        |     1|
+|1     |clock        |     1|
+|2     |frame_buffer |     1|
+|3     |BUFG         |     2|
+|4     |CARRY4       |    42|
+|5     |LUT1         |    21|
+|6     |LUT2         |    71|
+|7     |LUT3         |    79|
+|8     |LUT4         |    56|
+|9     |LUT5         |    63|
+|10    |LUT6         |   139|
+|11    |MUXF7        |    16|
+|12    |RAMB18E1     |     1|
+|13    |RAMB18E1_1   |     1|
+|14    |FDCE         |    60|
+|15    |FDPE         |     4|
+|16    |FDRE         |   292|
+|17    |FDSE         |    34|
+|18    |LD           |    48|
+|19    |IBUF         |    16|
+|20    |OBUF         |    19|
+|21    |OBUFT        |     1|
 +------+-------------+------+
 
 Report Instance Areas: 
 +------+--------------------------+------------------+------+
 |      |Instance                  |Module            |Cells |
 +------+--------------------------+------------------+------+
-|1     |top                       |                  |   513|
-|2     |  my_Address_Generator    |Address_Generator |    27|
-|3     |  my_VGA                  |VGA               |   114|
-|4     |  my_clocking             |clocking          |     5|
-|5     |    inst                  |clocking_clk_wiz  |     5|
-|6     |  my_debounce             |debounce          |    38|
-|7     |  my_filtering            |filtering         |    45|
-|8     |  my_ov7670_capture       |ov7670_capture    |    54|
-|9     |  my_ov7670_controller    |ov7670_controller |   180|
-|10    |    Inst_i2c_sender       |i2c_sender        |   144|
-|11    |    Inst_ov7670_registers |ov7670_registers  |    34|
+|1     |top                       |                  |   983|
+|2     |  my_Address_Generator    |Address_Generator |    26|
+|3     |  my_VGA                  |VGA               |   109|
+|4     |  my_debounce             |debounce          |    37|
+|5     |  my_draw_rect_char       |draw_rect_char    |   152|
+|6     |    my_delay              |delay             |    77|
+|7     |  my_filtering            |filtering         |   337|
+|8     |  my_font_rom             |font_rom          |     6|
+|9     |  my_ov7670_capture       |ov7670_capture    |    54|
+|10    |  my_ov7670_controller    |ov7670_controller |   180|
+|11    |    Inst_i2c_sender       |i2c_sender        |   146|
+|12    |    Inst_ov7670_registers |ov7670_registers  |    32|
+|13    |  my_resetlocked          |resetlocked       |    18|
 +------+--------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 743.539 ; gain = 474.680
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 717.465 ; gain = 137.527
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 717.465 ; gain = 448.609
+Synthesis finished with 0 errors, 0 critical warnings and 685 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 743.539 ; gain = 159.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 743.539 ; gain = 474.680
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 124 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 48 instances were transformed.
+  LD => LDCE: 48 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-69 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
+140 Infos, 213 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 717.465 ; gain = 456.816
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bened/Desktop/Proj/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 743.539 ; gain = 482.887
+INFO: [Common 17-1381] The checkpoint 'C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 717.465 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 31 15:21:25 2022...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.021 . Memory (MB): peak = 743.539 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  7 17:57:21 2022...

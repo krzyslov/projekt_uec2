@@ -49,6 +49,8 @@ proc create_new_project {project target top_module} {
 		#rtl/AR_58276_2013_3_MMCM/MMCME2_ADV.v
 		rtl/basys3_ov7670/clocking.v
 		rtl/basys3_ov7670/clocking_clk_wiz.v
+		rtl/basys3_ov7670/clock.v
+		rtl/basys3_ov7670/clock_clk_wiz.v
 		#rtl/ov7670_fr/ov7670_capture.v
 		#rtl/ov7670_fr/debounce.v
     }
