@@ -12,8 +12,8 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
-//
-module RGB (Din, Nblank, reset, R, G, B);
+//Wersja z grayscalem
+module RGB (Din, Nblank, reset, R, G, B,Grayscale);
 
    input[11:0] Din;
    input Nblank; 
@@ -24,12 +24,13 @@ module RGB (Din, Nblank, reset, R, G, B);
    wire [7:0] G;
    output [7:0] B ; 
    wire [7:0] B;
-    
+   output [7:0] Grayscale ; 
+   wire [7:0] Grayscale; 
 
    assign R = (Nblank == 1'b1 && reset == 1'b0) ? {Din[11:8], Din[11:8]} : 8'b00000000 ;
    assign G = (Nblank == 1'b1 && reset == 1'b0) ? {Din[7:4], Din[7:4]} : 8'b00000000 ;
    assign B = (Nblank == 1'b1 && reset == 1'b0 ) ? {Din[3:0], Din[3:0]} : 8'b00000000 ;
-    
+   assign Grayscale = (Nblank == 1'b1 && reset == 1'b0 ) ? {16*(Din[11:8] + Din[7:4] + Din[3:0])/3} : 8'b00000000 ; 
     
 
     

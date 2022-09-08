@@ -18,7 +18,7 @@ proc create_report { reportName command } {
 }
 set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
 set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/freqd/.Xil/Vivado-3624-DESKTOP-E1S6T55/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -27,37 +27,35 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.cache/wt [current_project]
-set_property parent.project_path C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property webtalk.parent_dir C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.cache/wt [current_project]
+set_property parent.project_path C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.cache/ip [current_project]
+set_property ip_output_repo c:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/RGB.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/address_Generator.v
-  C:/Users/bened/Desktop/freqd/rtl/filtering/char_rom.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/debounce.v
-  C:/Users/bened/Desktop/freqd/rtl/filtering/delay.v
-  C:/Users/bened/Desktop/freqd/rtl/filtering/draw_rect_char.v
-  C:/Users/bened/Desktop/freqd/rtl/filtering/filtering.v
-  C:/Users/bened/Desktop/freqd/rtl/filtering/font_rom.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/i2c_sender.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_capture.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/ov7670_controller.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/basys3_ov7670/ov7670_registers.v
-  C:/Users/bened/Desktop/freqd/rtl/ov7670_fr/resetlocked.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/vga.v
-  C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/imports/ov7670_fr/top_level.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v
+  C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v
+  C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v
+  C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v
+  C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v
+  C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v
+  C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v
+  C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v
+  C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v
+  C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v
+  C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v
+  C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v
 }
-read_ip -quiet C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
-set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc]
-
-read_ip -quiet c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/clock/clock.xci
-set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/clock/clock_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/clock/clock.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/clock/clock_ooc.xdc]
+read_ip -quiet C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci
+set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -67,9 +65,11 @@ set_property used_in_implementation false [get_files -all c:/Users/bened/Desktop
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc]
+read_xdc C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top top_level -part xc7a35tcpg236-1
 

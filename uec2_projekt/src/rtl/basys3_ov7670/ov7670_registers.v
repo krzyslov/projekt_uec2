@@ -4,7 +4,6 @@ module ov7670_registers(clk, resend, advance, command, finished);
 	input resend;
 	input advance;
 	output [15:0] command;
-	output [15:0] command;
 	output finished;
 	wire finished;
 	
@@ -27,7 +26,7 @@ module ov7670_registers(clk, resend, advance, command, finished);
 		end
 	else if (advance == 1'b1)
 	begin
-		address <= std_logic_vector(unsigned(address)+1);
+		address <= address+1;
 	end
 	case(address)
 	8'h00:
@@ -56,7 +55,7 @@ module ov7670_registers(clk, resend, advance, command, finished);
 		end
 	8'h06:
 		begin
-			sreg <= 16'8C00;
+			sreg <= 16'h8C00;
 		end
 	8'h07:
 		begin

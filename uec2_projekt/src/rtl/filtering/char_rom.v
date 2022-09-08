@@ -32,7 +32,14 @@ module char_rom (
        4'b0101: tekst_do_wyswietlenia = " filtr: Blue Filter           " ;
        4'b0110: tekst_do_wyswietlenia = " filtr: Green Filter          " ;
        4'b0111: tekst_do_wyswietlenia = " filtr: Original Image        " ;
-       default: tekst_do_wyswietlenia = " Wybierz jeden filtr          " ; 
+       4'b1000: tekst_do_wyswietlenia = " filtr: Average blurring      " ;
+       4'b1001: tekst_do_wyswietlenia = " filtr: Sobel Edge Detection  " ;
+       4'b1010: tekst_do_wyswietlenia = " filtr: Edge Detection        " ;
+       4'b1011: tekst_do_wyswietlenia = " filtr: Motion Blurring XY    " ;
+       4'b1100: tekst_do_wyswietlenia = " filtr: Emboss                " ;
+       4'b1101: tekst_do_wyswietlenia = " filtr: Sharpen               " ;
+       4'b1110: tekst_do_wyswietlenia = " filtr: Motion Blur X         " ;
+       default: tekst_do_wyswietlenia = " Wybierz inna kombinacje      " ; 
     endcase 
    end
    //reg [(8*string_length -1):0] tekst_do_wyswietlenia = "In principio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum. Hoc erat in principio apud Deum. Omnia per ipsum facta sunt: et sine ipso factum est nihil, quod factum est: in ipso vita erat, et vita erat lux hominum: et lux in tenebris lucet, et";

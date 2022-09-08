@@ -1,0 +1,2083 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Sep  8 17:46:52 2022
+# Process ID: 15772
+# Current directory: C:/Users/bened/Desktop/bezbuild
+# Command line: vivado.exe -mode tcl -source run.tcl -tclargs rebuild
+# Log file: C:/Users/bened/Desktop/bezbuild/vivado.log
+# Journal file: C:/Users/bened/Desktop/bezbuild\vivado.jou
+#-----------------------------------------------------------
+source run.tcl
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 1572865"
+# set project PROJEKT_UEC2
+# set top_module top_level
+# set target xc7a35tcpg236-1
+# set bitstream_file build/${project}.runs/impl_1/${top_module}.bit
+# proc usage {} {
+# puts "===========================================================================\n
+# usage: vivado -mode tcl -source [info script] -tclargs \[open/rebuild/sim/bit/prog\]\n
+# \topen    - open project and start gui\n
+# \trebuild - clear build directory and create the project again from sources, then open gui\n
+# \tsim     - run simulation\n
+# \tbit     - generate bitstream\n
+# \tprog    - load bitstream to FPGA\n
+# If a project is already created in the build directory, run.tcl opens it. Otherwise, creates a new one.
+# ==========================================================================="
+# }
+# proc create_new_project {project target top_module} {
+#     file mkdir build
+#     create_project ${project} build -part ${target} -force
+#     
+#     # Specify .xdc files location             -- EDIT
+#     read_xdc {
+#         constraints/project_constraints.xdc
+# 		
+# 		
+#     }
+# 
+#     # Specify verilog design files location   -- EDIT
+#     read_verilog {
+# 		rtl/ov7670_fr/RGB.v
+# 		rtl/ov7670_fr/address_Generator.v
+# 		
+# 		rtl/basys3_ov7670/clocking.v
+# 		rtl/basys3_ov7670/clocking_clk_wiz.v
+# 		rtl/basys3_ov7670/clock.v
+# 		rtl/basys3_ov7670/clock_clk_wiz.v
+# 		rtl/ov7670_fr/ov7670_capture.v
+# 		rtl/ov7670_fr/debounce.v
+# 		rtl/ov7670_fr/ov7670_controller.v
+# 		rtl/ov7670_fr/top_level.v
+# 		rtl/ov7670_fr/vga.v
+# 		rtl/basys3_ov7670/i2c_sender.v
+# 		rtl/basys3_ov7670/ov7670_registers.v
+# 		rtl/filtering/char_rom.v
+# 		rtl/filtering/delay.v
+# 		rtl/filtering/draw_rect_char.v
+# 		rtl/filtering/filtering.v
+# 		rtl/filtering/font_rom.v
+# 		rtl/ov7670_fr/resetlocked.v
+# 		rtl/frame_buffer/ram_buffer.v
+# 		
+# 		
+# 		
+# 		
+#     }
+# 	#rtl/frame_buffer/blk_mem_gen_v8_4_0.vhd
+# 	#rtl/frame_buffer/frame_buffer.v
+# 	#rtl/AR_58276_2013_3_MMCM/MMCME2_ADV.v
+# 	#rtl/frame_buffer/frame_buffer_stub.v
+#     #rtl/frame_buffer/frame_buffer_sim_netlist.v
+#     # Specify vhdl design files location      -- EDIT
+# 	#rtl/frame_buffer/blk_mem_gen_v8_4_0.v
+#    # read_vhdl {
+# 	#		
+# 	#		rtl/frame_buffer/frame_buffer.vhd
+# 	#		rtl/frame_buffer/blk_mem_gen_v8_4_0.vhd
+# 	#	
+# 		
+# 	#}
+#     read_ip		rtl/frame_buffer/frame_buffer.xci
+# 
+#     # Specify files for memory initialization -- EDIT
+#     #read_mem {
+#         #./image_rom.data
+#     #}
+# 
+#     # Specify simulation files location       -- EDIT
+#     #add_files -fileset sim_1 {
+#     #    sim/testbench.v
+# 	#	sim/tiff_writer.v
+# 	#	sim/draw_rect_ctl_tb.v
+# 	#	sim/draw_rect_ctl_test.v
+# 	#	sim/delay_test.v
+#     #}
+# 
+#     set_property top ${top_module} [current_fileset]
+#     update_compile_order -fileset sources_1
+#     update_compile_order -fileset sim_1
+# }
+# proc open_existing_project {project} {
+#     open_project build/$project.xpr
+#     update_compile_order -fileset sources_1
+#     update_compile_order -fileset sim_1
+# }
+# proc open_or_create_project {project target top_module} {
+#     if {[file exists build/$project.xpr] == 1} {
+#         open_existing_project $project 
+#     } else {
+#         create_new_project $project $target $top_module
+#     }
+# }
+# proc program_fpga {bitstream_file} {
+#     if {[file exists $bitstream_file] == 0} {
+#         puts "ERROR: No bitstream found"
+#     } else {
+#         open_hw_manager
+#         connect_hw_server
+#         current_hw_target [get_hw_targets *]
+#         open_hw_target
+#         current_hw_device [lindex [get_hw_devices] 0]
+#         refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+# 
+#         set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+#         set_property FULL_PROBES.FILE {} [lindex [get_hw_devices] 0]
+#         set_property PROGRAM.FILE ${bitstream_file} [lindex [get_hw_devices] 0]
+# 
+#         program_hw_devices [lindex [get_hw_devices] 0]
+#         refresh_hw_device [lindex [get_hw_devices] 0]
+#     }
+# }
+# proc simulation {} {
+#     launch_simulation
+#     # run all
+# }
+# proc bitstream {} {
+#     # Run synthesis
+#     reset_run synth_1
+#     launch_runs synth_1 -jobs 8
+#     wait_on_run synth_1
+#     
+#     # Run implemenatation up to bitstream generation
+#     launch_runs impl_1 -to_step write_bitstream -jobs 8
+#     wait_on_run impl_1
+# }
+# if {$argc == 1} {
+#     switch $argv {
+#         open {
+#             open_or_create_project $project $target $top_module    
+#             start_gui
+#         }
+#         rebuild {
+#             create_new_project $project $target $top_module    
+#             start_gui
+#         }
+#         sim {
+#             open_or_create_project $project $target $top_module    
+#             simulation
+#             start_gui
+#         }
+#         bit {
+#             open_or_create_project $project $target $top_module    
+#             bitstream
+#             exit
+#         }
+#         prog {
+#             program_fpga $bitstream_file
+#             exit
+#         }
+#         default {
+#             usage
+#             exit 1
+#         }
+#     }
+# } else {
+#     usage
+#     exit 1
+# }
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_files/Vivado/Vivado/2017.3/data/ip'.
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 915.562 ; gain = 18.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clock.v:74]
+INFO: [Synth 8-638] synthesizing module 'clock_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clock_clk_wiz.v:72]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 9.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 9.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 18 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 36 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 90 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clock_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clock_clk_wiz.v:72]
+INFO: [Synth 8-256] done synthesizing module 'clock' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clock.v:74]
+WARNING: [Synth 8-350] instance 'my_clock' of module 'clock' requires 8 connections, but only 5 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:49]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:71]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+	Parameter position_center bound to: 4'b0000 
+	Parameter position_up bound to: 4'b0001 
+	Parameter position_down bound to: 4'b0010 
+	Parameter position_left bound to: 4'b0011 
+	Parameter position_right bound to: 4'b0100 
+	Parameter position_left_up bound to: 4'b0101 
+	Parameter position_left_down bound to: 4'b0110 
+	Parameter position_right_up bound to: 4'b0111 
+	Parameter position_right_down bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element pcount_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:112]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:157]
+WARNING: [Synth 8-3848] Net gray_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net left_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net right_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net up_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net down_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net leftup_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net leftdown_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net rightup_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net rightdown_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:68]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:44]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:45]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (16#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-350] instance 'my_filtering' of module 'filtering' requires 21 connections, but only 18 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:176]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (17#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (18#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (19#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (20#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:32]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (21#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+WARNING: [Synth 8-3331] design filtering has unconnected port clk10
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port pixel_position[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 959.711 ; gain = 62.422
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:71]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 959.711 ; gain = 62.422
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1276.188 ; gain = 378.898
+54 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1276.188 ; gain = 378.898
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1295.645 ; gain = 7.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 18 - type: integer 
+	Parameter BITWIDTH bound to: 24 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+ERROR: [Synth 8-448] named port connection 'rgb_in' does not exist for instance 'my_ram_buffer' of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:151]
+WARNING: [Synth 8-689] width (17) of port connection 'input_rgb_address' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:152]
+WARNING: [Synth 8-689] width (19) of port connection 'address_center' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:153]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:154]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:155]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:156]
+WARNING: [Synth 8-689] width (19) of port connection 'address_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:157]
+WARNING: [Synth 8-689] width (19) of port connection 'address_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:158]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:159]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:160]
+WARNING: [Synth 8-689] width (19) of port connection 'address_righ_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:161]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+ERROR: [Synth 8-285] failed synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+ERROR: [Synth 8-285] failed synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1462.410 ; gain = 174.133
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist
+ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist
+ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 18 - type: integer 
+	Parameter BITWIDTH bound to: 24 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+ERROR: [Synth 8-448] named port connection 'rgb_in' does not exist for instance 'my_ram_buffer' of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:151]
+WARNING: [Synth 8-689] width (17) of port connection 'input_rgb_address' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:152]
+WARNING: [Synth 8-689] width (19) of port connection 'address_center' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:153]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:154]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:155]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:156]
+WARNING: [Synth 8-689] width (19) of port connection 'address_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:157]
+WARNING: [Synth 8-689] width (19) of port connection 'address_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:158]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:159]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:160]
+WARNING: [Synth 8-689] width (19) of port connection 'address_righ_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:161]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+ERROR: [Synth 8-285] failed synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+ERROR: [Synth 8-285] failed synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist
+ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist
+33 Infos, 14 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-70] Application Exception: Undefined HARPData for the netlist
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 18:40:59 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 18:40:59 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 18 - type: integer 
+	Parameter BITWIDTH bound to: 24 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+WARNING: [Synth 8-689] width (17) of port connection 'input_rgb_address' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:152]
+WARNING: [Synth 8-689] width (19) of port connection 'address_center' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:153]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:154]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:155]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:156]
+WARNING: [Synth 8-689] width (19) of port connection 'address_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:157]
+WARNING: [Synth 8-689] width (19) of port connection 'address_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:158]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:159]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:160]
+WARNING: [Synth 8-689] width (19) of port connection 'address_righ_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:161]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (16#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+	Parameter position_center bound to: 4'b0000 
+	Parameter position_up bound to: 4'b0001 
+	Parameter position_down bound to: 4'b0010 
+	Parameter position_left bound to: 4'b0011 
+	Parameter position_right bound to: 4'b0100 
+	Parameter position_left_up bound to: 4'b0101 
+	Parameter position_left_down bound to: 4'b0110 
+	Parameter position_right_up bound to: 4'b0111 
+	Parameter position_right_down bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element pcount_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:121]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:166]
+WARNING: [Synth 8-3848] Net gray_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net left_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net right_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net up_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net down_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net leftup_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net leftdown_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net rightup_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net rightdown_nxt in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:77]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:53]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:54]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (17#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-350] instance 'my_filtering' of module 'filtering' requires 30 connections, but only 27 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:198]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (18#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (19#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (20#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (21#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:32]
+WARNING: [Synth 8-3848] Net address_C in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:105]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (22#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+WARNING: [Synth 8-3331] design filtering has unconnected port clk10
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_center[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_up[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_up[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_in_right_down[23]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[16] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[15] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[14] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[13] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[12] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[11] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[10] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[9] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[8] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[7] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[6] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[5] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[4] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[3] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[2] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[1] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[0] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1462.410 ; gain = 0.000
+57 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1462.410 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 18:43:28 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 18:43:28 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 18:48:17 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 18:48:17 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 18:49:03 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 18:49:03 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 18:50:38 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 18:50:38 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 18 - type: integer 
+	Parameter BITWIDTH bound to: 24 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+WARNING: [Synth 8-689] width (17) of port connection 'input_rgb_address' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:152]
+WARNING: [Synth 8-689] width (19) of port connection 'address_center' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:153]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:154]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:155]
+WARNING: [Synth 8-689] width (19) of port connection 'address_left_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:156]
+WARNING: [Synth 8-689] width (19) of port connection 'address_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:157]
+WARNING: [Synth 8-689] width (19) of port connection 'address_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:158]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right_up' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:159]
+WARNING: [Synth 8-689] width (19) of port connection 'address_right' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:160]
+WARNING: [Synth 8-689] width (19) of port connection 'address_righ_down' does not match port width (18) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:161]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (16#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+	Parameter RGB_LEFT_UP bound to: 4'b0000 
+	Parameter RGB_UP bound to: 4'b0001 
+	Parameter RGB_RIGHT_UP bound to: 4'b0010 
+	Parameter RGB_LEFT bound to: 4'b0011 
+	Parameter RGB_CENTER bound to: 4'b0100 
+	Parameter RGB_RIGHT bound to: 4'b0101 
+	Parameter RGB_LEFT_DOWN bound to: 4'b0110 
+	Parameter RGB_DOWN bound to: 4'b0111 
+	Parameter RGB_RIGHT_DOWN bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element gray_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:179]
+WARNING: [Synth 8-6014] Unused sequential element left_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:180]
+WARNING: [Synth 8-6014] Unused sequential element right_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:181]
+WARNING: [Synth 8-6014] Unused sequential element up_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:182]
+WARNING: [Synth 8-6014] Unused sequential element down_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:183]
+WARNING: [Synth 8-6014] Unused sequential element leftup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:184]
+WARNING: [Synth 8-6014] Unused sequential element leftdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:185]
+WARNING: [Synth 8-6014] Unused sequential element rightup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:186]
+WARNING: [Synth 8-6014] Unused sequential element rightdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:187]
+WARNING: [Synth 8-6014] Unused sequential element tblue_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:189]
+WARNING: [Synth 8-6014] Unused sequential element tgreen_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:190]
+WARNING: [Synth 8-6014] Unused sequential element tred_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:191]
+WARNING: [Synth 8-6014] Unused sequential element red_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:207]
+WARNING: [Synth 8-6014] Unused sequential element green_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:208]
+WARNING: [Synth 8-6014] Unused sequential element blue_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:209]
+WARNING: [Synth 8-6014] Unused sequential element r_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:228]
+WARNING: [Synth 8-6014] Unused sequential element g_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:229]
+WARNING: [Synth 8-6014] Unused sequential element b_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:230]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:606]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:51]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:52]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (17#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-350] instance 'my_filtering' of module 'filtering' requires 28 connections, but only 26 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:198]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (18#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (19#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (20#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (21#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:32]
+WARNING: [Synth 8-3848] Net address_C in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:105]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (22#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[23]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[22]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[21]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[20]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[19]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[18]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[17]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[16]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[15]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[14]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[13]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[12]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[11]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[10]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[9]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[8]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[7]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[6]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[5]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[4]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_up[0]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_position[3]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_position[2]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_position[1]
+WARNING: [Synth 8-3331] design filtering has unconnected port rgb_position[0]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[17]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[16]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[15]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[14]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[13]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[12]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[10] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[9] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[8] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[7] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[6] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[5] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[4] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[3] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[2] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[1] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+WARNING: [Synth 8-3295] tying undriven pin my_ram_buffer:input_rgb_address[0] to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:148]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 1462.410 ; gain = 0.000
+56 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 1462.410 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 19 - type: integer 
+	Parameter BITWIDTH bound to: 24 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (16#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+	Parameter RGB_LEFT_UP bound to: 4'b0000 
+	Parameter RGB_UP bound to: 4'b0001 
+	Parameter RGB_RIGHT_UP bound to: 4'b0010 
+	Parameter RGB_LEFT bound to: 4'b0011 
+	Parameter RGB_CENTER bound to: 4'b0100 
+	Parameter RGB_RIGHT bound to: 4'b0101 
+	Parameter RGB_LEFT_DOWN bound to: 4'b0110 
+	Parameter RGB_DOWN bound to: 4'b0111 
+	Parameter RGB_RIGHT_DOWN bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element gray_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:177]
+WARNING: [Synth 8-6014] Unused sequential element left_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:178]
+WARNING: [Synth 8-6014] Unused sequential element right_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:179]
+WARNING: [Synth 8-6014] Unused sequential element up_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:180]
+WARNING: [Synth 8-6014] Unused sequential element down_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:181]
+WARNING: [Synth 8-6014] Unused sequential element leftup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:182]
+WARNING: [Synth 8-6014] Unused sequential element leftdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:183]
+WARNING: [Synth 8-6014] Unused sequential element rightup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:184]
+WARNING: [Synth 8-6014] Unused sequential element rightdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:185]
+WARNING: [Synth 8-6014] Unused sequential element tblue_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:187]
+WARNING: [Synth 8-6014] Unused sequential element tgreen_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:188]
+WARNING: [Synth 8-6014] Unused sequential element tred_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:189]
+WARNING: [Synth 8-6014] Unused sequential element red_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:205]
+WARNING: [Synth 8-6014] Unused sequential element green_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:206]
+WARNING: [Synth 8-6014] Unused sequential element blue_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:207]
+WARNING: [Synth 8-6014] Unused sequential element r_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:226]
+WARNING: [Synth 8-6014] Unused sequential element g_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:227]
+WARNING: [Synth 8-6014] Unused sequential element b_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:228]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:604]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:49]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:50]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (17#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (18#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (19#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (20#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (21#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:32]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (22#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[18]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[17]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[16]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[15]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[14]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[13]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[12]
+WARNING: [Synth 8-3331] design ram_buffer has unconnected port input_rgb_address[11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1462.410 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 19:10:45 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 19:10:45 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 19:13:16 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 19:13:16 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 19 - type: integer 
+	Parameter BITWIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_input' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:151]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_center' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:162]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_left_up' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:163]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_left' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:164]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_left_down' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:165]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_up' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:166]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_down' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:167]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_right_up' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:168]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_right' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:169]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_right_down' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:170]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (16#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+	Parameter RGB_LEFT_UP bound to: 4'b0000 
+	Parameter RGB_UP bound to: 4'b0001 
+	Parameter RGB_RIGHT_UP bound to: 4'b0010 
+	Parameter RGB_LEFT bound to: 4'b0011 
+	Parameter RGB_CENTER bound to: 4'b0100 
+	Parameter RGB_RIGHT bound to: 4'b0101 
+	Parameter RGB_LEFT_DOWN bound to: 4'b0110 
+	Parameter RGB_DOWN bound to: 4'b0111 
+	Parameter RGB_RIGHT_DOWN bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element gray_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:177]
+WARNING: [Synth 8-6014] Unused sequential element left_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:178]
+WARNING: [Synth 8-6014] Unused sequential element right_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:179]
+WARNING: [Synth 8-6014] Unused sequential element up_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:180]
+WARNING: [Synth 8-6014] Unused sequential element down_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:181]
+WARNING: [Synth 8-6014] Unused sequential element leftup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:182]
+WARNING: [Synth 8-6014] Unused sequential element leftdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:183]
+WARNING: [Synth 8-6014] Unused sequential element rightup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:184]
+WARNING: [Synth 8-6014] Unused sequential element rightdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:185]
+WARNING: [Synth 8-6014] Unused sequential element tblue_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:187]
+WARNING: [Synth 8-6014] Unused sequential element tgreen_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:188]
+WARNING: [Synth 8-6014] Unused sequential element tred_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:189]
+WARNING: [Synth 8-6014] Unused sequential element red_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:205]
+WARNING: [Synth 8-6014] Unused sequential element green_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:206]
+WARNING: [Synth 8-6014] Unused sequential element blue_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:207]
+WARNING: [Synth 8-6014] Unused sequential element r_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:226]
+WARNING: [Synth 8-6014] Unused sequential element g_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:227]
+WARNING: [Synth 8-6014] Unused sequential element b_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:228]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:604]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:49]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:50]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (17#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (18#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (19#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (20#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (21#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:32]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (22#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1462.410 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci'
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [D:/Program_files/Vivado/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (7#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/vga.v:1]
+WARNING: [Synth 8-350] instance 'my_VGA' of module 'VGA' requires 12 connections, but only 10 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (8#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (9#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (10#1) [C:/Users/bened/Desktop/bezbuild/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (11#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (12#1) [C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element line_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:63]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (13#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (14#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/RGB.v:16]
+WARNING: [Synth 8-350] instance 'my_RGB' of module 'RGB' requires 7 connections, but only 6 given [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:135]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 19 - type: integer 
+	Parameter BITWIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (15#1) [C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/ram_buffer.v:20]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_input' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:151]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_center' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:162]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_left_up' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:163]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_left' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:164]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_left_down' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:165]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_up' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:166]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_down' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:167]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_right_up' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:168]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_right' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:169]
+WARNING: [Synth 8-689] width (24) of port connection 'rgb_right_down' does not match port width (8) of module 'ram_buffer' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:170]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-4471] merging register 'address_C_reg[18:0]' into 'val_reg[18:0]' [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+WARNING: [Synth 8-6014] Unused sequential element address_C_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:47]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (16#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+	Parameter RGB_LEFT_UP bound to: 4'b0000 
+	Parameter RGB_UP bound to: 4'b0001 
+	Parameter RGB_RIGHT_UP bound to: 4'b0010 
+	Parameter RGB_LEFT bound to: 4'b0011 
+	Parameter RGB_CENTER bound to: 4'b0100 
+	Parameter RGB_RIGHT bound to: 4'b0101 
+	Parameter RGB_LEFT_DOWN bound to: 4'b0110 
+	Parameter RGB_DOWN bound to: 4'b0111 
+	Parameter RGB_RIGHT_DOWN bound to: 4'b1000 
+WARNING: [Synth 8-6014] Unused sequential element gray_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:177]
+WARNING: [Synth 8-6014] Unused sequential element left_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:178]
+WARNING: [Synth 8-6014] Unused sequential element right_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:179]
+WARNING: [Synth 8-6014] Unused sequential element up_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:180]
+WARNING: [Synth 8-6014] Unused sequential element down_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:181]
+WARNING: [Synth 8-6014] Unused sequential element leftup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:182]
+WARNING: [Synth 8-6014] Unused sequential element leftdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:183]
+WARNING: [Synth 8-6014] Unused sequential element rightup_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:184]
+WARNING: [Synth 8-6014] Unused sequential element rightdown_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:185]
+WARNING: [Synth 8-6014] Unused sequential element tblue_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:187]
+WARNING: [Synth 8-6014] Unused sequential element tgreen_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:188]
+WARNING: [Synth 8-6014] Unused sequential element tred_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:189]
+WARNING: [Synth 8-6014] Unused sequential element red_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:205]
+WARNING: [Synth 8-6014] Unused sequential element green_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:206]
+WARNING: [Synth 8-6014] Unused sequential element blue_o_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:207]
+WARNING: [Synth 8-6014] Unused sequential element r_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:226]
+WARNING: [Synth 8-6014] Unused sequential element g_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:227]
+WARNING: [Synth 8-6014] Unused sequential element b_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:228]
+WARNING: [Synth 8-6014] Unused sequential element addra_reg was removed.  [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:604]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:49]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:50]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (17#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/filtering.v:22]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 200 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 400 - type: integer 
+	Parameter rect_height bound to: 32 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 470 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000000 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 38 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (18#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (19#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (20#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (21#1) [C:/Users/bened/Desktop/bezbuild/rtl/filtering/char_rom.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:32]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (22#1) [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_160x120 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+WARNING: [Synth 8-3295] tying undriven pin my_VGA:rez_320x240 to constant 0 [C:/Users/bened/Desktop/bezbuild/rtl/ov7670_fr/top_level.v:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1462.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc:108]
+Finished Parsing XDC File [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1462.410 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.3
+  **** Build date : Oct  4 2017-20:12:17
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183741546A
+set_property PROGRAM.FILE {C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/top_level.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/top_level.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 20:18:27 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 20:18:27 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/top_level.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 20:25:44 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 20:25:44 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/top_level.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 20:42:15 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 20:42:15 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/top_level.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Thu Sep  8 20:49:03 2022] Launched synth_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Thu Sep  8 20:49:03 2022] Launched impl_1...
+Run output will be captured here: C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/impl_1/top_level.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  8 21:29:04 2022...

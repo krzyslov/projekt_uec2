@@ -38,21 +38,13 @@ assign vga_b = blue[7:4];
 //assign rez_160x120 = btnl;
 //assign rez_320x240 = btnr;
 
-/*clocking my_clocking(
+clocking my_clocking(
 	.reset(btnc),
 	.CLK_100(clk100),
 	.CLK_50(clk_camera),
 	.CLK_25(clk_vga),
 	.locked(locked)
-); */
-
-clock my_clock(
-    .reset(btnc),
-    .locked(locked),
-    .CLK_IN_100(clk100),
-    .CLK_50(clk_camera),
-    .CLK_25(clk_vga)
-);
+); 
 
 resetlocked my_resetlocked(
     .pclk(clk_vga),
@@ -114,7 +106,7 @@ wire [18:0] address_C, address_N, address_NE, address_E,address_SE,address_S, ad
 wire [11:0] rddata_C, rddata_N, rddata_NE, rddata_E, rddata_SE, rddata_S, rddata_SW, rddata_W, rddata_NW;
 
 frame_buffer my_frame_buffer(
-	.addrb(address_C[18:2]),
+	.addrb(address_center[18:2]),
 	.clkb(clk_vga),
 	.doutb(rddata_C),
 	.clka(ov7670_pclk),
@@ -122,6 +114,8 @@ frame_buffer my_frame_buffer(
 	.dina(wrdata),
 	.wea(wren)
 );
+
+
 
 ov7670_capture my_ov7670_capture(
 	.pclk(ov7670_pclk),
@@ -137,6 +131,7 @@ ov7670_capture my_ov7670_capture(
 wire [7:0] R,G,B;
 
 wire [23:0] RGB_C, RGB_N, RGB_NE, RGB_E, RGB_SE, RGB_S, RGB_SW, RGB_W, RGB_NW;
+wire [7:0] gray_wire;
 
 RGB my_RGB(
 	.Din(rddata_C),
@@ -144,8 +139,38 @@ RGB my_RGB(
 	.Nblank(activeArea),
 	.R(RGB_C[7:0]),
 	.G(RGB_C[15:8]),
-	.B(RGB_C[23:16])
+	.B(RGB_C[23:16]),
+	.Grayscale(gray_wire)
 	
+);
+
+wire [7:0] gray_center, gray_right_up, gray_right, gray_right_down, gray_down, gray_left_down, gray_left, gray_left_up, gray_up;
+wire [18:0] address_center, address_left_up, address_left, address_left_down, address_up, address_right_up, address_right, address_right_down, address_down;
+
+
+ram_buffer my_ram_buffer(
+.clk(clk_vga),
+.we(1'b1),
+.gray_input(gray_wire),
+.input_rgb_address(address_center),
+.address_center(address_center),
+.address_left_up(address_left_up), 
+.address_left(address_left),
+.address_left_down(address_left_down),
+.address_up(address_up),
+.address_down(address_down),
+.address_right_up(address_right_up),
+.address_right(address_right),
+.address_righ_down(address_right_down),
+.gray_center(gray_center), 
+.gray_left_up(gray_left_up), 
+.gray_left(gray_left),
+.gray_left_down(gray_left_down),
+.gray_up(gray_up),
+.gray_down(gray_down),
+.gray_right_up(gray_right_up),
+.gray_right(gray_right),
+.gray_right_down(gray_right_down)
 );
 
 Address_Generator my_Address_Generator(
@@ -155,15 +180,15 @@ Address_Generator my_Address_Generator(
 //	.rez_320x240(rez_320x240),
 	.enable(activeArea),
 	.vsync(vSync),
-	.address_C(address_C),
-	.address_N(address_N),
-	.address_NE(address_NE),
-	.address_E(address_E),
-	.address_SE(address_SE),
-	.address_S(address_S),
-	.address_SW(address_SW),
-	.address_W(address_W),
-	.address_NW(address_NW)
+	.address_C(address_center),
+	.address_N(address_up),
+	.address_NE(address_right_up),
+	.address_E(address_right),
+	.address_SE(address_right_down),
+	.address_S(address_down),
+	.address_SW(address_left_down),
+	.address_W(address_left),
+	.address_NW(address_left_up)
 	//.address(rdaddress)
 );
 
@@ -179,7 +204,16 @@ filtering my_filtering(
     .clock(clk_vga),
     .reset(reset_locked),
     .sel_module(sw),
-    .rgb_in(RGB_C),
+    .rgb_C(RGB_C),
+    .gray_center(gray_center), 
+    .gray_left_up(gray_left_up), 
+    .gray_left(gray_left),
+    .gray_left_down(gray_left_down),
+    .gray_up(gray_up),
+    .gray_down(gray_down),
+    .gray_right_up(gray_right_up),
+    .gray_right(gray_right),
+    .gray_right_down(gray_right_down),
     //.red_in(R),
     //.green_in(G),
     //.blue_in(B),

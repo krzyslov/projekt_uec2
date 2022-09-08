@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Wed Aug  8 17:18:26 2018
-// Host        : EEEvirtus14pc19 running 64-bit major release  (build 9200)
+// Date        : Thu Sep  8 17:39:10 2022
+// Host        : DESKTOP-E1S6T55 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/basys3_ov7670_full/basys3_ov7670_full.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v
+//               C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer_sim_netlist.v
 // Design      : frame_buffer
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35tcpg236-3
+// Device      : xc7a35tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 

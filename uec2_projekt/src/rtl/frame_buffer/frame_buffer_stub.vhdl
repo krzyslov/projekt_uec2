@@ -1,13 +1,12 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Wed Aug  8 17:18:26 2018
--- Host        : EEEvirtus14pc19 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               D:/basys3_ov7670_full/basys3_ov7670_full.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl
+-- Date        : Thu Sep  8 17:39:10 2022
+-- Host        : DESKTOP-E1S6T55 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer_stub.vhdl
 -- Design      : frame_buffer
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7a35tcpg236-3
+-- Device      : xc7a35tcpg236-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

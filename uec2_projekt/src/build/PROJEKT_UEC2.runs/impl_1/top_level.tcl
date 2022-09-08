@@ -69,19 +69,18 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 1572865}
   set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/freqd/.Xil/Vivado-3624-DESKTOP-E1S6T55/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/bened/Desktop/bezbuild/.Xil/Vivado-15772-DESKTOP-E1S6T55/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.cache/wt [current_project]
-  set_property parent.project_path C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.xpr [current_project]
-  set_property ip_output_repo C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.xpr [current_project]
+  set_property ip_output_repo C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp
-  read_ip -quiet C:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
-  read_ip -quiet c:/Users/bened/Desktop/freqd/build/PROJEKT_UEC2.srcs/sources_1/ip/clock/clock.xci
-  read_xdc C:/Users/bened/Desktop/freqd/constraints/project_constraints.xdc
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  add_files -quiet C:/Users/bened/Desktop/bezbuild/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp
+  read_ip -quiet C:/Users/bened/Desktop/bezbuild/rtl/frame_buffer/frame_buffer.xci
+  read_xdc C:/Users/bened/Desktop/bezbuild/constraints/project_constraints.xdc
   link_design -top top_level -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -119,7 +118,7 @@ set rc [catch {
   write_checkpoint -force top_level_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file top_level_io_placed.rpt"
   create_report "impl_1_place_report_utilization_0" "report_utilization -file top_level_utilization_placed.rpt -pb top_level_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -file top_level_control_sets_placed.rpt"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file top_level_control_sets_placed.rpt"
   close_msg_db -file place_design.pb
 } RESULT]
 if {$rc} {
@@ -140,7 +139,7 @@ set rc [catch {
   create_report "impl_1_route_report_methodology_0" "report_methodology -file top_level_methodology_drc_routed.rpt -pb top_level_methodology_drc_routed.pb -rpx top_level_methodology_drc_routed.rpx"
   create_report "impl_1_route_report_power_0" "report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx"
   create_report "impl_1_route_report_route_status_0" "report_route_status -file top_level_route_status.rpt -pb top_level_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -file top_level_timing_summary_routed.rpt -warn_on_violation  -rpx top_level_timing_summary_routed.rpx"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file top_level_timing_summary_routed.rpt -warn_on_violation  -rpx top_level_timing_summary_routed.rpx"
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file top_level_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file top_level_clock_utilization_routed.rpt"
   close_msg_db -file route_design.pb
@@ -158,7 +157,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force top_level.mmi }
   write_bitstream -force top_level.bit 
   catch {write_debug_probes -quiet -force top_level}

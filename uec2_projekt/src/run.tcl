@@ -40,34 +40,53 @@ proc create_new_project {project target top_module} {
     read_xdc {
         constraints/project_constraints.xdc
 		
+		
     }
 
     # Specify verilog design files location   -- EDIT
     read_verilog {
 		rtl/ov7670_fr/RGB.v
 		rtl/ov7670_fr/address_Generator.v
-		#rtl/AR_58276_2013_3_MMCM/MMCME2_ADV.v
+		
 		rtl/basys3_ov7670/clocking.v
 		rtl/basys3_ov7670/clocking_clk_wiz.v
 		rtl/basys3_ov7670/clock.v
 		rtl/basys3_ov7670/clock_clk_wiz.v
-		#rtl/ov7670_fr/ov7670_capture.v
-		#rtl/ov7670_fr/debounce.v
-    }
-    
-    # Specify vhdl design files location      -- EDIT
-    read_vhdl {
-		rtl/ov7670_fr/ov7670_capture.vhd
-		rtl/ov7670_fr/debounce.vhd
-		rtl/ov7670_fr/i3c2.vhd
-		rtl/ov7670_fr/ov7670_controller.vhd
-		rtl/ov7670_fr/top_level.vhd
-		rtl/ov7670_fr/vga.vhd
+		rtl/ov7670_fr/ov7670_capture.v
+		rtl/ov7670_fr/debounce.v
+		rtl/ov7670_fr/ov7670_controller.v
+		rtl/ov7670_fr/top_level.v
+		rtl/ov7670_fr/vga.v
+		rtl/basys3_ov7670/i2c_sender.v
+		rtl/basys3_ov7670/ov7670_registers.v
+		rtl/filtering/char_rom.v
+		rtl/filtering/delay.v
+		rtl/filtering/draw_rect_char.v
+		rtl/filtering/filtering.v
+		rtl/filtering/font_rom.v
+		rtl/ov7670_fr/resetlocked.v
+		rtl/frame_buffer/ram_buffer.v
 		
-		rtl/basys3_ov7670/i2c_sender.vhd
-		rtl/basys3_ov7670/ov7670_registers.vhd
+		
+		
+		
     }
-    
+	#rtl/frame_buffer/blk_mem_gen_v8_4_0.vhd
+	#rtl/frame_buffer/frame_buffer.v
+	#rtl/AR_58276_2013_3_MMCM/MMCME2_ADV.v
+	#rtl/frame_buffer/frame_buffer_stub.v
+    #rtl/frame_buffer/frame_buffer_sim_netlist.v
+    # Specify vhdl design files location      -- EDIT
+	#rtl/frame_buffer/blk_mem_gen_v8_4_0.v
+   # read_vhdl {
+	#		
+	#		rtl/frame_buffer/frame_buffer.vhd
+	#		rtl/frame_buffer/blk_mem_gen_v8_4_0.vhd
+	#	
+		
+	#}
+    read_ip		rtl/frame_buffer/frame_buffer.xci
+
     # Specify files for memory initialization -- EDIT
     #read_mem {
         #./image_rom.data

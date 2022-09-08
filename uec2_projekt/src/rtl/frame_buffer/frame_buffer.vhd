@@ -54,7 +54,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
 LIBRARY blk_mem_gen_v8_4_0;
-USE blk_mem_gen_v8_4_0.blk_mem_gen_v8_4_0;
+USE blk_mem_gen_v8_4_0.blk_mem_gen_v8_4_0; --USE blk_mem_gen_v8_4_0.ALL;
 
 ENTITY frame_buffer IS
   PORT (

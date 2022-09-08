@@ -59,7 +59,7 @@ module frame_buffer (
   addra,
   dina,
   clkb,
-  addrb,
+  addrb, 
   doutb
 );
 

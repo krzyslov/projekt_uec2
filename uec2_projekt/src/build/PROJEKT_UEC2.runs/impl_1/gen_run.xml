@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1662566198">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1662662942">
   <File Type="PWROPT-DCP" Name="top_level_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="top_level_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top_level.tcl"/>
@@ -65,19 +65,22 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/RGB.v">
+    <File Path="$PPRDIR/../rtl/frame_buffer/frame_buffer.xci">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/RGB.v"/>
-        <Attr Name="ImportTime" Val="1660666431"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/address_Generator.v">
+    <File Path="$PPRDIR/../rtl/ov7670_fr/RGB.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/address_Generator.v"/>
-        <Attr Name="ImportTime" Val="1661961732"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/ov7670_fr/address_Generator.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -90,10 +93,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/debounce.v">
+    <File Path="$PPRDIR/../rtl/basys3_ov7670/clocking.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/debounce.v"/>
-        <Attr Name="ImportTime" Val="1660754884"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/basys3_ov7670/clocking_clk_wiz.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/ov7670_fr/debounce.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -127,37 +142,36 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/i2c_sender.v">
+    <File Path="$PPRDIR/../rtl/basys3_ov7670/i2c_sender.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/i2c_sender.v"/>
-        <Attr Name="ImportTime" Val="1660930981"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/ov7670_capture.v">
+    <File Path="$PPRDIR/../rtl/ov7670_fr/ov7670_capture.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/ov7670_capture.v"/>
-        <Attr Name="ImportTime" Val="1660757001"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/ov7670_controller.v">
+    <File Path="$PPRDIR/../rtl/ov7670_fr/ov7670_controller.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/ov7670_controller.v"/>
-        <Attr Name="ImportTime" Val="1660844330"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/ov7670_registers.v">
+    <File Path="$PPRDIR/../rtl/basys3_ov7670/ov7670_registers.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/ov7670_registers.v"/>
-        <Attr Name="ImportTime" Val="1660941704"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/frame_buffer/ram_buffer.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -170,39 +184,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/vga.v">
+    <File Path="$PPRDIR/../rtl/ov7670_fr/vga.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/vga.v"/>
-        <Attr Name="ImportTime" Val="1661966929"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/ov7670_fr/top_level.v">
+    <File Path="$PPRDIR/../rtl/ov7670_fr/top_level.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ov7670_fr/top_level.v"/>
-        <Attr Name="ImportTime" Val="1661962064"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking.v">
+    <File Path="$PPRDIR/../rtl/basys3_ov7670/clock.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking.v"/>
-        <Attr Name="ImportTime" Val="1661015072"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/basys3_ov7670/clocking_clk_wiz.v">
+    <File Path="$PPRDIR/../rtl/basys3_ov7670/clock_clk_wiz.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/basys3_ov7670/clocking_clk_wiz.v"/>
-        <Attr Name="ImportTime" Val="1661015091"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -226,7 +232,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -237,6 +245,4 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="frame_buffer"/>
-  <BlockFileSet Type="BlockSrcs" Name="clock"/>
 </GenRun>
