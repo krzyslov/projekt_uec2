@@ -66,8 +66,11 @@ proc create_new_project {project target top_module} {
 		rtl/filtering/font_rom.v
 		rtl/ov7670_fr/resetlocked.v
 		rtl/frame_buffer/ram_buffer.v
-		
-		
+		rtl/loudspeaker/loudspeaker.v
+		rtl/distance_meter/distance_meter.v
+		rtl/distance_meter/bin2bcd16.v
+		rtl/distance_meter/char_rom_dist_meter.v
+		rtl/distance_meter/draw_distance_char.v
 		
 		
     }

@@ -10,7 +10,7 @@
 // Declare the module and its ports. This is
 // using Verilog-2001 syntax.
 
-module draw_rect_char (
+module draw_distance_char (
   output reg vsync_out,
   output reg vblnk_out,
   output reg hsync_out,
@@ -58,12 +58,8 @@ module draw_rect_char (
     reg [2:0] char_y;
     reg [4:0] char_x;
     
-    
     localparam rect_x =200 , rect_width = 240;
-    localparam rect_y = 400, rect_height = 16;
-    
-    //localparam rect2_x =200 , rect2_width = 240;
-    //localparam rect2_y = 200, rect2_height = 16;
+    localparam rect_y = 416, rect_height = 16;
     
     localparam FRAME_X_POS = 10 ,
                FRAME_Y_POS = 10 ,

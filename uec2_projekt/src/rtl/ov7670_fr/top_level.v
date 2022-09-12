@@ -1,16 +1,20 @@
-
+// zero - //code x30
 module top_level(
     input wire [3:0]sw,
 	input wire clk100,
-	//input wire btnl,
-	//input wire btnr,
 	input wire btnc,
-	output wire config_finished,
+	//Ultrasound distance meter
+	input wire EchoPin,
+	output wire TrigPin,
+	//Speaker
+	output wire speaker_out,
+	//VGA
 	output wire vga_hsync,
 	output wire vga_vsync,
 	output wire [3:0]vga_r,
 	output wire [3:0]vga_g,
 	output wire [3:0]vga_b,
+	//ov7670 camera pins
 	input wire ov7670_pclk,
 	output wire ov7670_xclk,
 	input wire ov7670_vsync,
@@ -19,7 +23,8 @@ module top_level(
 	output wire ov7670_sioc,
 	inout wire ov7670_siod,
 	output wire ov7670_pwdn,
-	output wire ov7670_reset
+	output wire ov7670_reset,
+	output wire config_finished
 );
 
 wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,rez_160x120,rez_320x240,locked,reset_locked;
@@ -38,13 +43,24 @@ assign vga_b = blue[7:4];
 //assign rez_160x120 = btnl;
 //assign rez_320x240 = btnr;
 
+wire clk_100MHz;
+
+/*clock my_clock(
+.CLK_100(clk_100MHz),
+.CLK_50(clk_camera),
+.CLK_25(clk_vga),
+.reset(btnc),
+.locked(locked),
+.CLK_IN_100(clk100)
+);*/
+
 clocking my_clocking(
 	.reset(btnc),
 	.CLK_100(clk100),
 	.CLK_50(clk_camera),
 	.CLK_25(clk_vga),
 	.locked(locked)
-); 
+);
 
 resetlocked my_resetlocked(
     .pclk(clk_vga),
@@ -53,6 +69,24 @@ resetlocked my_resetlocked(
 
 );
 
+wire [4:0] speaker_note;
+
+Loudspeaker my_Loudspeaker(
+.clk(clk_camera),
+.speaker_note(speaker_note),
+.audio(speaker_out)
+);
+
+wire [10:0] distance_cm;
+
+Distance_meter my_Distance_meter(
+.clk_100MHz(clk_camera),
+.reset(reset_locked),
+.distance_cm(distance_cm),
+.speaker_note(speaker_note),
+.Echo_in(EchoPin),
+.Trig_out(TrigPin)
+);
 
 assign vga_vsync = vSync;
 
@@ -232,9 +266,12 @@ filtering my_filtering(
     
 );
 
-wire [6:0] char_code;
-wire [3:0] char_line;
-wire [7:0] char_pixel, char_xy;
+wire [6:0] char_code, char_code_distance;
+wire [3:0] char_line, char_line_distance;
+wire [7:0] char_pixel, char_xy, char_distance_xy, char_pixel_distance;
+
+wire [11:0] rgb_rect2distance;
+wire [10:0] vcount_rect2distance, hcount_rect2distance;
 
 draw_rect_char my_draw_rect_char(
       .vcount_in(vcount_f),
@@ -245,6 +282,31 @@ draw_rect_char my_draw_rect_char(
       .hblnk_in(hblank_f),
       .char_pixels(char_pixel),
       .rgb_in({red_char,green_char,blue_char}),
+      //.vcount_out(vcount_rect2distance),
+      .vsync_out(),
+      .vblnk_out(),
+      //.hcount_out(hcount_rect2distance),
+      .hsync_out(),
+      .hblnk_out(),
+      .rgb_out(rgb_rect2distance),
+      .char_xy(char_xy),
+      .char_line(char_line), //{r,g,b}
+      .pclk(clk_vga),
+      .rst(reset_locked)
+
+);
+
+draw_distance_char my_draw_distance_char(
+      .vcount_in(vcount_f),
+      //.vcount_in(vcount_rect2distance),
+      .vsync_in(vsync_f),
+      .vblnk_in(vblank_f),
+      .hcount_in(hcount_f),
+      //.hcount_in(hcount_rect2distance),
+      .hsync_in(hsync_f),
+      .hblnk_in(hblank_f),
+      .char_pixels(char_pixel_distance),
+      .rgb_in(rgb_rect2distance),
       .vcount_out(),
       .vsync_out(),
       .vblnk_out(),
@@ -252,8 +314,8 @@ draw_rect_char my_draw_rect_char(
       .hsync_out(),
       .hblnk_out(),
       .rgb_out({red[7:4],green[7:4],blue[7:4]}),
-      .char_xy(char_xy),
-      .char_line(char_line), //{r,g,b}
+      .char_xy(char_distance_xy),
+      .char_line(char_line_distance), //{r,g,b}
       .pclk(clk_vga),
       .rst(reset_locked)
 
@@ -267,6 +329,12 @@ font_rom my_font_rom(
 
 );
 
+font_rom my_font_rom2(
+    .char_line_pixels(char_pixel_distance),  
+    .addr({char_code_distance[6:0],char_line_distance[3:0]}),
+    .clk(clk_vga)
+);
+
 char_rom my_char_rom(
    
     .char_code(char_code),
@@ -275,5 +343,12 @@ char_rom my_char_rom(
 
 );
 
+char_rom_dist_meter my_char_rom_dist_meter(
+   
+    .char_code(char_code_distance),
+    .char_xy(char_distance_xy),
+    //.distance({9'b0_0001_1101})
+    .distance(distance_cm)
+);
 
 endmodule

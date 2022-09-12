@@ -44,10 +44,9 @@ set_property PACKAGE_PIN U16 [get_ports {config_finished}]
 ##Buttons
  set_property PACKAGE_PIN U18 [get_ports btnc]						
 	set_property IOSTANDARD LVCMOS33 [get_ports btnc]
-## set_property PACKAGE_PIN W19 [get_ports btnl]                        
-##     set_property IOSTANDARD LVCMOS33 [get_ports btnl]
-## set_property PACKAGE_PIN T17 [get_ports btnr]						
-##         set_property IOSTANDARD LVCMOS33 [get_ports btnr]
+    
+
+#Switches
 set_property PACKAGE_PIN V17 [get_ports {sw[0]}]						
         set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
 set_property PACKAGE_PIN V16 [get_ports {sw[1]}]						
@@ -57,6 +56,17 @@ set_property PACKAGE_PIN W16 [get_ports {sw[2]}]
 set_property PACKAGE_PIN W17 [get_ports {sw[3]}]						
         set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
 ## OV7670 Camera header pins
+
+##Pmod Header JA
+#Sch name = JA1
+set_property PACKAGE_PIN J1 [get_ports {speaker_out} ]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {speaker_out} ]
+#Sch name = JA2
+set_property PACKAGE_PIN L2 [get_ports EchoPin]                    
+    set_property IOSTANDARD LVCMOS33 [get_ports EchoPin]
+##Sch name = JA3
+set_property PACKAGE_PIN J2 [get_ports TrigPin]                    
+    set_property IOSTANDARD LVCMOS33 [get_ports TrigPin]
 
 ##Pmod Header JB
 ##Sch name = JB1
