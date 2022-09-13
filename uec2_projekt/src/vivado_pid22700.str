@@ -1,0 +1,911 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:22 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 22700
+License: Customer
+
+Current time: 	Tue Sep 13 17:38:39 CEST 2022
+Time zone: 	Central European Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 28 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre/bin/java.exe
+
+User name: 	Jerzy
+User home directory: C:/Users/Jerzy
+User working directory: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src
+User country: 	PL
+User language: 	pl
+User locale: 	pl_PL
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.3
+RDI_DATADIR: C:/Xilinx/Vivado/2017.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.3/bin
+
+User preferences location: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/vivado.log
+Vivado journal file location: 	C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/vivado.jou
+Engine tmp dir: 	C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-22700-Tiger
+
+GUI allocated memory:	183 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 586 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 56 MB (+56311kb) [00:00:18]
+// [Engine Memory]: 576 MB (+452889kb) [00:00:18]
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: source run.tcl 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'. 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: FILE_SET_CHANGE
+// bs (cl):  Sourcing Tcl script 'run.tcl' : addNotify
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+dismissDialog("Sourcing Tcl script 'run.tcl'"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 602 MB. GUI used memory: 36 MB. Current time: 9/13/22 5:38:41 PM CEST
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 17:38:53 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 17:38:53 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// Elapsed time: 68 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cl)
+// Elapsed time: 93 seconds
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, cl): FALSE
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 36 MB. Current time: 9/13/22 5:41:41 PM CEST
+// [Engine Memory]: 680 MB (+78074kb) [00:03:30]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 60 MB (+1077kb) [00:04:24]
+// [GUI Memory]: 63 MB (+314kb) [00:04:34]
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 68 MB (+1400kb) [00:06:05]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 4000 ms.
+// ah (cl): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 72 MB (+452kb) [00:09:15]
+// Elapsed time: 438 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+// [GUI Memory]: 76 MB (+379kb) [00:11:27]
+// Elapsed time: 72 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (distance_buffer_cm_reg[20]) is unused and will be removed from module Distance_meter.. ]", 7); // ah (O, cl)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1); // B (D, cl)
+// PAPropertyPanels.initPanels (distance_meter.v) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_Distance_meter : Distance_meter (distance_meter.v)]", 5, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_Distance_meter : Distance_meter (distance_meter.v)]", 5, false, false, false, false, false, true); // B (D, cl) - Double Click
+// [GUI Memory]: 81 MB (+1898kb) [00:12:11]
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3331] design char_rom_dist_meter has unconnected port char_xy[7]. ]", 3); // ah (O, cl)
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 1); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_char_rom_dist_meter : char_rom_dist_meter (char_rom_dist_meter.v)]", 20, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_draw_distance_char : draw_distance_char (draw_distance_char.v)]", 16, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_char_rom_dist_meter : char_rom_dist_meter (char_rom_dist_meter.v)]", 21, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_char_rom_dist_meter : char_rom_dist_meter (char_rom_dist_meter.v)]", 21, false, false, false, false, false, true); // B (D, cl) - Double Click
+// Elapsed time: 11 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 2); // ah (O, cl)
+// [GUI Memory]: 88 MB (+2846kb) [00:13:49]
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom_dist_meter.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 2); // k (j, cl)
+// Elapsed time: 44 seconds
+selectCodeEditor("top_level.v", 230, 180); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 46 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "distance"); // l (aP, cl)
+selectCodeEditor("top_level.v", 57, 50); // cd (w, cl)
+selectCodeEditor("top_level.v", 53, 47); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "distance_meter.v", 1); // k (j, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("distance_meter.v", 350, 112); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 12 seconds
+selectCodeEditor("distance_meter.v", 121, 77); // cd (w, cl)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 94 MB (+1186kb) [00:16:34]
+// Elapsed time: 38 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom_dist_meter.v", 4); // k (j, cl)
+selectCodeEditor("char_rom_dist_meter.v", 124, 111); // cd (w, cl)
+// WARNING: HTimer (StateMonitor Timer) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+// Elapsed time: 32 seconds
+selectCodeEditor("draw_distance_char.v", 209, 176); // cd (w, cl)
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom_dist_meter.v", 4); // k (j, cl)
+selectCodeEditor("char_rom_dist_meter.v", 116, 126); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 2); // k (j, cl)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "char"); // l (aP, cl)
+selectCodeEditor("top_level.v", 225, 125); // cd (w, cl)
+selectCodeEditor("top_level.v", 224, 129); // cd (w, cl)
+selectCodeEditor("top_level.v", 211, 129); // cd (w, cl)
+selectCodeEditor("top_level.v", 223, 129); // cd (w, cl)
+// Elapsed time: 27 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "char_distance_xy"); // l (aP, cl)
+selectCodeEditor("top_level.v", 329, 133); // cd (w, cl)
+selectCodeEditor("top_level.v", 345, 133); // cd (w, cl)
+selectCodeEditor("top_level.v", 335, 129); // cd (w, cl)
+selectCodeEditor("top_level.v", 248, 132); // cd (w, cl)
+selectCodeEditor("top_level.v", 224, 125); // cd (w, cl)
+selectCodeEditor("top_level.v", 279, 92); // cd (w, cl)
+typeControlKey((HResource) null, "top_level.v", 'v'); // cd (w, cl)
+selectCodeEditor("top_level.v", 278, 94); // cd (w, cl)
+selectCodeEditor("top_level.v", 397, 100); // cd (w, cl)
+selectCodeEditor("top_level.v", 278, 95); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 98 MB (+226kb) [00:20:15]
+// Elapsed time: 44 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+selectCodeEditor("draw_distance_char.v", 259, 115); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 51 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 2); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 1); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element char_line_pixels_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:22]. ]", 26, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\filtering\font_rom.v;-;;-;16;-;line;-;22;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 22 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:11]. ]", 21, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\loudspeaker\loudspeaker.v;-;;-;16;-;line;-;11;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 4); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'ct' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:00:48 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:00:48 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// [GUI Memory]: 105 MB (+1379kb) [00:24:51]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// Elapsed time: 196 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 1, true); // ah (O, cl) - Node
+// Elapsed time: 28 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3331] design filtering has unconnected port hblank. ]", 3); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3331] design filtering has unconnected port hblank. ]", 3); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (distance_buffer_cm_reg[20]) is unused and will be removed from module Distance_meter.. ]", 7); // ah (O, cl)
+// TclEventType: RUN_STEP_COMPLETED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "char_rom_dist_meter.v", 4); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "distance_meter.v", 1); // k (j, cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 5000 ms.
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 304 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "loudspeaker.v", 4); // k (j, cl)
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+selectCodeEditor("draw_distance_char.v", 9, 81); // cd (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("draw_distance_char.v", 17, 29); // cd (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("draw_distance_char.v", 66, 60); // cd (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 45 MB. Current time: 9/13/22 6:11:41 PM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 5000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 96 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_draw_rect_char : draw_rect_char (draw_rect_char.v)]", 15, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_draw_rect_char : draw_rect_char (draw_rect_char.v)]", 15, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+// Elapsed time: 38 seconds
+selectCodeEditor("draw_rect_char.v", 147, 62); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 208, 115); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 206, 182); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 200, 145); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 213, 177); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 216, 168); // cd (w, cl)
+typeControlKey((HResource) null, "draw_rect_char.v", 'v'); // cd (w, cl)
+typeControlKey(null, null, 'z');
+selectCodeEditor("draw_rect_char.v", 236, 162); // cd (w, cl)
+typeControlKey((HResource) null, "draw_rect_char.v", 'v'); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 283, 198); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 162, 201); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 92, 175); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 259, 81); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 85, 60); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 86, 60); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 1, 59); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 263, 90); // cd (w, cl)
+typeControlKey((HResource) null, "draw_rect_char.v", 'v'); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 170, 107); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 267, 97); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 28 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "distance_meter.v", 1); // k (j, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("distance_meter.v", 76, 109); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 56 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:16:27 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:16:27 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_FAILED
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 99 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [10:0] out of range of prefix 'distance_buffer_cm' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:52]. ]", 1, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\distance_meter\distance_meter.v;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("distance_meter.v", 356, 183); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 25, true); // B (D, cl) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 25); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, project_constraints.xdc]", 27, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, project_constraints.xdc]", 27, false, false, false, false, false, true); // B (D, cl) - Double Click
+selectCodeEditor("project_constraints.xdc", 23, 211); // cd (w, cl)
+typeControlKey((HResource) null, "project_constraints.xdc", 'v'); // cd (w, cl)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:18:55 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:18:55 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_FAILED
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 199 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [10:0] out of range of prefix 'distance_buffer_cm' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:56]. ]", 1, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\distance_meter\distance_meter.v;-;;-;16;-;line;-;56;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("distance_meter.v", 365, 179); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 104 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'ct' command handler elapsed time: 102 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:24:18 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:24:18 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_FAILED
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 109 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3936] Found unconnected internal register 'distance_cm_nxt_reg' and it is trimmed from '21' to '9' bits. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:51]. ]", 1, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\distance_meter\distance_meter.v;-;;-;16;-;line;-;51;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 30 seconds
+selectCodeEditor("distance_meter.v", 73, 125); // cd (w, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'vsync_out' does not exist for instance 'my_draw_rect_char' of module 'draw_rect_char' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:285]. ]", 4, true); // ah (O, cl) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'vsync_out' does not exist for instance 'my_draw_rect_char' of module 'draw_rect_char' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:285]. ]", 4, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\ov7670_fr\top_level.v;-;;-;16;-;line;-;285;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("top_level.v", 38, 134); // cd (w, cl)
+// Elapsed time: 11 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'vsync_out' does not exist for instance 'my_draw_rect_char' of module 'draw_rect_char' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:285]. ]", 4); // ah (O, cl)
+selectCodeEditor("top_level.v", 43, 70); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_GENERATED
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:27:27 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:27:27 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_FAILED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 116 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'vcount_out' does not exist for instance 'my_draw_distance_char' of module 'draw_distance_char' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:307]. ]", 5); // ah (O, cl)
+selectCodeEditor("top_level.v", 4, 128); // cd (w, cl)
+selectCodeEditor("top_level.v", 237, 114); // cd (w, cl)
+selectCodeEditor("top_level.v", 131, 161); // cd (w, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cl): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cl):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bs (cl):  Resetting Runs : addNotify
+dismissDialog("Save Project"); // am (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'ct' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:29:56 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:29:56 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// Elapsed time: 208 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 3); // ah (O, cl)
+// Elapsed time: 11 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. , [Synth 8-3848] Net vblnk_rect2distance in module/entity top_level does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:273]. ]", 10, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\ov7670_fr\top_level.v;-;;-;16;-;line;-;273;-;;-;16;-;"); // ah (O, cl)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 280 seconds
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+// Elapsed time: 29 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (echo_cnt_reg[0]) is unused and will be removed from module Distance_meter.. ]", 9); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6040] Register 0ÆJç¯ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.. ]", 8); // ah (O, cl)
+// Elapsed time: 85 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6040] Register 0ÆJç¯ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.. ]", 8, true); // ah (O, cl) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6040] Register 0ÆJç¯ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.. ]", 8, true, false, false, false, true, false); // ah (O, cl) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, cl)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 45 MB. Current time: 9/13/22 6:41:42 PM CEST
+// Elapsed time: 98 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+// Elapsed time: 75 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 44); // ah (O, cl)
+// Elapsed time: 82 seconds
+selectCodeEditor("draw_distance_char.v", 29, 111); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 25, 115); // cd (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("draw_distance_char.v", 43, 166); // cd (w, cl)
+typeControlKey((HResource) null, "draw_distance_char.v", 'c'); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 156, 139); // cd (w, cl)
+typeControlKey((HResource) null, "draw_distance_char.v", 'v'); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 229, 165); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 580, 44); // cd (w, cl)
+typeControlKey((HResource) null, "draw_distance_char.v", 'c'); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 301, 6); // cd (w, cl)
+typeControlKey((HResource) null, "draw_distance_char.v", 'v'); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 45, 25); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 500, 26); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 236, 26); // cd (w, cl)
+selectCodeEditor("draw_distance_char.v", 6, 61); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 86 seconds
+selectCodeEditor("draw_distance_char.v", 68, 96); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("draw_distance_char.v", 299, 92); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'ct' command handler elapsed time: 9 seconds
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:47:32 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Tue Sep 13 18:47:32 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "distance_meter.v", 1); // k (j, cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// Elapsed time: 220 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (34) of port connection 'din' does not match port width (38) of module 'delay' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:54]. ]", 4); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (34) of port connection 'din' does not match port width (38) of module 'delay' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:54]. ]", 4); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (34) of port connection 'din' does not match port width (38) of module 'delay' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:54]. ]", 4); // ah (O, cl)
+// TclEventType: RUN_STEP_COMPLETED
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3331] design draw_distance_char has unconnected port hsync_in. ]", 6); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("draw_distance_char.v", 9, 53); // cd (w, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("draw_distance_char.v", 140, 95); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (N, cl)
+// aN (cl): Cancel Implementation: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.StateMonitor_RESET_STEP, "Reset Step"); // a (aN)
+// bs (cl):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Cancel Implementation"); // aN (cl)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Reset to Previous Step"); // bs (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:52:26 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_FAILED
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 57 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'vsync_in' does not exist for instance 'my_draw_distance_char' of module 'draw_distance_char' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:300]. ]", 4, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\ov7670_fr\top_level.v;-;;-;16;-;line;-;300;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("top_level.v", 44, 44); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:53:54 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_FAILED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 55 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'vsync_in' does not exist for instance 'my_draw_distance_char' of module 'draw_distance_char' [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:300]. ]", 5, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\ov7670_fr\top_level.v;-;;-;16;-;line;-;300;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 19 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2); // ah (O, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 18:55:28 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cl): Synthesis Completed: addNotify
+// Elapsed time: 182 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-350] instance 'my_draw_rect_char' of module 'draw_rect_char' requires 15 connections, but only 11 given [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:275]. ]", 4, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-350] instance 'my_draw_rect_char' of module 'draw_rect_char' requires 15 connections, but only 11 given [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:275]. ]", 4, false, false, false, false, false, true); // ah (O, cl) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-350] instance 'my_draw_rect_char' of module 'draw_rect_char' requires 15 connections, but only 11 given [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:275]. ]", 4, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\ov7670_fr\top_level.v;-;;-;16;-;line;-;275;-;;-;16;-;"); // ah (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "loudspeaker.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 5); // k (j, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("draw_rect_char.v", 201, 132); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 36 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2); // ah (O, cl)
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// Tcl Message: [Tue Sep 13 19:00:17 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cl): Synthesis Completed: addNotify
+// Elapsed time: 228 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3295] tying undriven pin my_delay:din[15] to constant 0 [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:53]. ]", 5); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3295] tying undriven pin my_delay:din[15] to constant 0 [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:53]. ]", 5, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\filtering\draw_rect_char.v;-;;-;16;-;line;-;53;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("draw_rect_char.v", 139, 146); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 229, 76); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 151, 91); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 232, 93); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 236, 115); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 231, 94); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 25 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 3); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 3); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 3); // ah (O, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("draw_rect_char.v", 197, 66); // cd (w, cl)
+selectCodeEditor("draw_rect_char.v", 176, 65); // cd (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.v", 2); // k (j, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 19:06:00 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cl): Synthesis Completed: addNotify
+// Elapsed time: 254 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 46 MB. Current time: 9/13/22 7:11:42 PM CEST
+// Elapsed time: 169 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 13 19:13:07 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cl): Implementation Completed: addNotify
+// Elapsed time: 396 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Implementation Completed"); // ah (cl)
+// Elapsed time: 16 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2); // ah (O, cl)
+// Elapsed time: 665 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element Hcnt_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:33]. ]", 32, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\ov7670_fr\vga.v;-;;-;16;-;line;-;33;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 50 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element r_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:216]. ]", 18, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\filtering\filtering.v;-;;-;16;-;line;-;216;-;;-;16;-;"); // ah (O, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element distance_cm_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:63]. ]", 23, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\distance_meter\distance_meter.v;-;;-;16;-;line;-;63;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 20 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:11]. ]", 29, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\loudspeaker\loudspeaker.v;-;;-;16;-;line;-;11;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 44 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. , [Synth 8-6014] Unused sequential element my_font_rom/char_line_pixels_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:22]. ]", 37, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Jerzy\Desktop\warning\projekt_uec2\uec2_projekt\src\rtl\filtering\font_rom.v;-;;-;16;-;line;-;22;-;;-;16;-;"); // ah (O, cl)
+// Elapsed time: 51 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3331] design filtering has unconnected port hblank. ]", 41, true, false, false, false, true, false); // ah (O, cl) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, cl)
+selectMenuItem(PAResourceItoN.MsgTreePanel_DISCARD_USER_CREATED_MESSAGES, "Discard User Created Messages"); // ac (K, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3331] design filtering has unconnected port hblank. ]", 4, true, false, false, false, true, false); // ah (O, cl) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, cl)
+selectMenuItem(PAResourceItoN.MsgTreePanel_DISCARD_USER_CREATED_MESSAGES, "Discard User Created Messages"); // ac (K, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2, true); // ah (O, cl) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 40); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (echo_cnt_reg[0]) is unused and will be removed from module Distance_meter.. ]", 48); // ah (O, cl)
+// Elapsed time: 11 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 3); // k (j, cl)
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// Tcl Message: [Tue Sep 13 19:35:23 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// Elapsed time: 109 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (echo_cnt_reg[0]) is unused and will be removed from module Distance_meter.. ]", 48); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (echo_cnt_reg[0]) is unused and will be removed from module Distance_meter.. ]", 48); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3332] Sequential element (echo_cnt_reg[0]) is unused and will be removed from module Distance_meter.. ]", 48); // ah (O, cl)
+// TclEventType: RUN_COMPLETED
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 116 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 48 MB. Current time: 9/13/22 7:41:45 PM CEST
+// Elapsed time: 1463 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 4); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "font_rom.v", 5); // k (j, cl)
+// Elapsed time: 291 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]. ]", 2); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]. ]", 3); // ah (O, cl)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cl): Launch Runs: addNotify
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_OK", "OK"); // JButton (A, G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// Tcl Message: [Tue Sep 13 20:08:46 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// Elapsed time: 49 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_rect_char.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "draw_distance_char.v", 4); // k (j, cl)
+// PAResourceOtoP.PAViews_MESSAGES: Messages: close view
+// Elapsed time: 16 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 39 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_Distance_meter : Distance_meter (distance_meter.v)]", 5, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v), my_Distance_meter : Distance_meter (distance_meter.v)]", 5, false, false, false, false, false, true); // B (D, cl) - Double Click
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 6000 ms.
+// ah (cl): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 49 MB. Current time: 9/13/22 8:11:46 PM CEST

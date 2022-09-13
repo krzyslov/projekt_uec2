@@ -77,7 +77,7 @@ Loudspeaker my_Loudspeaker(
 .audio(speaker_out)
 );
 
-wire [10:0] distance_cm;
+wire [8:0] distance_cm;     //[10:0]
 
 Distance_meter my_Distance_meter(
 .clk_100MHz(clk_camera),
@@ -263,9 +263,9 @@ filtering my_filtering(
     
 );
 
-wire [6:0] char_code, char_code_distance;
+wire [6:0] char_code, char_code_distance, char_distance_xy;
 wire [3:0] char_line, char_line_distance;
-wire [7:0] char_pixel, char_xy, char_distance_xy, char_pixel_distance;
+wire [7:0] char_pixel, char_xy,  char_pixel_distance;
 
 wire [11:0] rgb_rect2distance;
 wire [10:0] vcount_rect2distance, hcount_rect2distance;
@@ -274,19 +274,19 @@ wire vsync_rect2distance, hsync_rect2distance, hblnk_rect2distance, vblnk_rect2d
 
 draw_rect_char my_draw_rect_char(
       .vcount_in(vcount_f),
-      .vsync_in(vsync_f),
-      .vblnk_in(vblank_f),
+      //.vsync_in(vsync_f),
+      //.vblnk_in(vblank_f),
       .hcount_in(hcount_f),
-      .hsync_in(hsync_f),
-      .hblnk_in(hblank_f),
+     // .hsync_in(hsync_f),
+     // .hblnk_in(hblank_f),
       .char_pixels(char_pixel),
       .rgb_in({red_char,green_char,blue_char}),
       .vcount_out(vcount_rect2distance),
-      .vsync_out(vsync_rect2distance),
-      .vblnk_out(vblnk_rect2distance),
+     // .vsync_out(vsync_rect2distance),
+      //.vblnk_out(vblnk_rect2distance),
       .hcount_out(hcount_rect2distance),
-      .hsync_out(hsync_rect2distance),
-      .hblnk_out(hblnk_rect2distance),
+      //.hsync_out(hsync_rect2distance),
+      //.hblnk_out(hblnk_rect2distance),
       .rgb_out(rgb_rect2distance),
       .char_xy(char_xy),
       .char_line(char_line), //{r,g,b}
@@ -297,19 +297,14 @@ draw_rect_char my_draw_rect_char(
 
 draw_distance_char my_draw_distance_char(
       .vcount_in(vcount_rect2distance),
-      .vsync_in(vsync_rect2distance),
-      .vblnk_in(vblnk_rect2distance),
+      //.vsync_in(vsync_rect2distance),
+      //.vblnk_in(vblnk_rect2distance),
       .hcount_in(hcount_rect2distance),
-      .hsync_in(hsync_rect2distance),
-      .hblnk_in(hblnk_rect2distance),
+     // .hsync_in(hsync_rect2distance),
+     // .hblnk_in(hblnk_rect2distance),
       .char_pixels(char_pixel_distance),
       .rgb_in(rgb_rect2distance),
-      .vcount_out(),
-      .vsync_out(),
-      .vblnk_out(),
-      .hcount_out(),
-      .hsync_out(),
-      .hblnk_out(),
+    
       .rgb_out({red[7:4],green[7:4],blue[7:4]}),
       .char_xy(char_distance_xy),
       .char_line(char_line_distance), //{r,g,b}
@@ -344,7 +339,6 @@ char_rom_dist_meter my_char_rom_dist_meter(
    
     .char_code(char_code_distance),
     .char_xy(char_distance_xy),
-    //.distance({9'b0_0001_1101})
     .distance(distance_cm)
 );
 

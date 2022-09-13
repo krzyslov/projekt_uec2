@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Sep 13 20:09:05 2022
+# Process ID: 25244
+# Current directory: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1
+# Command line: vivado.exe -log top_level.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_level.tcl -notrace
+# Log file: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/top_level.vdi
+# Journal file: C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top_level.tcl -notrace
+Command: open_checkpoint top_level_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 237.426 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 497 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/.Xil/Vivado-25244-Tiger/dcp3/top_level_early.xdc]
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/.Xil/Vivado-25244-Tiger/dcp3/top_level_early.xdc]
+Parsing XDC File [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/.Xil/Vivado-25244-Tiger/dcp3/top_level.xdc]
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/.Xil/Vivado-25244-Tiger/dcp3/top_level.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 525.711 ; gain = 3.070
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 525.711 ; gain = 3.070
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.3 (64-bit) build 2018833
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 529.781 ; gain = 292.355
+Command: write_bitstream -force top_level.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top_level.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:34 ; elapsed = 00:01:21 . Memory (MB): peak = 983.355 ; gain = 453.574
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 13 20:11:07 2022...

@@ -1,0 +1,92 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date         : Tue Sep 13 19:15:46 2022
+| Host         : Tiger running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+| Design       : top_level
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    22 |
+| Unused register locations in slices containing registers |    87 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             166 |           66 |
+| No           | No                    | Yes                    |             132 |           35 |
+| No           | Yes                   | No                     |             330 |          100 |
+| Yes          | No                    | No                     |              44 |           19 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              97 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+---------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|         Clock Signal         |                      Enable Signal                      |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
++------------------------------+---------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|  my_clocking/inst/clk_camera |                                                         | my_Distance_meter/Trig_out_i_1_n_0                       |                1 |              1 |
+|  my_clocking/inst/clk_camera |                                                         | my_ov7670_controller/Inst_i2c_sender/sioc_i_1_n_0        |                1 |              1 |
+|  ov7670_pclk_IBUF_BUFG       |                                                         |                                                          |                1 |              2 |
+|  my_clocking/inst/clk_vga    |                                                         | my_resetlocked/safestart[3]_i_1_n_0                      |                1 |              4 |
+|  my_clocking/inst/clk_camera |                                                         | my_resetlocked/Q[0]                                      |                3 |              5 |
+|  my_clocking/inst/clk_camera | my_ov7670_controller/Inst_i2c_sender/divider[7]_i_1_n_0 |                                                          |                4 |              8 |
+|  my_clocking/inst/clk_camera | EchoPin_IBUF                                            | my_resetlocked/Q[0]                                      |                3 |              9 |
+| ~ov7670_pclk_IBUF_BUFG       |                                                         |                                                          |                7 |             10 |
+|  my_clocking/inst/clk_camera | my_ov7670_controller/Inst_i2c_sender/busy_sr0           | my_ov7670_controller/Inst_i2c_sender/data_sr[30]_i_1_n_0 |                3 |             11 |
+|  my_clocking/inst/clk_vga    | my_VGA/Vcnt[10]_i_1_n_0                                 | my_resetlocked/Q[0]                                      |                3 |             11 |
+| ~my_filtering/pcount         |                                                         | my_VGA/red_reg[3]                                        |                5 |             12 |
+|  ov7670_pclk_IBUF_BUFG       | my_ov7670_capture/latched_href                          |                                                          |               10 |             15 |
+|  my_clocking/inst/clk_camera | my_ov7670_controller/Inst_i2c_sender/E[0]               | my_debounce/SR[0]                                        |                5 |             16 |
+|  ov7670_pclk_IBUF_BUFG       | my_ov7670_capture/wren                                  | my_ov7670_capture/latched_vsync                          |                5 |             19 |
+|  my_clocking/inst/clk_camera |                                                         | my_resetlocked/echo_cnt_reg[1]                           |                5 |             20 |
+|  my_clocking/inst/clk_camera | my_ov7670_controller/Inst_i2c_sender/busy_sr0           |                                                          |                5 |             21 |
+|  my_clocking/inst/clk_camera |                                                         |                                                          |                9 |             23 |
+|  my_clocking/inst/clk_vga    |                                                         | my_resetlocked/c_reg[23]                                 |                7 |             24 |
+|  my_clocking/inst/clk_camera |                                                         | my_Distance_meter/trig_cnt[0]_i_1_n_0                    |                7 |             25 |
+|  my_clocking/inst/clk_camera | my_ov7670_controller/Inst_i2c_sender/busy_sr0           | my_ov7670_controller/Inst_i2c_sender/busy_sr[31]_i_1_n_0 |                6 |             31 |
+|  my_clocking/inst/clk_vga    |                                                         |                                                          |               49 |            131 |
+|  my_clocking/inst/clk_vga    |                                                         | my_resetlocked/Q[0]                                      |              105 |            370 |
++------------------------------+---------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     2 |
+| 2      |                     1 |
+| 4      |                     1 |
+| 5      |                     1 |
+| 8      |                     1 |
+| 9      |                     1 |
+| 10     |                     1 |
+| 11     |                     2 |
+| 12     |                     1 |
+| 15     |                     1 |
+| 16+    |                    10 |
++--------+-----------------------+
+
+

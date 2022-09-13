@@ -123,3 +123,5 @@ set_property PACKAGE_PIN P17 [get_ports ov7670_vsync]
 set_property PACKAGE_PIN R18 [get_ports ov7670_sioc]					
 	set_property IOSTANDARD LVCMOS33 [get_ports ov7670_sioc]
 
+set_property CFGBVS VCCO [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
