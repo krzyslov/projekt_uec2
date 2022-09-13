@@ -11,9 +11,9 @@
 // using Verilog-2001 syntax.
 
 module char_rom_dist_meter (
-    input wire [7:0] char_xy,
+    input wire [6:0] char_xy,
     output wire [6:0] char_code,
-    input wire [10:0]distance
+    input wire [8:0]distance
   );
   localparam string_length = 15;
   reg [(8*string_length -1):0] tekst_do_wyswietlenia;
