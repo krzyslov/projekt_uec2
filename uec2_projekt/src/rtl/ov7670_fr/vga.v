@@ -1,8 +1,5 @@
 module VGA (
 input wire CLK25,
-output wire clkout, 
-input wire rez_160x120,
-input wire rez_320x240,
 input wire reset, 
 output reg Hsync,
 output reg Vsync, 
@@ -49,52 +46,18 @@ output reg [10:0] Vcnt_out
 			end
 			else
 			begin
-				if(rez_160x120 == 1'b1)
-				begin
-					if(Vcnt < 120 - 1)
-					begin
-						activeArea <= 1'b1;
-					end
-				end
-				else if(rez_320x240 == 1'b1)
-				begin
-					if(Vcnt < 240 - 1)
-					begin
-						activeArea <= 1'b1;
-					end
-				end
-				else
-				begin
-				    if( Vcnt < 480 - 1)
-				    begin 
-				        activeArea <= 1'b1;
-				    end
-			    end
+                if( Vcnt < 480 - 1)
+                begin 
+                    activeArea <= 1'b1;
+                end
 			    Vcnt <= Vcnt + 1;
 			end 
 		end
 		else
 		begin
-		  if(rez_160x120 == 1'b1)
-		  begin
-		      if(Hcnt == 160 - 1)
-		      begin
-		          activeArea <= 1'b0;
-		      end
-		  end
-            else if( rez_320x240 == 1'b1 ) 
+            if(Hcnt == 640 - 1)
             begin
-                if(Hcnt == 320 - 1)
-                begin
-                    activeArea <= 1'b0;
-                end
-            end
-            else
-            begin
-                if(Hcnt == 640 - 1)
-                begin
-                    activeArea <= 1'b0;
-                end
+                activeArea <= 1'b0;
             end
             Hcnt<=Hcnt+1;
         end
@@ -151,5 +114,4 @@ output reg [10:0] Vcnt_out
 	assign Nsync = 1'b1;
 	assign video = ((Hcnt<HD) % (Vcnt <VD)) ? 1'b1 : 1'b0;
 	assign Nblank = video;
-	assign clkout = CLK25;
 endmodule

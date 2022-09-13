@@ -97,7 +97,6 @@ wire [10:0] hcount_vga_filtering, vcount_vga_filtering;
 VGA my_VGA(
 	.CLK25(clk_vga),
 	.reset(reset_locked),
-	.clkout(),
 	.Hsync(vga_hsync),
 	.Vsync(vSync),
 	.Nblank(nBlank),
@@ -153,8 +152,6 @@ frame_buffer my_frame_buffer(
 
 ov7670_capture my_ov7670_capture(
 	.pclk(ov7670_pclk),
-//	.rez_160x120(rez_160x120),
-//	.rez_320x240(rez_320x240),
 	.vsync(ov7670_vsync),
 	.href(ov7670_href),
 	.d(ov7670_data),
@@ -273,6 +270,8 @@ wire [7:0] char_pixel, char_xy, char_distance_xy, char_pixel_distance;
 wire [11:0] rgb_rect2distance;
 wire [10:0] vcount_rect2distance, hcount_rect2distance;
 
+wire vsync_rect2distance, hsync_rect2distance, hblnk_rect2distance, vblnk_rect2distance;
+
 draw_rect_char my_draw_rect_char(
       .vcount_in(vcount_f),
       .vsync_in(vsync_f),
@@ -282,12 +281,12 @@ draw_rect_char my_draw_rect_char(
       .hblnk_in(hblank_f),
       .char_pixels(char_pixel),
       .rgb_in({red_char,green_char,blue_char}),
-      //.vcount_out(vcount_rect2distance),
-      .vsync_out(),
-      .vblnk_out(),
-      //.hcount_out(hcount_rect2distance),
-      .hsync_out(),
-      .hblnk_out(),
+      .vcount_out(vcount_rect2distance),
+      .vsync_out(vsync_rect2distance),
+      .vblnk_out(vblnk_rect2distance),
+      .hcount_out(hcount_rect2distance),
+      .hsync_out(hsync_rect2distance),
+      .hblnk_out(hblnk_rect2distance),
       .rgb_out(rgb_rect2distance),
       .char_xy(char_xy),
       .char_line(char_line), //{r,g,b}
@@ -297,14 +296,12 @@ draw_rect_char my_draw_rect_char(
 );
 
 draw_distance_char my_draw_distance_char(
-      .vcount_in(vcount_f),
-      //.vcount_in(vcount_rect2distance),
-      .vsync_in(vsync_f),
-      .vblnk_in(vblank_f),
-      .hcount_in(hcount_f),
-      //.hcount_in(hcount_rect2distance),
-      .hsync_in(hsync_f),
-      .hblnk_in(hblank_f),
+      .vcount_in(vcount_rect2distance),
+      .vsync_in(vsync_rect2distance),
+      .vblnk_in(vblnk_rect2distance),
+      .hcount_in(hcount_rect2distance),
+      .hsync_in(hsync_rect2distance),
+      .hblnk_in(hblnk_rect2distance),
       .char_pixels(char_pixel_distance),
       .rgb_in(rgb_rect2distance),
       .vcount_out(),
