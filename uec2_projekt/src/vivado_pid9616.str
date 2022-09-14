@@ -1,0 +1,158 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:22 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 9616
+License: Customer
+
+Current time: 	Wed Sep 14 15:45:15 CEST 2022
+Time zone: 	Central European Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 29 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre/bin/java.exe
+
+User name: 	Jerzy
+User home directory: C:/Users/Jerzy
+User working directory: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src
+User country: 	PL
+User language: 	pl
+User locale: 	pl_PL
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.3
+RDI_DATADIR: C:/Xilinx/Vivado/2017.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.3/bin
+
+User preferences location: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: C:/Users/Jerzy/AppData/Roaming/Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/vivado.log
+Vivado journal file location: 	C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/vivado.jou
+Engine tmp dir: 	C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-9616-Tiger
+
+GUI allocated memory:	133 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 577 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 57 MB (+57105kb) [00:00:19]
+// [Engine Memory]: 568 MB (+444221kb) [00:00:19]
+// [GUI Memory]: 61 MB (+939kb) [00:00:21]
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: source run.tcl 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'. 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: STOP_PROGRESS_DIALOG
+// bs (cl):  Sourcing Tcl script 'run.tcl' : addNotify
+// TclEventType: STOP_PROGRESS_DIALOG
+// [GUI Memory]: 66 MB (+2891kb) [00:00:28]
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Sourcing Tcl script 'run.tcl'"); // bs (cl)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 589 MB. GUI used memory: 36 MB. Current time: 9/14/22 3:45:17 PM CEST
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bs (cl):  Resetting Runs : addNotify
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cl)
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 598 MB (+1683kb) [00:00:49]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Sep 14 15:45:35 2022] Launched synth_1... Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log [Wed Sep 14 15:45:35 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// Elapsed time: 70 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 609 MB. GUI used memory: 37 MB. Current time: 9/14/22 3:48:57 PM CEST
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 253 seconds
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, cl): FALSE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 71 MB (+1193kb) [00:07:48]
+// Elapsed time: 129 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design]", 15); // ah (O, cl)
+// Elapsed time: 49 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 7); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 7); // ah (O, cl)
+// Elapsed time: 38 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design]", 8); // ah (O, cl)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design]", 9); // ah (O, cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 4000 ms.
+// ah (cl): Bitstream Generation Completed: addNotify
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cl)
+// [GUI Memory]: 77 MB (+2533kb) [00:10:14]
+// Elapsed time: 14 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 7); // ah (O, cl)
+// [GUI Memory]: 81 MB (+118kb) [00:11:09]
+// [GUI Memory]: 85 MB (+350kb) [00:11:39]
+// Elapsed time: 97 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 7); // ah (O, cl)
+// Elapsed time: 22 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream]", 27); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, DRC, Implementation, Placement, Clocks]", 25); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design]", 21); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 7); // ah (O, cl)
+// [GUI Memory]: 90 MB (+96kb) [00:12:39]
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6040] Register 0®Í“ÿ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.. ]", 5); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6040] Register 0®Í“ÿ driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.. ]", 5, true, false, false, false, true, false); // ah (O, cl) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, cl)
+// Elapsed time: 441 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cl): Launch Runs: addNotify
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_OK", "OK"); // JButton (A, G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// bs (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// Tcl Message: [Wed Sep 14 16:04:59 2022] Launched impl_1... Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// ah (cl): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 627 MB. GUI used memory: 40 MB. Current time: 9/14/22 4:18:57 PM CEST
+// Elapsed time: 1808 seconds
+selectView(PAResourceOtoP.PAViews_FLOW_NAVIGATOR, "Flow Navigator", 75, 75, 178, 661, false, false, false, true, false); // D (ch, cl) - Popup Trigger

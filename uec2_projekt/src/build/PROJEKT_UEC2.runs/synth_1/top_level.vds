@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Sep 14 15:33:34 2022
-# Process ID: 16568
+# Start of session at: Wed Sep 14 15:45:43 2022
+# Process ID: 7976
 # Current directory: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1
 # Command line: vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19148 
+INFO: Helper process launched with PID 17444 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 354.941 ; gain = 96.410
+Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 355.219 ; gain = 97.172
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
 INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
@@ -112,8 +112,8 @@ INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/Jerzy/Deskt
 INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (12#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
 WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]
 INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (13#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
-INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16568-Tiger/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (14#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16568-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-7976-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (14#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-7976-Tiger/realtime/frame_buffer_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
 WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]
 INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (15#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
@@ -161,7 +161,7 @@ INFO: [Synth 8-256] done synthesizing module 'char_rom_dist_meter' (25#1) [C:/Us
 WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:49]
 INFO: [Synth 8-256] done synthesizing module 'top_level' (26#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 405.039 ; gain = 146.508
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 405.309 ; gain = 147.262
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -171,7 +171,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 405.039 ; gain = 146.508
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 405.309 ; gain = 147.262
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -180,8 +180,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16568-Tiger/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
-Finished Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-16568-Tiger/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
+Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-7976-Tiger/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/.Xil/Vivado-7976-Tiger/dcp3/frame_buffer_in_context.xdc] for cell 'my_frame_buffer'
 Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
 WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc:118]
 Finished Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
@@ -196,23 +196,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 720.098 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 720.270 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 720.098 ; gain = 461.566
+Finished Constraint Validation : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 720.270 ; gain = 462.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 720.098 ; gain = 461.566
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 720.270 ; gain = 462.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for my_frame_buffer. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 720.098 ; gain = 461.566
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 720.270 ; gain = 462.223
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:11]
 INFO: [Synth 8-4471] merging register 'distance_cm_reg[8:0]' into 'distance_buffer_cm_reg[8:0]' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:63]
@@ -237,7 +237,7 @@ INFO: [Synth 8-5546] ROM "rgb_nxt" won't be mapped to RAM because it is too spar
 WARNING: [Synth 8-6014] Unused sequential element char_line_pixels_reg was removed.  [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:22]
 INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 720.098 ; gain = 461.566
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 720.270 ; gain = 462.223
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -566,7 +566,7 @@ INFO: [Synth 8-3886] merging instance 'i_2/my_Address_Generator/address_NW_reg[0
 INFO: [Synth 8-3886] merging instance 'i_2/my_Address_Generator/address_NE_reg[0]' (FDR) to 'i_2/my_Address_Generator/address_W_reg[0]'
 INFO: [Synth 8-3886] merging instance 'i_2/my_Address_Generator/address_SE_reg[0]' (FDR) to 'i_2/my_Address_Generator/address_W_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:01:49 . Memory (MB): peak = 720.098 ; gain = 461.566
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:01:50 . Memory (MB): peak = 720.270 ; gain = 462.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -606,13 +606,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 720.098 ; gain = 461.566
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:20 ; elapsed = 00:02:24 . Memory (MB): peak = 720.270 ; gain = 462.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:19 ; elapsed = 00:02:24 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Timing Optimization : Time (s): cpu = 00:02:24 ; elapsed = 00:02:28 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -657,7 +657,7 @@ INFO: [Synth 8-4480] The timing for the instance my_ram_buffer/ram_reg_9 (implem
 INFO: [Synth 8-4480] The timing for the instance my_font_rom/char_line_pixels_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance my_font_rom/char_line_pixels_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:25 ; elapsed = 00:02:30 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Technology Mapping : Time (s): cpu = 00:02:31 ; elapsed = 00:02:35 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -681,7 +681,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:28 ; elapsed = 00:02:33 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished IO Insertion : Time (s): cpu = 00:02:34 ; elapsed = 00:02:39 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -694,7 +694,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:29 ; elapsed = 00:02:33 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:34 ; elapsed = 00:02:39 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -706,25 +706,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:30 ; elapsed = 00:02:34 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:35 ; elapsed = 00:02:40 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:30 ; elapsed = 00:02:34 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:35 ; elapsed = 00:02:40 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:30 ; elapsed = 00:02:34 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:30 ; elapsed = 00:02:34 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -792,11 +792,11 @@ Report Instance Areas:
 |21    |  my_resetlocked          |resetlocked         |    22|
 +------+--------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:30 ; elapsed = 00:02:35 . Memory (MB): peak = 742.801 ; gain = 484.270
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 744.070 ; gain = 486.023
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:48 ; elapsed = 00:02:15 . Memory (MB): peak = 742.801 ; gain = 169.211
-Synthesis Optimization Complete : Time (s): cpu = 00:02:30 ; elapsed = 00:02:35 . Memory (MB): peak = 742.801 ; gain = 484.270
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:53 ; elapsed = 00:02:19 . Memory (MB): peak = 744.070 ; gain = 171.062
+Synthesis Optimization Complete : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 744.070 ; gain = 486.023
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 430 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -808,8 +808,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 145 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:37 ; elapsed = 00:02:41 . Memory (MB): peak = 742.801 ; gain = 492.230
+synth_design: Time (s): cpu = 00:02:42 ; elapsed = 00:02:47 . Memory (MB): peak = 744.070 ; gain = 493.922
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/top_level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.283 . Memory (MB): peak = 742.801 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 14 15:36:34 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.338 . Memory (MB): peak = 744.070 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 14 15:48:50 2022...

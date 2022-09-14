@@ -1,0 +1,845 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Sep 14 12:53:50 2022
+# Process ID: 14876
+# Current directory: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src
+# Command line: vivado.exe -mode tcl -source run.tcl -tclargs rebuild
+# Log file: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/vivado.log
+# Journal file: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src\vivado.jou
+#-----------------------------------------------------------
+source run.tcl
+# set_param synth.elaboration.rodinMoreOptions "rt::set_parameter var_size_limit 1572865"
+# set project PROJEKT_UEC2
+# set top_module top_level
+# set target xc7a35tcpg236-1
+# set bitstream_file build/${project}.runs/impl_1/${top_module}.bit
+# proc usage {} {
+# puts "===========================================================================\n
+# usage: vivado -mode tcl -source [info script] -tclargs \[open/rebuild/sim/bit/prog\]\n
+# \topen    - open project and start gui\n
+# \trebuild - clear build directory and create the project again from sources, then open gui\n
+# \tsim     - run simulation\n
+# \tbit     - generate bitstream\n
+# \tprog    - load bitstream to FPGA\n
+# If a project is already created in the build directory, run.tcl opens it. Otherwise, creates a new one.
+# ==========================================================================="
+# }
+# proc create_new_project {project target top_module} {
+#     file mkdir build
+#     create_project ${project} build -part ${target} -force
+#     
+#     # Specify .xdc files location             -- EDIT
+#     read_xdc {
+#         constraints/project_constraints.xdc
+# 		
+# 		
+#     }
+# 
+#     # Specify verilog design files location   -- EDIT
+#     read_verilog {
+# 		rtl/ov7670_fr/RGB.v
+# 		rtl/ov7670_fr/address_Generator.v
+# 		
+# 		rtl/basys3_ov7670/clocking.v
+# 		rtl/basys3_ov7670/clocking_clk_wiz.v
+# 		rtl/basys3_ov7670/clock.v
+# 		rtl/basys3_ov7670/clock_clk_wiz.v
+# 		rtl/ov7670_fr/ov7670_capture.v
+# 		rtl/ov7670_fr/debounce.v
+# 		rtl/ov7670_fr/ov7670_controller.v
+# 		rtl/ov7670_fr/top_level.v
+# 		rtl/ov7670_fr/vga.v
+# 		rtl/basys3_ov7670/i2c_sender.v
+# 		rtl/basys3_ov7670/ov7670_registers.v
+# 		rtl/filtering/char_rom.v
+# 		rtl/filtering/delay.v
+# 		rtl/filtering/draw_rect_char.v
+# 		rtl/filtering/filtering.v
+# 		rtl/filtering/font_rom.v
+# 		rtl/ov7670_fr/resetlocked.v
+# 		rtl/frame_buffer/ram_buffer.v
+# 		rtl/loudspeaker/loudspeaker.v
+# 		rtl/distance_meter/distance_meter.v
+# 		rtl/distance_meter/bin2bcd16.v
+# 		rtl/distance_meter/char_rom_dist_meter.v
+# 		rtl/distance_meter/draw_distance_char.v
+# 		
+# 		
+#     }
+# 	#rtl/frame_buffer/blk_mem_gen_v8_4_0.vhd
+# 	#rtl/frame_buffer/frame_buffer.v
+# 	#rtl/AR_58276_2013_3_MMCM/MMCME2_ADV.v
+# 	#rtl/frame_buffer/frame_buffer_stub.v
+#     #rtl/frame_buffer/frame_buffer_sim_netlist.v
+#     # Specify vhdl design files location      -- EDIT
+# 	#rtl/frame_buffer/blk_mem_gen_v8_4_0.v
+#    # read_vhdl {
+# 	#		
+# 	#		rtl/frame_buffer/frame_buffer.vhd
+# 	#		rtl/frame_buffer/blk_mem_gen_v8_4_0.vhd
+# 	#	
+# 		
+# 	#}
+#     read_ip		rtl/frame_buffer/frame_buffer.xci
+# 
+#     # Specify files for memory initialization -- EDIT
+#     #read_mem {
+#         #./image_rom.data
+#     #}
+# 
+#     # Specify simulation files location       -- EDIT
+#     #add_files -fileset sim_1 {
+#     #    sim/testbench.v
+# 	#	sim/tiff_writer.v
+# 	#	sim/draw_rect_ctl_tb.v
+# 	#	sim/draw_rect_ctl_test.v
+# 	#	sim/delay_test.v
+#     #}
+# 
+#     set_property top ${top_module} [current_fileset]
+#     update_compile_order -fileset sources_1
+#     update_compile_order -fileset sim_1
+# }
+# proc open_existing_project {project} {
+#     open_project build/$project.xpr
+#     update_compile_order -fileset sources_1
+#     update_compile_order -fileset sim_1
+# }
+# proc open_or_create_project {project target top_module} {
+#     if {[file exists build/$project.xpr] == 1} {
+#         open_existing_project $project 
+#     } else {
+#         create_new_project $project $target $top_module
+#     }
+# }
+# proc program_fpga {bitstream_file} {
+#     if {[file exists $bitstream_file] == 0} {
+#         puts "ERROR: No bitstream found"
+#     } else {
+#         open_hw_manager
+#         connect_hw_server
+#         current_hw_target [get_hw_targets *]
+#         open_hw_target
+#         current_hw_device [lindex [get_hw_devices] 0]
+#         refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+# 
+#         set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+#         set_property FULL_PROBES.FILE {} [lindex [get_hw_devices] 0]
+#         set_property PROGRAM.FILE ${bitstream_file} [lindex [get_hw_devices] 0]
+# 
+#         program_hw_devices [lindex [get_hw_devices] 0]
+#         refresh_hw_device [lindex [get_hw_devices] 0]
+#     }
+# }
+# proc simulation {} {
+#     launch_simulation
+#     # run all
+# }
+# proc bitstream {} {
+#     # Run synthesis
+#     reset_run synth_1
+#     launch_runs synth_1 -jobs 8
+#     wait_on_run synth_1
+#     
+#     # Run implemenatation up to bitstream generation
+#     launch_runs impl_1 -to_step write_bitstream -jobs 8
+#     wait_on_run impl_1
+# }
+# if {$argc == 1} {
+#     switch $argv {
+#         open {
+#             open_or_create_project $project $target $top_module    
+#             start_gui
+#         }
+#         rebuild {
+#             create_new_project $project $target $top_module    
+#             start_gui
+#         }
+#         sim {
+#             open_or_create_project $project $target $top_module    
+#             simulation
+#             start_gui
+#         }
+#         bit {
+#             open_or_create_project $project $target $top_module    
+#             bitstream
+#             exit
+#         }
+#         prog {
+#             program_fpga $bitstream_file
+#             exit
+#         }
+#         default {
+#             usage
+#             exit 1
+#         }
+#     }
+# } else {
+#     usage
+#     exit 1
+# }
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 12:55:16 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 12:55:16 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 896.793 ; gain = 23.496
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'Loudspeaker' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:17]
+INFO: [Synth 8-256] done synthesizing module 'Loudspeaker' (7#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:1]
+INFO: [Synth 8-638] synthesizing module 'Distance_meter' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:2]
+WARNING: [Synth 8-3936] Found unconnected internal register 'distance_cm_nxt_reg' and it is trimmed from '21' to '9' bits. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:51]
+INFO: [Synth 8-256] done synthesizing module 'Distance_meter' (8#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:2]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (9#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (10#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (11#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (12#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (13#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14876-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (14#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14876-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (15#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (16#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 19 - type: integer 
+	Parameter BITWIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (17#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:20]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (18#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:48]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:49]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (19#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 140 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 464 - type: integer 
+	Parameter rect_height bound to: 16 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 450 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000001 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 34 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (20#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (21#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'draw_distance_char' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:13]
+	Parameter rect_x bound to: 380 - type: integer 
+	Parameter rect_width bound to: 120 - type: integer 
+	Parameter rect_y bound to: 464 - type: integer 
+	Parameter rect_height bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_distance_char' (22#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (23#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (24#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13]
+INFO: [Synth 8-638] synthesizing module 'char_rom_dist_meter' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/char_rom_dist_meter.v:13]
+	Parameter string_length bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom_dist_meter' (25#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/char_rom_dist_meter.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:37]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (26#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 945.891 ; gain = 72.594
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 945.891 ; gain = 72.594
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc:118]
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:16 ; elapsed = 00:00:55 . Memory (MB): peak = 1294.570 ; gain = 421.273
+65 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:00:55 . Memory (MB): peak = 1294.570 ; gain = 421.273
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 13:13:00 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 13:13:00 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 13:19:35 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 13:19:36 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 13:24:58 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 13:24:58 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 13:37:57 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 13:44:58 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 13:44:59 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 13:59:49 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 13:59:50 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci'
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1303.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'Loudspeaker' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:17]
+INFO: [Synth 8-256] done synthesizing module 'Loudspeaker' (7#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:1]
+INFO: [Synth 8-638] synthesizing module 'Distance_meter' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:2]
+WARNING: [Synth 8-3936] Found unconnected internal register 'distance_cm_nxt_reg' and it is trimmed from '21' to '9' bits. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:51]
+INFO: [Synth 8-256] done synthesizing module 'Distance_meter' (8#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:2]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (9#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (10#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (11#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (12#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (13#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14876-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (14#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14876-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (15#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (16#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 19 - type: integer 
+	Parameter BITWIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (17#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:20]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (18#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:48]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:49]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (19#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 140 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 464 - type: integer 
+	Parameter rect_height bound to: 16 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 450 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000001 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 34 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (20#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (21#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'draw_distance_char' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:13]
+	Parameter rect_x bound to: 380 - type: integer 
+	Parameter rect_width bound to: 120 - type: integer 
+	Parameter rect_y bound to: 464 - type: integer 
+	Parameter rect_height bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_distance_char' (22#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (23#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (24#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13]
+INFO: [Synth 8-638] synthesizing module 'char_rom_dist_meter' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/char_rom_dist_meter.v:13]
+	Parameter string_length bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom_dist_meter' (25#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/char_rom_dist_meter.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:49]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (26#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1335.781 ; gain = 32.180
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1335.781 ; gain = 32.180
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc:118]
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1357.984 ; gain = 54.383
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 14:30:19 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 14:30:19 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci'
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top_level
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1357.984 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
+INFO: [Synth 8-638] synthesizing module 'clocking' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'clocking_clk_wiz' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:19468]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'clocking_clk_wiz' (4#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (5#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/clocking.v:71]
+INFO: [Synth 8-638] synthesizing module 'resetlocked' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-256] done synthesizing module 'resetlocked' (6#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/resetlocked.v:7]
+INFO: [Synth 8-638] synthesizing module 'Loudspeaker' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:17]
+INFO: [Synth 8-256] done synthesizing module 'Loudspeaker' (7#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/loudspeaker/loudspeaker.v:1]
+INFO: [Synth 8-638] synthesizing module 'Distance_meter' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:2]
+WARNING: [Synth 8-3936] Found unconnected internal register 'distance_cm_nxt_reg' and it is trimmed from '21' to '9' bits. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:51]
+INFO: [Synth 8-256] done synthesizing module 'Distance_meter' (8#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/distance_meter.v:2]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:1]
+	Parameter HM bound to: 799 - type: integer 
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter VM bound to: 524 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'VGA' (9#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/vga.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (10#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
+	Parameter camera_address bound to: 8'b01000010 
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (11#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/i2c_sender.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (12#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/basys3_ov7670/ov7670_registers.v:1]
+WARNING: [Synth 8-3848] Net siod_xhdl0 in module/entity ov7670_controller does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:11]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (13#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14876-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (14#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/.Xil/Vivado-14876-Tiger/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ov7670_capture' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
+WARNING: [Synth 8-6014] Unused sequential element href_hold_reg was removed.  [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:58]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_capture' (15#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/ov7670_capture.v:3]
+INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-256] done synthesizing module 'RGB' (16#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/RGB.v:16]
+INFO: [Synth 8-638] synthesizing module 'ram_buffer' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:20]
+	Parameter ADDRESSWIDTH bound to: 19 - type: integer 
+	Parameter BITWIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 1920 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ram_buffer' (17#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/ram_buffer.v:20]
+INFO: [Synth 8-638] synthesizing module 'Address_Generator' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Address_Generator' (18#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/address_Generator.v:4]
+INFO: [Synth 8-638] synthesizing module 'filtering' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22]
+WARNING: [Synth 8-3848] Net hblank in module/entity filtering does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:48]
+WARNING: [Synth 8-3848] Net vblank in module/entity filtering does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:49]
+INFO: [Synth 8-256] done synthesizing module 'filtering' (19#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/filtering.v:22]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_char' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13]
+	Parameter rect_x bound to: 140 - type: integer 
+	Parameter rect_width bound to: 240 - type: integer 
+	Parameter rect_y bound to: 464 - type: integer 
+	Parameter rect_height bound to: 16 - type: integer 
+	Parameter FRAME_X_POS bound to: 10 - type: integer 
+	Parameter FRAME_Y_POS bound to: 10 - type: integer 
+	Parameter FRAME_X_PIX bound to: 630 - type: integer 
+	Parameter FRAME_Y_PIX bound to: 450 - type: integer 
+	Parameter FRAME_RGB bound to: 12'b000000000001 
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3]
+	Parameter WIDTH bound to: 34 - type: integer 
+	Parameter CLK_DEL bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay' (20#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/delay.v:3]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_char' (21#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/draw_rect_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'draw_distance_char' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:13]
+	Parameter rect_x bound to: 380 - type: integer 
+	Parameter rect_width bound to: 120 - type: integer 
+	Parameter rect_y bound to: 464 - type: integer 
+	Parameter rect_height bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_distance_char' (22#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/draw_distance_char.v:13]
+INFO: [Synth 8-638] synthesizing module 'font_rom' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-256] done synthesizing module 'font_rom' (23#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/font_rom.v:9]
+INFO: [Synth 8-638] synthesizing module 'char_rom' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13]
+	Parameter string_length bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom' (24#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/filtering/char_rom.v:13]
+INFO: [Synth 8-638] synthesizing module 'char_rom_dist_meter' [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/char_rom_dist_meter.v:13]
+	Parameter string_length bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rom_dist_meter' (25#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/distance_meter/char_rom_dist_meter.v:13]
+WARNING: [Synth 8-3848] Net ov7670_siod_xhdl0 in module/entity top_level does not have driver. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:49]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (26#1) [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/ov7670_fr/top_level.v:2]
+WARNING: [Synth 8-3331] design filtering has unconnected port hblank
+WARNING: [Synth 8-3331] design filtering has unconnected port vblank
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 1357.984 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1357.984 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.dcp' for cell 'my_frame_buffer'
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc:118]
+Finished Parsing XDC File [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/constraints/project_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_level_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:42 . Memory (MB): peak = 1364.949 ; gain = 6.965
+64 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:43 . Memory (MB): peak = 1364.949 ; gain = 6.965
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 14:57:02 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 14:57:02 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+close_design
+close_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1364.949 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 15:11:45 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 15:11:45 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 15:30:42 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 15:30:42 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/rtl/frame_buffer/frame_buffer.xci' is already up-to-date
+[Wed Sep 14 15:33:25 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/synth_1/runme.log
+[Wed Sep 14 15:33:25 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Jerzy/Desktop/58warning/projekt_uec2/uec2_projekt/src/build/PROJEKT_UEC2.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 14 15:42:55 2022...

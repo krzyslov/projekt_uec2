@@ -11,7 +11,7 @@ set target xc7a35tcpg236-1
 # Bitstream location
 set bitstream_file build/${project}.runs/impl_1/${top_module}.bit
 
-set_property SEVERITY Warning [get_drc_checks REQP-1840]
+
 
 
 # Print how to use the script
