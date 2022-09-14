@@ -27,14 +27,26 @@ module top_level(
 	output wire config_finished
 );
 
-wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,rez_160x120,rez_320x240,locked,reset_locked;
+
+
+
+
+
+
+
+
+
+
+
+
+wire clk_camera, clk_vga,resend,nBlank,vSync,nSync,activeArea,locked,reset_locked;
 wire [16:0] rd_addr,wr_addr;
 wire [18:0] wraddress,rdaddress;
 wire [11:0] wrdata,rddata;
 wire [7:0] red,blue,green;
 wire [0:0] wren;
 wire [1:0] size_select;
-wire ov7670_siod_xhdl0;
+wire ov7670_siod_xhdl0; 
 
 assign ov7670_siod = ov7670_siod_xhdl0;
 assign vga_r = red[7:4];
@@ -91,7 +103,7 @@ Distance_meter my_Distance_meter(
 assign vga_vsync = vSync;
 
 wire [10:0] hcount_f, vcount_f;
-wire hblank_f,vblank_f,hsync_f,vsync_f;
+//wire hsync_f,vsync_f; hblank_f,vblank_f,
 wire [10:0] hcount_vga_filtering, vcount_vga_filtering;
 
 VGA my_VGA(
@@ -230,8 +242,8 @@ wire [3:0] red_char, green_char,blue_char;
 
 
 filtering my_filtering(
-    .vsync_in(vSync),
-    .hsync_in(vga_hsync),
+    //.vsync_in(vSync),
+    //.hsync_in(vga_hsync),
     .clock(clk_vga),
     .reset(reset_locked),
     .sel_module(sw),
@@ -254,19 +266,19 @@ filtering my_filtering(
     .Nblank(activeArea),
     .hc(hcount_f),
     .vc(vcount_f),
-    .hblank(hblank_f),
-    .vblank(vblank_f),
-    .hsync(hsync_f),
-    .vsync(vsync_f),
+    //.hblank(hblank_f),
+    //.vblank(vblank_f),
+    //.hsync(hsync_f),
+    //.vsync(vsync_f),
     .Hcount_in(hcount_vga_filtering),
     .Vcount_in(vcount_vga_filtering)
     
 );
 
-wire [6:0] char_code, char_code_distance, char_distance_xy;
+wire [6:0] char_code, char_code_distance;
 wire [3:0] char_line, char_line_distance;
-wire [7:0] char_pixel, char_xy,  char_pixel_distance;
-
+wire [7:0] char_pixel,   char_pixel_distance;
+wire [4:0] char_xy, char_distance_xy;
 wire [11:0] rgb_rect2distance;
 wire [10:0] vcount_rect2distance, hcount_rect2distance;
 
@@ -341,5 +353,16 @@ char_rom_dist_meter my_char_rom_dist_meter(
     .char_xy(char_distance_xy),
     .distance(distance_cm)
 );
+/*
+//wire in_ov7670_siod, out_ov7670_siod;
+wire t;
+
+IOBUF IOBUF_inst (
+.O(out_ov7670_siod), // Buffer output
+.IO(ov7670_siod), // Buffer inout port (connect directly to top-level port)
+.I(in_ov7670_siod), // Buffer input
+.T(1'b0) // 3-state enable input, high=input, low=output
+);
+*/
 
 endmodule

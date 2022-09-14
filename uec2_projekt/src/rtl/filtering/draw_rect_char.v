@@ -15,7 +15,7 @@ module draw_rect_char (
   output reg [10:0] hcount_out,
   output reg [10:0] vcount_out,
   output wire [3:0] char_line,
-  output wire [7:0] char_xy,
+  output wire [4:0] char_xy,
   
   
   input wire [7:0] char_pixels,
@@ -43,7 +43,7 @@ module draw_rect_char (
     .dout({hcount_dl, vcount_dl, rgb_dl})
     );
 
-    reg [2:0] char_y;
+   // reg [2:0] char_y;
     reg [4:0] char_x;
     
     
@@ -57,7 +57,7 @@ module draw_rect_char (
                FRAME_RGB = 12'h0_0_1;
    
     
-    assign char_xy = {char_y[2:0], char_x[4:0]};
+    assign char_xy = {char_x[4:0]};
     assign char_line = {(vcount_in - rect_y) % 16};//4'h6;
 
     
@@ -103,13 +103,13 @@ module draw_rect_char (
             vcount_out  <= 0;
             hcount_out  <= 0;
             rgb_out     <= 0;
-            char_y      <= 0;
+          //  char_y      <= 0;
             char_x      <= 0;
         end else begin
             vcount_out  <= vcount_dl;
             hcount_out  <= hcount_dl;
             rgb_out     <= rgb_nxt; //rgb_nxt;
-            char_y      <= (vcount_in - rect_y)/16;
+            //char_y      <= (vcount_in - rect_y)/16;
             char_x      <= (hcount_in - rect_x)/8;
         end
         

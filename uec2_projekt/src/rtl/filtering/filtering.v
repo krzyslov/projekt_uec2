@@ -25,8 +25,8 @@ input wire reset,
 //input wire hsync,
 //input wire vsync,
 input wire [3:0]sel_module,
-input wire hsync_in,
-input wire vsync_in,       //inputs - sel_module(select required function), reset(to switch on and off), val(give a value to adjust brightness and filters)
+//input wire hsync_in,
+//input wire vsync_in,       //inputs - sel_module(select required function), reset(to switch on and off), val(give a value to adjust brightness and filters)
 input wire [23:0] rgb_C,
 
 input wire [7:0] gray_center,
@@ -45,10 +45,10 @@ output reg[3:0] green,
 output reg[3:0] blue, 
 output reg[10:0] hc,
 output reg[10:0] vc,
-output reg hblank,
-output reg vblank,
-output reg hsync,
-output reg vsync,                   // red, green and blue output pixels
+//output reg hblank,
+//output reg vblank,
+//output reg hsync,
+//output reg vsync,                   // red, green and blue output pixels
 input wire Nblank
 );
     
@@ -96,8 +96,8 @@ input wire Nblank
    always @(posedge clock) begin
       vc <= Vcount_in;
       hc <= Hcount_in;
-      hsync <= hsync_in;
-      vsync <= vsync_in;
+      //hsync <= hsync_in;
+      //vsync <= vsync_in;
 end
 
 always @(posedge clock)begin

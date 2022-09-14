@@ -12,7 +12,7 @@ module Distance_meter(
     reg [24:0] trig_cnt_nxt = 0;
     reg [20:0] echo_cnt  = 0;
     reg [20:0] echo_cnt_nxt  = 0;
-    reg [20:0] distance_cm_nxt = 0;
+    reg [8:0] distance_cm_nxt = 0;
     reg [8:0] distance_buffer_cm = 0;
     reg [20:0] distance_buffer_nxt_cm = 0;
     reg [4:0] speaker_note_nxt;
@@ -47,7 +47,7 @@ module Distance_meter(
         
         
         if ( Echo_in == 1) begin
-            echo_cnt_nxt = echo_cnt + 21'd2;
+            echo_cnt_nxt = echo_cnt + 20'd2;
             distance_cm_nxt = echo_cnt/(11'd58*100);// / 11'd58;
             speaker_note_nxt = distance_buffer_cm[8:0] / 31;
         end else begin

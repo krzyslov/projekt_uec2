@@ -19,7 +19,7 @@ module draw_distance_char (
  // output reg [10:0] hcount_out,
  // output reg [10:0] vcount_out,
   output wire [3:0] char_line,
-  output wire [6:0] char_xy,
+  output wire [4:0] char_xy,
   
   
   input wire [7:0] char_pixels,
@@ -47,7 +47,7 @@ module draw_distance_char (
     .dout({hcount_dl, vcount_dl,  rgb_dl})
     );
 
-    reg [1:0] char_y;
+    //reg [1:0] char_y;
     reg [3:0] char_x;
     
 
@@ -56,7 +56,7 @@ module draw_distance_char (
 
    
     
-    assign char_xy = {char_y[1:0], char_x[3:0]};
+    assign char_xy = { char_x[3:0]};
     assign char_line = {(vcount_in - rect_y) % 16};//4'h6;
 
 
@@ -80,11 +80,11 @@ module draw_distance_char (
     always @(posedge pclk) begin
         if(rst) begin
             rgb_out     <= 0;
-            char_y      <= 0;
+            //char_y      <= 0;
             char_x      <= 0;
         end else begin
             rgb_out     <= rgb_nxt;
-            char_y      <= (vcount_in - rect_y)/16;
+            //char_y      <= (vcount_in - rect_y)/16;
             char_x      <= (hcount_in - rect_x)/8;
         end
         
